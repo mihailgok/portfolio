@@ -1,0 +1,114 @@
+.contacts_hero
+   background: $main-blue
+   padding-top: 200rem
+   color: $main-white
+   margin-bottom: 120rem
+   .hero__header
+      margin-bottom: 88rem
+   &__map
+      position: relative
+      #map
+         height: 826rem
+         width: 100%
+         max-width: calc(100% - 1px)
+   &__info
+      background: $main-highlight !important
+      display: inline-block
+      position: absolute
+      top: 0
+      right: 100rem
+      width: 560rem
+   .contacts_grid__card__header
+      padding-top: 0
+      &:before
+         display: none
+   .contacts_grid__card__label
+      color: $main-white
+      
+
+
+
+.contacts_grid
+   color: $main-blue
+   &__container
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      grid-row-gap: 20rem
+      grid-column-gap: 20rem
+   &__card
+      padding: 60rem 40rem
+      cursor: pointer
+      &:nth-last-child(odd)
+         background: $main-gray
+      &__header
+         padding-top: 30rem
+         position: relative
+         margin-bottom: 60rem
+         &::before
+            content: ""
+            width: 72rem
+            height: 6rem
+            top: 0
+            left: 0
+            position: absolute
+            background: $main-highlight
+            contant: ""
+            transform: skew(-20deg)
+      &__label
+         color: #7B868C
+         margin-bottom: 16rem
+      &__address
+         margin-bottom: 32rem
+         font-style: normal
+      &__link:hover
+         text-decoration: underline
+   &__loadmore
+      display: none
+      
+
+[class*="copyrights-pane"] 
+   display: none !important
+
+
+@media (max-width: 650px)
+   .contacts_hero
+      padding-top: 60rem
+      margin-bottom: 60rem
+      &__map
+         #map
+            height: 400rem
+      &__info
+         padding: 28rem 15rem !important
+         background: $main-highlight !important
+         display: block
+         position: static
+         width: 100%
+      .hero__title
+         margin-bottom: 28rem
+      .hero__header
+         margin-bottom: 0
+      
+   
+   .contacts_grid
+      &__container
+         grid-template-columns: 1fr
+         grid-row-gap: 8rem
+      &__card
+         padding: 28rem 12rem
+         &__header
+            padding-top: 24rem
+            margin-bottom: 36rem
+            &::before
+               width: 38rem
+               height: 4rem
+         &__address
+            margin-bottom: 28rem
+         &__label
+            margin-bottom: 12rem
+      &__loadmore
+         margin: 0 auto
+         display: flex
+         justify-content: center
+         width: 85%
+         margin-top: 32rem
+      

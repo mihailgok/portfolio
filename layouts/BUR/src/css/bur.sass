@@ -1,0 +1,180 @@
+.bur
+   &_hero 
+      padding: 252rem 0 208rem 0
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%), url("../img/bur.jpeg"), lightgray 50%
+      background-size: cover
+      background-position: center bottom
+      background-repeat: no-repeat
+      &__text 
+         max-width: 551rem
+         color: $main-white
+      .hero__title 
+         margin-right: 177rem
+         max-width: 700rem
+   .about_page
+      padding: 100rem 0
+      margin-bottom: 0
+      span
+         color: $main-highlight
+         font-weight: 400
+   &_info
+      background: $main-lightgray
+      padding: 100rem 0
+      margin-bottom: 0
+      &__header 
+         color: $main-black
+         margin-bottom: 96rem 
+         span
+            color: $main-highlight
+      &__flex
+         display: flex 
+         // justify-content: space-between
+      &__img 
+         max-width: 705rem 
+         height: 480rem
+         object-fit: cover 
+         margin-right: 165rem
+      &__text 
+         display: flex 
+         flex-direction: column
+         max-width: 652rem
+         gap: 48rem
+         span
+            color: $main-highlight
+            font-weight: 400
+   .about_statagy
+      margin-bottom: 0
+      &__header 
+         margin-bottom: 96rem
+         max-width: 1370rem
+         span
+            color: $main-highlight
+      .about_politics__card 
+         padding: 48rem 32rem
+         gap: 109rem
+         color: $main-black
+         .about_statagy__card__text
+            height: 96rem
+
+   &_dolota
+      padding: 100rem 0
+      &__top
+         margin-bottom: 96rem
+         display: flex
+         align-items: center
+         &__text
+            max-width: 676rem
+            span
+               font-weight: 400
+               color: $main-highlight
+      &__header 
+         max-width: 573rem
+         color: $main-black
+         margin-right: 297rem
+      &__imgs 
+         display: flex 
+         justify-content: space-between
+      &__img 
+         width: 560rem
+         height: 480rem
+         object-fit: cover
+         &--big 
+            width: 850rem
+
+   &_select 
+      padding: 100rem 0
+      background: $main-lightgray
+      .container
+         display: flex 
+         // justify-content: space-between
+      &__first 
+         max-width: 555rem
+         margin-right: 297rem
+      &__header 
+         margin-bottom: 32rem
+         color: #3D3935
+      &__sec 
+         max-width: 640rem
+         display: flex 
+         flex-direction: column
+         gap: 56rem
+         &__item 
+            display: flex 
+            align-items: center
+            &::before
+               content: ""
+               width: 33rem
+               height: 4rem
+               transform: skew(-20deg)
+               margin-right: 24rem 
+               background: $main-highlight
+
+
+@media (max-width: 650px) 
+   .bur
+      &_hero 
+         padding: 103rem 0 256rem 0
+         .hero__title 
+            margin-right: 0
+      .about_page
+         padding: 48rem 0
+         .about__col:last-child
+            .subtitle
+               font-size: 20rem
+      &_info 
+         padding: 48rem 0
+         &__flex
+            flex-direction: column-reverse
+         &__header 
+            margin-bottom: 32rem
+         &__img 
+            width: 100%
+            height: 200rem
+         &__text 
+            gap: 24rem
+            margin-bottom: 32rem
+      .about_statagy
+         padding: 48rem 0
+         &__header 
+            margin-bottom: 32rem
+         .about_politics__card
+            gap: 0
+            padding: 24rem 18rem
+            height: 172rem
+            justify-content: space-between
+            .about_statagy__card__text
+               height: auto
+               font-weight: 400
+      &_dolota 
+         padding: 48rem 0
+         &__top
+            flex-direction: column
+            align-items: flex-start
+            margin-bottom: 16rem
+            &__text
+               font-weight: 400
+         &__header 
+            margin-right: 0
+            margin-bottom: 24rem
+         &__imgs 
+            flex-direction: column
+            gap: 24rem
+         &__img 
+            width: 100%
+            height: 250rem
+      &_select 
+         padding: 48rem 0
+         .container
+            flex-direction: column
+         &__first 
+            margin-right: 0
+            margin-bottom: 32rem
+            .subtitle 
+               font-weight: 400
+         &__sec 
+            gap: 24rem
+            &__item 
+               &::before
+                  width: 20rem
+                  margin-right: 8rem
+                  flex-shrink: 0

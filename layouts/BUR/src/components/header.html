@@ -1,0 +1,77 @@
+<header class="header header--active maintext">
+   <div class="container header__container">
+      <a href="index.html" class="header__logo">
+         <img src="img/logo.svg" alt="логотип компании">
+      </a>
+
+      <nav class="nav">
+         <ul class="nav__list">
+            <li class="nav__item">
+               <a href="index.html" class="nav__link caps">Главная</a>
+            </li>
+            <li class="nav__item">
+               <a href="tender.html" class="nav__link caps">Тендеры</a>
+            </li>
+            <li class="nav__item">
+               <a href="vacancy.html" class="nav__link caps">Вакансии</a>
+            </li>
+            <li class="nav__item">
+               <a href="contacts.html" class="nav__link caps">Контакты</a>
+            </li>
+         </ul>
+      </nav>
+
+      <a href="tel:+74957558300" class="header__phone">+7 495 755-83-00</a>
+      <button class="menu_btn">
+         <svg width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.86747 0H24L23.3253 2H0L0.86747 0Z" fill="white" id="first" />
+            <path d="M0.86747 6H24L23.3253 8H0L0.86747 6Z" fill="white" />
+            <path d="M0.86747 12H24L23.3253 14H0L0.86747 12Z" fill="white" id="third" />
+         </svg>
+
+         <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.71059 13.5024L21.6596 0.234165L22.2541 2.25946L3.14715 15.6383L2.71059 13.5024Z"
+               fill="white" />
+            <path d="M3.71059 0.49756L22.6596 13.7658L20.9598 15.0171L1.85285 1.6383L3.71059 0.49756Z"
+               fill="white" />
+         </svg>
+      </button>
+   </div>
+</header>
+
+<nav class="nav nav-mobile">
+   <ul class="nav__list h1 reg caps">
+      <li class="nav__item">
+         <a href="index.html" class="nav__link caps">Главная</a>
+      </li>
+      <li class="nav__item">
+         <a href="tender.html" class="nav__link nav__link--active caps">Тендеры</a>
+      </li>
+      <li class="nav__item">
+         <a href="vacancy.html" class="nav__link caps">Вакансии</a>
+      </li>
+      <li class="nav__item">
+         <a href="contacts.html" class="nav__link caps">Контакты</a>
+      </li>
+   </ul>
+</nav>
+
+<script>
+   let menu_btn = document.querySelector('.menu_btn');
+   let menu_mobile = document.querySelector('.nav-mobile');
+   let all_menu_links = document.querySelectorAll('.nav-mobile .nav__item');
+
+   menu_btn.addEventListener('click', function () {
+      this.classList.toggle('menu_btn--active');
+      menu_mobile.classList.toggle('nav--active');
+      document.querySelector("body").classList.toggle("stop-scroll");
+   });
+
+   for (let link of all_menu_links) {
+      link.addEventListener('click', function () {
+         menu_btn.classList.remove('menu_btn--active');
+         menu_mobile.classList.remove('nav--active');
+         document.querySelector("body").classList.remove("stop-scroll");
+      });
+   }
+</script>

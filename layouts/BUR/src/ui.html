@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>UI</title>
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+
+
+   <link rel="stylesheet" href="css/final.sass">
+
+   <script src="js/rem.js"></script>
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+   <include src="src/components/header.html"></include>
+
+
+   <div class="container ui">
+      <div class="colors flex">
+         <div class="colors__block"></div>
+         <div class="colors__block"></div>
+         <div class="colors__block"></div>
+         <div class="colors__block"></div>
+         <div class="colors__block"></div>
+         <div class="colors__block"></div>
+      </div>
+
+      <div class="">
+         <h1 class="h1 med">H1 128px Medium</h1>
+         <h2 class="h2 reg">H2 86px Regular</h2>
+         <h3 class="h3 reg">H3 62px Regular</h3>
+         <h4 class="h4 reg">H4 44px Regular</h4>
+         <div class="flex">
+            <h5 class="h5 light">H5 34px Light</h5>
+            <h5 class="h5 reg">H5 34px Regular</h5>
+         </div>
+         <div class="flex">
+            <h6 class="h6 bold">H6 34px Light</h6>
+            <h6 class="h6 reg">H6 34px Regular</h6>
+            <h6 class="h6 light">H6 34px Light</h6>
+         </div>
+
+         <div class="flex">
+            <p class="subtitle light">Subtitle 24px Light</p>
+            <p class="maintext">Основной текст 20px Regular</p>
+            <p class="maintext caps">Основной текст 20px Regular</p>
+         </div>
+
+         <div class="flex">
+            <p class="maintext light">Основной текст 20px Light</p>
+            <p class="liltext reg">Маленький текст 16px Regular</p>
+            <p class="liltext light">Маленький текст 16px Light</p>
+         </div>
+
+      </div>
+   </div>
+
+   <div class="container ui">
+
+      <div class="buttons">
+
+         <include src="src/components/btn-primary.html" locals='{
+            "text": "Вcе услуги"
+        }'></include>
+
+         <button class="btn_primary">
+            <span class="maintext">Все услуги</span>
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M12 1.68652L23.3137 13.0002M23.3137 13.0002L12.508 23.806M23.3137 13.0002H0.686292"
+                  stroke="white" stroke-width="2" />
+            </svg>
+         </button>
+
+         <button class="btn_primary" disabled>
+            <span class="maintext">Все услуги</span>
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M12 1.68652L23.3137 13.0002M23.3137 13.0002L12.508 23.806M23.3137 13.0002H0.686292"
+                  stroke="white" stroke-width="2" />
+            </svg>
+         </button>
+
+         <button class="btn_primary btn_primary--noarrow" disabled>
+            <span class="maintext">Все услуги</span>
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M12 1.68652L23.3137 13.0002M23.3137 13.0002L12.508 23.806M23.3137 13.0002H0.686292"
+                  stroke="white" stroke-width="2" />
+            </svg>
+         </button>
+      </div>
+
+      <div class="buttons">
+         <button class="btn_secondary">
+            <span class="maintext">Загрузить еще</span>
+         </button>
+         <button class="btn_secondary" disabled>
+            <span class="maintext">Загрузить еще</span>
+         </button>
+      </div>
+
+      <div class="buttons buttons--light">
+         <button class="btn_secondary btn_secondary--dark">
+            <span class="maintext">Загрузить еще</span>
+         </button>
+         <button class="btn_secondary btn_secondary--dark" disabled>
+            <span class="maintext">Загрузить еще</span>
+         </button>
+      </div>
+
+      <div class="buttons buttons--light">
+         <button class="btn_third">
+            <span class="maintext">Откликнуться</span>
+            <div class="btn_third__svg">
+               <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 1.68652L23.3137 13.0002M23.3137 13.0002L12.508 23.806M23.3137 13.0002H0.686292"
+                     stroke="white" stroke-width="2" />
+               </svg>
+            </div>
+         </button>
+
+         <button class="btn_third" disabled>
+            <span class="maintext">Откликнуться</span>
+            <div class="btn_third__svg">
+               <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 1.68652L23.3137 13.0002M23.3137 13.0002L12.508 23.806M23.3137 13.0002H0.686292"
+                     stroke="white" stroke-width="2" />
+               </svg>
+            </div>
+         </button>
+      </div>
+
+
+      <div class="buttons buttons--light">
+         <a href="#" class="arrow_link">
+            <span class="maintext">Перейти на HH.ru</span>
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M12 1.68652L23.3137 13.0002M23.3137 13.0002L12.508 23.806M23.3137 13.0002H0.686292"
+                  stroke="white" stroke-width="2" />
+            </svg>
+         </a>
+         <a href="#" class="arrow_link arrow_link--disabled">
+            <span class="maintext">Перейти на HH.ru</span>
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M12 1.68652L23.3137 13.0002M23.3137 13.0002L12.508 23.806M23.3137 13.0002H0.686292"
+                  stroke="white" stroke-width="2" />
+            </svg>
+         </a>
+      </div>
+
+
+      <div class="buttons buttons--light">
+         <label class="tab_checkbox">
+            <input type="checkbox">
+            <span class="maintext">Нижневартовск</span>
+         </label>
+         <label class="tab_checkbox">
+            <input type="checkbox" disabled>
+            <span class="maintext">Нижневартовск</span>
+         </label>
+      </div>
+
+      <div class="buttons buttons--light">
+         <button class="arrow_btn">
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M12 1.68652L23.3137 13.0002M23.3137 13.0002L12.508 23.806M23.3137 13.0002H0.686292"
+                  stroke="white" stroke-width="2" />
+            </svg>
+         </button>
+         <button class="arrow_btn arrow_btn--left">
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M12 1.68652L23.3137 13.0002M23.3137 13.0002L12.508 23.806M23.3137 13.0002H0.686292"
+                  stroke="white" stroke-width="2" />
+            </svg>
+         </button>
+         <button class="arrow_btn" disabled>
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M12 1.68652L23.3137 13.0002M23.3137 13.0002L12.508 23.806M23.3137 13.0002H0.686292"
+                  stroke="white" stroke-width="2" />
+            </svg>
+         </button>
+      </div>
+
+      <div class="buttons buttons--light">
+         <select name="" id="select_mat" class="select">
+            <option value="">Обслуживание</option>
+            <option value="">Бурение</option>
+            <option value="">Обслуживание</option>
+            <option value="">Обслуживание</option>
+            <option value="">Обслуживание</option>
+            <option value="">Обслуживание</option>
+            <option value="" selected disabled>Выберите тему&nbsp;</option>
+         </select>
+         <script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
+
+         <script>
+            const choices = new Choices('.select', {
+               searchEnabled: false,
+               shouldSort: false,
+               shouldSortItems: false,
+            });
+
+            var a = document.getElementsByClassName('select'), i = 0;
+            while (a[i]) {
+               if (/([a-zA-Z0-9-.])\*([a-zA-Z0-9-.])/.test(a[i].innerHTML))
+                  a[i].innerHTML = a[i].innerHTML.replace(/([a-zA-Z0-9-.])@([a-zA-Z0-9-.])/g, '$1<span class="dog">@</span>$2');
+               ++i;
+            }
+         </script>
+      </div>
+
+
+      <div class="buttons buttons--light">
+         <div class="tenders">
+            <p class="tenders__text liltext light">Тендеров на странице</p>
+            <div class="tenders__list liltext light">
+               <label class="tenders__check">
+                  <input type="radio" name="tenders__check">
+                  <span>10</span>
+               </label>
+               <label class="tenders__check">
+                  <input type="radio" name="tenders__check">
+                  <span>25</span>
+               </label>
+               <label class="tenders__check">
+                  <input type="radio" name="tenders__check">
+                  <span>50</span>
+               </label>
+            </div>
+         </div>
+
+
+         <div class="pages liltext">
+            <button class="pages_arrow pages_arrow-left">
+               <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21 10L1 10M1 10L8.77778 19M1 10L8.77778 1" stroke="#2D3A4D" />
+               </svg>
+            </button>
+
+            <a href="#" class="pages__page">1</a>
+            <a href="#" class="pages__page pages__page--active">2</a>
+            <a href="#" class="pages__page">3</a>
+            <a href="#" class="pages__page">...</a>
+            <a href="#" class="pages__page">66 </a>
+
+            <button class="pages_arrow pages_arrow-right">
+               <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21 10L1 10M1 10L8.77778 19M1 10L8.77778 1" stroke="#2D3A4D" />
+               </svg>
+            </button>
+         </div>
+      </div>
+
+
+      <div class="buttons buttons--light" style="padding: 50rem">
+
+         <label class="label-input" data-error="Поле заполнено некорректно">
+            <input value="" type="text" class="maintext" placeholder="&nbsp;" required>
+            <span class="maintext">Имя</span>
+         </label>
+
+         <label class="label-input label-input--error" data-error="Поле заполнено некорректно">
+            <input value="" type="text" class="maintext" placeholder="&nbsp;" required>
+            <span class="maintext">Имя</span>
+         </label>
+
+         <label class="label-input textarea" data-error="Поле заполнено некорректно">
+            <textarea type="text" class="maintext" placeholder="&nbsp;" required></textarea>
+            <span class="maintext">Имя</span>
+         </label>
+
+      </div>
+   </div>
+
+   
+   <include src="src/components/footer.html"></include>
+</body>
+
+</html>

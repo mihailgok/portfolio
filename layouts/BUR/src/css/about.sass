@@ -1,0 +1,262 @@
+.about
+   &_hero
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%), url("../img/about.jpeg") center center no-repeat
+      background-size: cover 
+      .hero__title 
+         margin-right: 385rem
+         .hero__header
+            color: $main-white
+      &__list 
+         display: flex 
+         flex-direction: column
+         gap: 8rem
+      &__item 
+         display: flex
+         align-items: center
+         position: relative
+         color: $main-white
+         &::before
+            content: ""
+            width: 5rem
+            height: 5rem 
+            border-radius: 50%
+            margin: 0 12rem
+            background: $main-white
+
+   &_history 
+      background: $main-lightgray
+      padding: 100rem 0
+      margin-bottom: 0
+      &__header 
+         color: $main-blue
+         margin-bottom: 73rem
+      &__grid
+         display: flex 
+         justify-content: space-between
+      &__card 
+         &:last-child
+            max-width: 544rem
+         &__header 
+            color: $main-highlight
+            span
+               font-size: 0.671em
+
+   &_map
+      padding-top: 100rem
+      margin-bottom: 42rem
+      &__top
+         display: flex
+         justify-content: space-between
+         &__list 
+            gap: 16rem
+            display: flex 
+            flex-direction: column
+         &__item
+            display: flex
+            align-items: center
+            svg 
+               width: 32rem 
+               height: 32rem
+               margin-right: 25rem
+      &__header 
+         max-width: 705rem
+      &__map
+         margin-top: -25rem
+      &__img 
+         width: 100%
+   &_page 
+      &__header 
+         margin-bottom: 88rem
+         color: $main-blue
+      .about__info
+         max-width: 100%
+         margin-bottom: 80rem
+      .about__col:first-child
+         .about__img
+            max-height: 768rem
+            object-fit: cover
+      .about__col:last-child
+         .subtitle
+            max-width: 705rem
+   &_statagy
+      margin-bottom: 0
+      // background: #2D3A4D, url("../img/arrow-blue.svg") center no-repeat
+      background-color: #2D3A4D
+      background-image: url("../img/arrow-blue.svg")
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: right center
+      color: #FFFFFF
+      padding: 100rem 0
+      background-size: contain
+      &__header 
+         margin-bottom: 24rem
+      &__text 
+         max-width: 580rem
+         margin-bottom: 120rem
+      &__grid 
+         display: flex 
+         align-items: flex-start
+         gap: 100rem
+      &__card 
+         max-width: 480rem
+         &__text 
+            height: 72rem
+         &__header 
+            display: flex 
+            align-items: center
+            margin-bottom: 8rem
+            &::before
+               content: ""
+               width: 25rem
+               height: 4rem
+               background: $main-highlight
+               margin-right: 16rem
+               transform: skew(-20deg)
+   &_politics 
+      padding: 100rem 0
+      margin-bottom: 100rem
+      &__header 
+         max-width: 766rem
+      &__text 
+         max-width: 521rem
+      &__grid
+         display: grid
+         grid-template-columns: 1fr 1fr 1fr
+         gap: 20rem
+      &__card 
+         gap: 133rem
+         display: flex
+         flex-direction: column
+         padding: 32rem 
+         background: $main-lightgray
+         &__text 
+            height: 72rem
+   &_social
+      &__container
+         display: flex 
+         align-items: center
+         justify-content: space-between
+      &__btns
+         display: flex 
+         align-items: center
+         gap: 32rem
+         .btn_primary
+            padding: 20rem 140rem
+            svg 
+               transform: rotate(0)
+               width: 32rem 
+               height: 32rem
+
+
+@media (max-width: 650px) 
+   .about
+      &_hero 
+         background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%), url("../img/about-m.jpeg") center center no-repeat
+         background-size: cover
+         padding: 106rem 0 226rem 0
+         .hero__title
+            margin-right: 0
+            margin-bottom: 32rem
+            .hero__header
+               margin-bottom: 0
+         &__list 
+            gap: 8rem
+         &__item 
+            align-items: flex-start
+            &::before
+               margin: 0.5em 15rem 0 15rem
+               width: 4rem
+               height: 4rem
+
+      &_history 
+         padding: 48rem 0
+         &__header
+            margin-bottom: 32rem
+         &__grid 
+            display: flex 
+            flex-direction: column
+            gap: 32rem
+         &__card 
+            &__header 
+               font-size: 62rem
+
+      &_map
+         padding: 48rem 0
+         &__header 
+            margin-bottom: 32rem
+         &__top 
+            display: flex 
+            flex-direction: column
+            margin-bottom: 32rem
+            &__list 
+               gap: 8rem
+         &__map 
+            margin-top: 0
+      &_page 
+         &__header 
+            margin-bottom: 28rem
+         .about__info
+            margin-bottom: 40rem
+         .about__col:first-child 
+            .about__img
+               width: 290rem
+               height: 316rem
+               margin-bottom: 40rem
+      &_statagy
+         padding: 48rem 0
+         margin-bottom: 0
+         background-size: cover
+         background-position: left center
+         &__header 
+            margin-bottom: 16rem
+         &__text 
+            margin-bottom: 32rem
+         &__grid 
+            display: flex 
+            flex-direction: column
+            gap: 32rem
+         &__card 
+            &__text
+               height: 42rem
+      &_politics 
+         padding: 48rem 0
+         margin-bottom: 0
+         &__header 
+            margin-bottom: 16rem
+            color: #3D3935
+         &__grid 
+            display: flex 
+            flex-direction: column
+            gap: 16rem
+         &__card 
+            gap: 31rem
+      &_partners 
+         padding: 48rem 0
+         margin-bottom: 0
+         // .partners__grid
+            // display: grid 
+            // grid-template-columns: 1fr 1fr
+         .partners__card
+            grid-area: auto
+      &_social 
+         padding: 48rem 0
+         margin-bottom: 0
+         &__container 
+            flex-direction: column
+            align-items: flex-start
+            .h2 
+               margin-bottom: 56rem
+         &__btns 
+            flex-direction: column
+            align-items: center
+            width: 100%
+            .btn_primary
+               display: flex 
+               justify-content: center
+               width: 95%
+               padding: 15rem 0 18rem 0
+               align-self: center
+               svg 
+                  width: 30rem
+                  height: 30rem

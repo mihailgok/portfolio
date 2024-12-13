@@ -1,0 +1,8 @@
+{
+    "version": "1.1",
+    "api_version": 3,
+    "layout": {
+       "logo": "/tableau.png",
+       "color": "#D8F5E7"
+    }
+ }

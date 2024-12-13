@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Компания «БурСервис»</title>
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+
+   <link rel="stylesheet" href="css/final.sass">
+
+   <script src="js/rem.js"></script>
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+   <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+</head>
+
+<body>
+
+   <include src="src/components/header.html"></include>
+
+   <main>
+
+      <section class="section vac-hero about_hero">
+         <div class="container">
+            <div class="hero__title">
+               <h1 class="hero__header h2 reg">О компании</h1>
+               <!-- <p class="vac-hero__subtitle subtitle light">Всего 35 вакансий</p> -->
+            </div>
+
+            <ul class="about_hero__list h6">
+               <li class="about_hero__item">Безопасность и качество - наша цель</li>
+               <li class="about_hero__item">Природа - наша забота</li>
+               <li class="about_hero__item">Технологии и надёжность - наша сила</li>
+               <li class="about_hero__item">Доверие заказчиков - наша мотивация</li>
+            </ul>
+         </div>
+      </section>
+
+      <section class="section about_history">
+         <div class="container">
+            <h2 class="about_history__header h2 reg aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
+               Компания&nbsp;«БурСервис» была создана в 2000 году с целью оказания сервисных услуг в области
+               наклонно-направленного бурения
+            </h2>
+
+            <div class="about_history__grid">
+               <div class="about_history__card">
+                  <p class="about_history__card__header h1 med">3000+</p>
+                  <p class="about_history__card__text maintext">человек штат компании в России</p>
+               </div>
+               <div class="about_history__card">
+                  <p class="about_history__card__header h1 med">2007<span>г.</span></p>
+                  <p class="about_history__card__text maintext">
+                     ООО «БурСервис» вошла в группу компаний Halliburton
+                  </p>
+               </div>
+               <div class="about_history__card">
+                  <p class="about_history__card__header h1 med">2022<span>г.</span></p>
+                  <p class="about_history__card__text maintext">
+                     «БурСервис» были переданы права на оказание нефтесервисных услуг в части всего бизнеса Halliburton
+                     в России, включая без ограничения: предоставление оборудования, услуг и комплексных решений для
+                     проектов в сфере разведки, разработки и добычи нефти и газа
+                  </p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+
+      <section class="section about_map">
+         <div class="container">
+            <div class="about_map__top">
+               <h2 class="about_map__header h6 reg">Операционная деятельность компании в основных нефтегазовых районах
+                  России поддерживается производственными базами и региональными офисами в Нижневартовске, Новом
+                  Уренгое, Губкинском, Нефтеюганске, Усинске, Кожве, Пойково, Тюмени, Бузлуке, на о. Сахалин, в
+                  Иркутске, Красноярске, Оренбурге, Перми. Усть-Куте, Санкт-Петербурге и Москве</h2>
+
+               <div class="about_map__top__list">
+                  <div class="about_map__top__item h6">
+                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" fill="#CE0E2D" />
+                        <path
+                           d="M15.8091 13.7136C15.2952 13.7136 14.8139 13.9129 14.4495 14.2773C14.0869 14.6417 13.8858 15.1229 13.8858 15.6368C13.8858 16.1507 14.0869 16.632 14.4495 16.9964C14.8139 17.359 15.2952 17.5601 15.8091 17.5601C16.323 17.5601 16.8042 17.359 17.1686 16.9964C17.5313 16.632 17.7323 16.1507 17.7323 15.6368C17.7323 15.1229 17.5313 14.6417 17.1686 14.2773C16.9906 14.098 16.7788 13.9558 16.5454 13.859C16.312 13.7622 16.0617 13.7128 15.8091 13.7136ZM22.8955 17.7612L21.7714 16.8004C21.8247 16.4739 21.8522 16.1404 21.8522 15.8087C21.8522 15.477 21.8247 15.1418 21.7714 14.817L22.8955 13.8562C22.9804 13.7835 23.0412 13.6867 23.0697 13.5786C23.0983 13.4706 23.0932 13.3564 23.0553 13.2512L23.0398 13.2065C22.7305 12.3415 22.267 11.5396 21.6717 10.8398L21.6408 10.8037C21.5685 10.7187 21.4722 10.6576 21.3645 10.6285C21.2568 10.5993 21.1428 10.6035 21.0375 10.6404L19.6419 11.1371C19.1263 10.7143 18.5522 10.3809 17.93 10.1489L17.6602 8.68965C17.6398 8.57972 17.5865 8.47859 17.5073 8.39969C17.4281 8.32079 17.3267 8.26786 17.2167 8.24793L17.1703 8.23934C16.2766 8.07777 15.3347 8.07777 14.4409 8.23934L14.3945 8.24793C14.2845 8.26786 14.1832 8.32079 14.104 8.39969C14.0248 8.47859 13.9715 8.57972 13.9511 8.68965L13.6795 10.1557C13.0632 10.3896 12.4891 10.7223 11.9797 11.1406L10.5738 10.6404C10.4685 10.6032 10.3544 10.5989 10.2467 10.6281C10.1389 10.6572 10.0426 10.7185 9.97047 10.8037L9.93953 10.8398C9.34535 11.5403 8.88194 12.342 8.57141 13.2065L8.55594 13.2512C8.4786 13.4661 8.54219 13.7067 8.71578 13.8562L9.8536 14.8273C9.80032 15.1504 9.77453 15.4804 9.77453 15.807C9.77453 16.137 9.80032 16.467 9.8536 16.7867L8.71922 17.7578C8.63431 17.8305 8.57353 17.9273 8.54498 18.0354C8.51643 18.1434 8.52145 18.2576 8.55938 18.3628L8.57485 18.4075C8.88594 19.272 9.34485 20.0712 9.94297 20.7742L9.97391 20.8103C10.0462 20.8953 10.1425 20.9564 10.2502 20.9855C10.3579 21.0147 10.4719 21.0105 10.5772 20.9736L11.9831 20.4734C12.4953 20.8945 13.0659 21.2279 13.683 21.4582L13.9545 22.9243C13.9749 23.0343 14.0282 23.1354 14.1074 23.2143C14.1866 23.2932 14.288 23.3461 14.398 23.3661L14.4444 23.3746C15.3469 23.5371 16.2712 23.5371 17.1738 23.3746L17.2202 23.3661C17.3302 23.3461 17.4315 23.2932 17.5107 23.2143C17.5899 23.1354 17.6432 23.0343 17.6636 22.9243L17.9334 21.4651C18.5556 21.2314 19.1297 20.8996 19.6453 20.4768L21.0409 20.9736C21.1462 21.0108 21.2603 21.0151 21.368 20.9859C21.4758 20.9568 21.5721 20.8955 21.6442 20.8103L21.6752 20.7742C22.2733 20.0678 22.7322 19.272 23.0433 18.4075L23.0588 18.3628C23.1327 18.1496 23.0691 17.9107 22.8955 17.7612ZM15.8091 18.6584C14.1402 18.6584 12.7875 17.3057 12.7875 15.6368C12.7875 13.9679 14.1402 12.6153 15.8091 12.6153C17.478 12.6153 18.8306 13.9679 18.8306 15.6368C18.8306 17.3057 17.478 18.6584 15.8091 18.6584Z"
+                           fill="white" />
+                     </svg>
+                     <span>Оперативная база</span>
+                  </div>
+                  <div class="about_map__top__item h6">
+                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" fill="#CE0E2D" />
+                        <path
+                           d="M19.5544 15.5422H12.2383V14.1449H21.8949V12H9V20.9474H19.5398C20.3514 20.9474 21.1298 20.6755 21.7037 20.1917C22.2776 19.7078 22.6 19.0516 22.6 18.3673V18.1253C22.601 17.4426 22.281 16.7874 21.7101 16.3033C21.1393 15.8191 20.3641 15.5454 19.5544 15.5422ZM19.3763 18.1283C19.3763 18.2187 19.3551 18.3082 19.314 18.3917C19.2728 18.4752 19.2125 18.551 19.1365 18.6148C19.0606 18.6785 18.9704 18.729 18.8712 18.7633C18.772 18.7977 18.6657 18.8151 18.5585 18.8147H12.2383V17.396H18.5585C18.6657 17.3956 18.772 17.4131 18.8712 17.4474C18.9704 17.4817 19.0606 17.5322 19.1365 17.5959C19.2125 17.6597 19.2728 17.7355 19.314 17.819C19.3551 17.9025 19.3763 17.992 19.3763 18.0824V18.1283Z"
+                           fill="white" />
+                     </svg>
+                     <span>Оперативная база</span>
+                  </div>
+                  <div class="about_map__top__item h6">
+                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" fill="#CE0E2D" />
+                        <path
+                           d="M21.8396 20.808L17.5819 14.0214V10.7772H18.571V9H12.5313V10.779H13.5285V14.0232L9.26266 20.808C9.10316 21.0607 9.01255 21.3534 9.00042 21.6551C8.9883 21.9568 9.05511 22.2563 9.19379 22.5219C9.33246 22.7875 9.53785 23.0093 9.78822 23.1639C10.0386 23.3184 10.3246 23.4 10.6161 23.4H20.481C20.773 23.3995 21.0594 23.3174 21.3101 23.1622C21.5608 23.0071 21.7663 22.7847 21.9051 22.5186C22.0439 22.2524 22.1108 21.9524 22.0986 21.6502C22.0865 21.3479 21.9958 21.0547 21.8362 20.8014L21.8402 20.808H21.8396ZM21.3155 22.1892C21.2344 22.3441 21.1144 22.4734 20.9683 22.5636C20.8221 22.6538 20.6552 22.7015 20.4851 22.7016H10.6161C10.4452 22.7019 10.2775 22.6542 10.1307 22.5637C9.98381 22.4732 9.86334 22.3433 9.782 22.1876C9.70067 22.0319 9.66151 21.8563 9.66867 21.6795C9.67583 21.5026 9.72905 21.3311 9.82268 21.183L9.82037 21.1866L14.1922 14.2266V10.776H16.906V14.2284L21.2733 21.1884C21.3717 21.339 21.4308 21.525 21.4308 21.7254C21.4308 21.8964 21.3879 22.0572 21.3126 22.1964L21.3149 22.1916L21.3155 22.1892Z"
+                           fill="white" />
+                        <path
+                           d="M17.9465 15.5828H13.1752L10.6901 18.6685L9.59684 21.3428L9.6294 22.4331C9.60954 22.4677 9.59827 22.5079 9.59684 22.5495C9.5954 22.591 9.60386 22.6322 9.62127 22.6686L9.62059 22.6678C9.65448 22.7363 9.71684 22.782 9.78868 22.7828H21.3324C21.3665 22.7828 21.4 22.7722 21.4295 22.7521C21.4589 22.732 21.4832 22.7032 21.4998 22.6686L21.5005 22.6678C21.518 22.6316 21.5264 22.5904 21.5249 22.549C21.5233 22.5075 21.5118 22.4674 21.4917 22.4331L21.4924 22.4339L21.5249 21.6513L20.3322 19.0799L17.9465 15.5828Z"
+                           fill="white" />
+                     </svg>
+                     <span>Оперативная база</span>
+                  </div>
+                  <div class="about_map__top__item h6">
+                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" fill="#CE0E2D" />
+                        <path
+                           d="M16 8.50024L8.5 12.8336V23.5002H13.5L15.9167 21.0002L18.5 23.5002H23.5V12.8336L16 8.50024ZM12.5833 22.6669V17.6669L15.0833 20.1669L12.5833 22.6669ZM13.4167 16.8336H18.4167L15.9167 19.3336L13.4167 16.8336ZM19.25 22.6669L16.75 20.1669L19.25 17.6669V22.6669ZM18.5 15.1669H13.3333V13.5002H18.5V15.1669Z"
+                           fill="white" />
+                     </svg>
+                     <span>Склад</span>
+                  </div>
+               </div>
+            </div>
+
+            <div class="about_map__map">
+               <img src="img/map.svg" alt="" class="about_map__img">
+            </div>
+         </div>
+      </section>
+
+      <section class="section about about_page">
+         <div class="container">
+            <h2 class="about_page__header h2 reg" data-aos="fade-up" data-aos-duration="1000">
+               Предоставление высококачественных
+               и&nbsp;безопасных услуг по бурению скважин
+               для наших клиентов
+            </h2>
+
+            <div class="about__cols">
+               <div class="about__col">
+                  <p class="about__info light subtitle" data-aos="fade-up" data-aos-duration="1000">
+                     Мы стремимся быть лидирующей компанией в нефтегазовой отрасли по предоставлению буровых услуг при
+                     наиболее эффективном использовании имеющихся производственных и природных ресурсов с учетом
+                     сохранения благоприятной экологической ситуации в регионах деятельности.
+                  </p>
+                  <div class="about__img_container">
+                     <div>
+                        <img class="about__img" src="img/about1.jpeg">
+                     </div>
+                  </div>
+               </div>
+
+               <div class="about__col">
+                  <div class="about__img_container">
+                     <div>
+                        <img class="about__img about__img-margin" src="img/about2.jpeg">
+                     </div>
+                  </div>
+                  <p class="light subtitle" data-aos="fade-left" data-aos-delay="1000" data-aos-duration="1000">
+                     Внедряем самые современные производственные технологии. Обладаем высококвалифицированным
+                     персоналом, способным решать самые сложные задачи. Всегда выполняем взятые на себя обязательства и
+                     гордимся этим!
+                  </p>
+               </div>
+            </div>
+         </div>
+
+         <script>
+            document.addEventListener("DOMContentLoaded", () => {
+               function onVisible(element, callback) {
+                  new IntersectionObserver((entries, observer) => {
+                     entries.forEach(entry => {
+                        if (entry.intersectionRatio > 0) {
+                           callback(element);
+                           observer.disconnect();
+                        }
+                     });
+                  }).observe(element);
+               }
+
+               function showImg(el) {
+                  setTimeout(() => {
+                     el.classList.add("active");
+                  }, 500);
+               }
+
+               const allImgs = document.querySelectorAll(".about__img_container");
+
+               for (let img of allImgs) {
+                  onVisible(img, showImg);
+               }
+            })
+         </script>
+      </section>
+
+
+      <section class="section about_statagy">
+         <div class="container">
+            <h2 class="about_statagy__header h2 reg">Стратегия в области ОТ, ПБ, ООС и&nbsp;качества обслуживания</h2>
+            <p class="about_statagy__text maintext">
+               Программа «Наш путь к нулевым показателям» - концепция БурСервис по достижению нулевых показателей по
+               происшествиям, связанным с техникой безопасности, по экологическим происшествиям, а также достижению
+               нулевого уровня непроизводственного времени.
+            </p>
+
+            <div class="about_statagy__grid">
+               <div class="about_statagy__card">
+                  <h4 class="about_statagy__card__header h6">
+                     01
+                  </h4>
+                  <p class="about_statagy__card__text h6 reg">
+                     Придерживаться самых высоких стандартов услуг
+                  </p>
+               </div>
+               <div class="about_statagy__card">
+                  <h4 class="about_statagy__card__header h6 reg">
+                     02
+                  </h4>
+                  <p class="about_statagy__card__text h6">
+                     Придерживаться самых высоких стандартов услуг
+                  </p>
+               </div>
+               <div class="about_statagy__card">
+                  <h4 class="about_statagy__card__header h6 reg">
+                     03
+                  </h4>
+                  <p class="about_statagy__card__text h6">
+                     Не идти на компромиссы при выполнении работ
+                  </p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="section about_politics">
+         <div class="container">
+            <div class="section__top partners__top">
+               <h2 class="about_politics__header h2 reg">
+                  Политика нулевых показателей
+               </h2>
+
+               <p class="about_politics__text maintext reg">
+                  Компания БурСервис придерживается высоких стандартов безопасности, охраны здоровья, человека и
+                  окружающей среды и безусловно сохранит данные приоритеты в долгосрочной перспективе
+               </p>
+            </div>
+
+            <div class="about_politics__grid">
+               <div class="about_politics__card">
+                  <h4 class="about_statagy__card__header h6 reg">
+                     01
+                  </h4>
+                  <p class="about_statagy__card__text h6">
+                     Обязательсва руководства
+                  </p>
+               </div>
+               <div class="about_politics__card">
+                  <h4 class="about_statagy__card__header h6 reg">
+                     02
+                  </h4>
+                  <p class="about_statagy__card__text h6">
+                     Непрерывное улучшение системы управлени
+                  </p>
+               </div>
+               <div class="about_politics__card">
+                  <h4 class="about_statagy__card__header h6 reg">
+                     03
+                  </h4>
+                  <p class="about_statagy__card__text h6">
+                     Обучение и квалификация
+                  </p>
+               </div>
+               <div class="about_politics__card">
+                  <h4 class="about_statagy__card__header h6 reg">
+                     04
+                  </h4>
+                  <p class="about_statagy__card__text h6">
+                     Взаимодействие и регулирование рисков
+                  </p>
+               </div>
+               <div class="about_politics__card">
+                  <h4 class="about_statagy__card__header h6 reg">
+                     05
+                  </h4>
+                  <p class="about_statagy__card__text h6">
+                     Улучшение технологий процессов
+                  </p>
+               </div>
+               <div class="about_politics__card">
+                  <h4 class="about_statagy__card__header h6 reg">
+                     06
+                  </h4>
+                  <p class="about_statagy__card__text h6">
+                     Контроль результатов деятельности
+                  </p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+
+      <section class="section about_partners partners">
+         <div class="container">
+            <div class="section__top partners__top">
+               <p class="section__top__text h5 light">
+                  С кем мы работаем
+               </p>
+
+               <p class="partners__top__text h5 reg">
+                  Среди ключевых Заказчиков услуг компании “БурСервис” все крупные российские нефтегазовые компании, а
+                  также малые и средние предприятия добывающей отрасли.
+               </p>
+            </div>
+
+            <div class="partners__grid">
+               <div class="partners__card" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
+                  <!-- <p style="color: #0079C2;">Газпром</p> -->
+                  <!-- <img src="img/partners/gazprom.svg"> -->
+                  <img src="img/partners/new-new/rosn.svg">
+               </div>
+               <div class="partners__card" data-aos="fade-up" data-aos-delay="250" data-aos-duration="1000">
+                  <!-- <p style="color: #0079C2;">Газпром нефть</p> -->
+                  <img src="img/partners/new-new/gzp.svg">
+                  <!-- <img src="img/partners/gazprom-neft.svg"> -->
+               </div>
+               <div class="partners__card" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                  <!-- <p style="color: #ED1A3A;">Лукойл</p> -->
+                  <img src="img/partners/new-new/lk.svg">
+                  <!-- <img src="img/partners/lukoil.svg"> -->
+               </div>
+               <div class="partners__card" data-aos="fade-up" data-aos-delay="750" data-aos-duration="1000">
+                  <!-- <p style="color: #000000;">Роснефть</p> -->
+                  <img src="img/partners/new-new/nova.svg">
+               </div>
+            </div>
+
+         </div>
+      </section>
+
+
+      <section class="section about_social">
+         <div class="container about_social__container">
+            <h2 class="h2 reg">Мы в соц.сетях</h2>
+
+            <div class="about_social__btns">
+               <button class="btn_primary">
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <g id="file-icons:telegram" clip-path="url(#clip0_730_655)">
+                        <path id="Vector"
+                           d="M29.4022 2.83884L1.0517 13.828C-0.0891702 14.3397 -0.475045 15.3645 0.775955 15.9207L8.04908 18.244L25.6346 7.31965C26.5948 6.63384 27.5778 6.81671 26.7319 7.57115L11.6283 21.3171L11.1539 27.1343C11.5933 28.0325 12.398 28.0367 12.9112 27.5903L17.0898 23.616L24.2464 29.0027C25.9086 29.9918 26.813 29.3535 27.1706 27.5405L31.8647 5.19865C32.3521 2.96709 31.521 1.98384 29.4022 2.83884Z"
+                           fill="white" />
+                     </g>
+                     <defs>
+                        <clipPath id="clip0_730_655">
+                           <rect width="32" height="32" fill="white" />
+                        </clipPath>
+                     </defs>
+                  </svg>
+               </button>
+               <button class="btn_primary">
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <g id="akar-icons:vk-fill" clip-path="url(#clip0_730_660)">
+                        <path id="Vector" fill-rule="evenodd" clip-rule="evenodd"
+                           d="M31.2667 7.93075C31.488 7.20275 31.2667 6.66675 30.2067 6.66675H26.7067C25.816 6.66675 25.4053 7.12941 25.1827 7.64008C25.1827 7.64008 23.4027 11.9014 20.8813 14.6694C20.0653 15.4721 19.6947 15.7267 19.2493 15.7267C19.0267 15.7267 18.692 15.4721 18.692 14.7427V7.93075C18.692 7.05608 18.4467 6.66675 17.7053 6.66675H12.2013C11.6453 6.66675 11.3107 7.07208 11.3107 7.45741C11.3107 8.28541 12.572 8.47741 12.7013 10.8081V15.8721C12.7013 16.9827 12.4973 17.1841 12.052 17.1841C10.8653 17.1841 7.97867 12.9027 6.26533 8.00408C5.93333 7.05075 5.59733 6.66675 4.70267 6.66675H1.2C0.2 6.66675 0 7.12941 0 7.64008C0 8.54941 1.18667 13.0667 5.52667 19.0414C8.42 23.1214 12.4933 25.3334 16.204 25.3334C18.4293 25.3334 18.704 24.8427 18.704 23.9961V20.9121C18.704 19.9294 18.9147 19.7334 19.62 19.7334C20.14 19.7334 21.0293 19.9894 23.1067 21.9561C25.48 24.2881 25.8707 25.3334 27.2067 25.3334H30.7067C31.7067 25.3334 32.208 24.8427 31.92 23.8721C31.6027 22.9067 30.4693 21.5054 28.9667 19.8427C28.1507 18.8961 26.9267 17.8761 26.5547 17.3654C26.036 16.7107 26.184 16.4187 26.5547 15.8361C26.5547 15.8361 30.8213 9.93475 31.2653 7.93075H31.2667Z"
+                           fill="white" />
+                     </g>
+                     <defs>
+                        <clipPath id="clip0_730_660">
+                           <rect width="32" height="32" fill="white" />
+                        </clipPath>
+                     </defs>
+                  </svg>
+               </button>
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <include src="src/components/footer.html"></include>
+</body>
+
+</html>

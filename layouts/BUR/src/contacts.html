@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Компания «БурСервис»</title>
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+
+   <link rel="stylesheet" href="css/final.sass">
+
+   <script src="js/rem.js"></script>
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+   <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+</head>
+
+<body>
+
+   <include src="src/components/header.html"></include>
+
+   <main>
+      <section class="section contacts_hero">
+         <div class="container">
+            <div class="hero__title">
+               <h1 id="cont_header" class="hero__header h2 reg">Наши контакты</h1>
+            </div>
+         </div>
+
+         <div class="contacts_hero__map">
+            <div id="map"></div>
+
+            <div class="contacts_hero__info contacts_grid__card">
+               <h3 class="contacts_grid__card__header h4 reg">Москва</h3>
+               <p class="liltext light contacts_grid__card__label">Адрес:</p>
+               <address class="contacts_grid__card__address maintext">127018, г. Москва, ул. Двинцев, д.12, к.1 стр. С
+               </address>
+
+               <p class="liltext light contacts_grid__card__label">Телефон:</p>
+               <a class="contacts_grid__card__link maintext" href="tel:+74957558300">+7 (495) 755-83-00</a>
+            </div>
+         </div>
+
+         <img src="img/location.svg" style="display: none">
+         <img src="img/location-active.svg" style="display: none">
+
+      </section>
+
+
+      <section class="section contacts_grid">
+         <div class="container contacts_grid__container">
+            <!-- <div class="contacts_grid__card">
+               <h3 class="contacts_grid__card__header h5 reg">Москва</h3>
+               <p class="liltext light contacts_grid__card__label">Адрес:</p>
+               <address class="contacts_grid__card__address maintext">127018, г. Москва, ул. Двинцев, д.12, к.1 стр. С
+               </address>
+
+               <p class="liltext light contacts_grid__card__label">Телефон:</p>
+               <a class="contacts_grid__card__link maintext" href="tel:+74957558300">+7 (495) 755-83-00</a>
+            </div>
+            <div class="contacts_grid__card">
+               <h3 class="contacts_grid__card__header h5 reg">Санкт-Петербург</h3>
+               <p class="liltext light contacts_grid__card__label">Адрес:</p>
+               <address class="contacts_grid__card__address maintext">191168, г. Санкт-Петербург, ул. Невский Проспект,
+                  дом 21, Этаж 5, офис 517, Бизнес центр “Дом Мертенса”</address>
+
+               <p class="liltext light contacts_grid__card__label">Телефон:</p>
+               <a class="contacts_grid__card__link maintext" href="tel:+74957558300">+7 (495) 755-83-00</a>
+            </div>
+            <div class="contacts_grid__card">
+               <h3 class="contacts_grid__card__header h5 reg">Нижневартовск</h3>
+               <p class="liltext light contacts_grid__card__label">Адрес:</p>
+               <address class="contacts_grid__card__address maintext">628624, г. Нижневартовск, Северный Промузел 4ПС,
+                  д. 30</address>
+
+               <p class="liltext light contacts_grid__card__label">Телефон:</p>
+               <a class="contacts_grid__card__link maintext" href="tel:+73466292400">+7 (3466) 29-24-00</a>
+            </div>
+            <div class="contacts_grid__card">
+               <h3 class="contacts_grid__card__header h5 reg">Тюмень</h3>
+               <p class="liltext light contacts_grid__card__label">Адрес:</p>
+               <address class="contacts_grid__card__address maintext">625000, г. Тюмень, ул. Кирова, дом 40</address>
+
+               <p class="liltext light contacts_grid__card__label">Телефон:</p>
+               <a class="contacts_grid__card__link maintext" href="tel:+73452520108">+7 (3452) 52-01-08</a>
+            </div>
+            <div class="contacts_grid__card">
+               <h3 class="contacts_grid__card__header h5 reg">Нижневартовск</h3>
+               <p class="liltext light contacts_grid__card__label">Адрес:</p>
+               <address class="contacts_grid__card__address maintext">628624, г. Нижневартовск, Северный Промузел 4ПС,
+                  д. 30</address>
+
+               <p class="liltext light contacts_grid__card__label">Телефон:</p>
+               <a class="contacts_grid__card__link maintext" href="tel:">+7 (495) 755-83-00</a>
+            </div>
+            <div class="contacts_grid__card">
+               <h3 class="contacts_grid__card__header h5 reg">Новый Уренгой</h3>
+               <p class="liltext light contacts_grid__card__label">Адрес:</p>
+               <address class="contacts_grid__card__address maintext">629300, г. Новый Уренгой, ул. Северная магистраль,
+                  дом 5</address>
+
+               <p class="liltext light contacts_grid__card__label">Телефон:</p>
+               <a class="contacts_grid__card__link maintext" href="tel:+73494244010">+7 (3494) 24-40-10</a>
+            </div>
+            <div class="contacts_grid__card">
+               <h3 class="contacts_grid__card__header h5 reg">Южно-Сахалинск</h3>
+               <p class="liltext light contacts_grid__card__label">Адрес:</p>
+               <address class="contacts_grid__card__address maintext">693012, г. Южно-Сахалинск, ул. Украинская, дом 37
+               </address>
+
+               <p class="liltext light contacts_grid__card__label">Телефон:</p>
+               <a class="contacts_grid__card__link maintext" href="tel:+74242453600">+7 (4242) 45-36-00</a>
+            </div>
+            <div class="contacts_grid__card">
+               <h3 class="contacts_grid__card__header h5 reg">Бузулук</h3>
+               <p class="liltext light contacts_grid__card__label">Адрес:</p>
+               <address class="contacts_grid__card__address maintext">461040, г. Бузулук, ул. Промышленная 2Г</address>
+
+               <p class="liltext light contacts_grid__card__label">Телефон:</p>
+               <a class="contacts_grid__card__link maintext" href="tel:+73534222723">+7 (35342) 2-27-23</a>
+            </div>
+            <div class="contacts_grid__card">
+               <h3 class="contacts_grid__card__header h5 reg">Красноярск</h3>
+               <p class="liltext light contacts_grid__card__label">Адрес:</p>
+               <address class="contacts_grid__card__address maintext">660077, г. Красноярск, ул. Взлётная, 59</address>
+
+               <p class="liltext light contacts_grid__card__label">Телефон:</p>
+               <a class="contacts_grid__card__link maintext" href="tel:+74957558300">+7 (495) 755-83-00</a>
+            </div>
+            <div class="contacts_grid__card">
+               <h3 class="contacts_grid__card__header h5 reg">Иркутск</h3>
+               <p class="liltext light contacts_grid__card__label">Адрес:</p>
+               <address class="contacts_grid__card__address maintext">664047, г. Иркутск, ул. Трудовая, дом 60</address>
+
+               <p class="liltext light contacts_grid__card__label">Телефон:</p>
+               <a class="contacts_grid__card__link maintext" href="tel:+74957558300">+7 (495) 755-83-00</a>
+            </div>
+            <div class="contacts_grid__card">
+               <h3 class="contacts_grid__card__header h5 reg">Нефтеюганск (Пойковский)</h3>
+               <p class="liltext light contacts_grid__card__label">Адрес:</p>
+               <address class="contacts_grid__card__address maintext">628300, г. Нефтеюганск, мкр. 16А, д.50, этаж 3
+               </address>
+
+               <p class="liltext light contacts_grid__card__label">Телефон:</p>
+               <a class="contacts_grid__card__link maintext" href="tel:+74957558300">+7 (495) 755-83-00</a>
+            </div>
+            <div class="contacts_grid__card">
+               <h3 class="contacts_grid__card__header h5 reg">Губкинский</h3>
+               <p class="liltext light contacts_grid__card__label">Адрес:</p>
+               <address class="contacts_grid__card__address maintext">629830 Ямало-Ненецкий автономный округ, г.
+                  Губкинский, промышленная зона, панель 1, производственная база №0027, дом 2.</address>
+
+               <p class="liltext light contacts_grid__card__label">Телефон:</p>
+               <a class="contacts_grid__card__link maintext" href="tel:+74957558300">+7 (495) 755-83-00</a>
+            </div>
+            <div class="contacts_grid__card">
+               <h3 class="contacts_grid__card__header h5 reg">Усинск</h3>
+               <p class="liltext light contacts_grid__card__label">Адрес:</p>
+               <address class="contacts_grid__card__address maintext">169710, г. Усинск, ул. Комсомольская, дом 23.
+               </address>
+
+               <p class="liltext light contacts_grid__card__label">Телефон:</p>
+               <a class="contacts_grid__card__link maintext" href="tel:+78214454800">+7 (82144) 54-800</a>
+            </div> -->
+         </div>
+
+         <button class="contacts_grid__loadmore btn_secondary btn_secondary--dark">
+            <span class="maintext light">Показать все</span>
+         </button>
+      </section>
+
+
+      <section class="application">
+         <div class="container application__container">
+            <h2 class="h2 reg application__header" data-aos="fade-up" data-aos-duration="1000">Оставьте заявку<br> и мы
+               свяжемся <br>с вами</h2>
+
+            <form class="application-form" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+               <label class="label-input" data-error="Поле заполнено некорректно">
+                  <input value="" type="text" class="maintext" placeholder="&nbsp;" required>
+                  <span class="maintext">Имя</span>
+               </label>
+               <label class="label-input" data-error="Поле заполнено некорректно">
+                  <input value="" type="text" class="maintext" placeholder="&nbsp;" required>
+                  <span class="maintext">Номер телефона</span>
+               </label>
+               <label class="label-input" data-error="Поле заполнено некорректно">
+                  <input value="" type="text" class="maintext" placeholder="&nbsp;" required>
+                  <span class="maintext">Почта</span>
+               </label>
+
+               <select name="" id="select_mat" class="select">
+                  <option value="">Обслуживание</option>
+                  <option value="">Бурение</option>
+                  <option value="">Обслуживание</option>
+                  <option value="">Обслуживание</option>
+                  <option value="">Обслуживание</option>
+                  <option value="">Обслуживание</option>
+                  <option value="" selected disabled>Выберите тему&nbsp;</option>
+               </select>
+               <script
+                  src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
+
+               <script>
+                  const choices = new Choices('.select', {
+                     searchEnabled: false,
+                     shouldSort: false,
+                     shouldSortItems: false,
+                  });
+
+                  var a = document.getElementsByClassName('select'), i = 0;
+                  while (a[i]) {
+                     if (/([a-zA-Z0-9-.])\*([a-zA-Z0-9-.])/.test(a[i].innerHTML))
+                        a[i].innerHTML = a[i].innerHTML.replace(/([a-zA-Z0-9-.])@([a-zA-Z0-9-.])/g, '$1<span class="dog">@</span>$2');
+                     ++i;
+                  }
+               </script>
+
+               <label class="label-input textarea" data-error="Поле заполнено некорректно">
+                  <textarea value="" type="text" class="maintext" placeholder="&nbsp;"></textarea>
+                  <span class="maintext">Ваш комментарий</span>
+               </label>
+
+               <button class="btn_primary application__btn" type="submit">
+                  <span class="maintext">Отправить</span>
+               </button>
+
+            </form>
+         </div>
+
+         <div class="form_sended">
+            <div class="form_sended__container">
+               <button class="form_sended__close">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M1.5 2L19.5 20M37.5 38L19.5 20M19.5 20L37.5 2M19.5 20L1.5 38" stroke="black" />
+                  </svg>
+               </button>
+
+               <h5 class="form_sended__header h2 reg">
+                  Спасибо за заявку!
+               </h5>
+
+               <p class="form_sended__text h5 light">Наши менеджеры свяжутся с&nbsp;вами в&nbsp;течение 15 минут.</p>
+
+               <button class="btn_primary">
+                  <span class="maintext">На главную</span>
+                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M12 1.68652L23.3137 13.0002M23.3137 13.0002L12.508 23.806M23.3137 13.0002H0.686292"
+                        stroke="white" stroke-width="2"></path>
+                  </svg>
+               </button>
+            </div>
+         </div>
+
+
+
+         <script src="js/open-window.js"></script>
+      </section>
+
+   </main>
+
+
+   <script type="text/javascript">
+
+      document.addEventListener("DOMContentLoaded", () => {
+
+         let coordinates = [
+            {
+               id: 1,
+               town: "Москва",
+               address: "127018, г. Москва, ул. Двинцев, д.12, к.1 стр. С",
+               phone: "+7 (495) 755-83-00",
+               phone_link: "+74957558300",
+               coordinates: [55.796911, 37.600163],
+            },
+            {
+               id: 2,
+               town: "Санкт-Петербург",
+               address: "191168, г. Санкт-Петербург, ул. Невский Проспект, дом 21, Этаж 5, офис 517, Бизнес центр “Дом Мертенса”",
+               phone: "+7 (495) 755-83-00",
+               phone_link: "+74957558300",
+               coordinates: [59.935643, 30.322079],
+            },
+            {
+               id: 3,
+               town: "Нижневартовск",
+               address: "628624, г. Нижневартовск, Северный Промузел 4ПС, д. 30",
+               phone: "+7 (495) 755-83-00",
+               phone_link: "+74957558300",
+               coordinates: [60.938545, 76.558902],
+            },
+            {
+               id: 4,
+               town: "Тюмень",
+               address: "625000, г. Тюмень, ул. Кирова, дом 40",
+               phone: "+7 (3452) 52-01-08",
+               phone_link: "+73452520108",
+               coordinates: [57.156905, 65.530079],
+            },
+            {
+               id: 5,
+               town: "Новый Уренгой",
+               address: "629300, г. Новый Уренгой, ул. Северная магистраль, дом 5",
+               phone: "+7(3494)24-40-10",
+               phone_link: "+73494244010",
+               coordinates: [66.138457, 76.694602],
+            },
+            {
+               id: 6,
+               town: "Южно-Сахалинск",
+               address: "693012, г. Южно-Сахалинск, ул. Украинская, дом 37",
+               phone: "+7 (4242) 45-36-00",
+               phone_link: "+74242453600",
+               coordinates: [46.984802, 142.737106],
+            },
+            {
+               id: 7,
+               town: "Бузулук",
+               address: "461040, г. Бузулук,  ул. Промышленная 2Г",
+               phone: "+7 (35342) 2-27-23",
+               phone_link: "+73534222723",
+               coordinates: [52.787648, 52.219355],
+            },
+            {
+               id: 8,
+               town: "Красноярск",
+               address: "660077, г. Красноярск, ул. Взлётная, 59",
+               phone: "+7 (495) 755-83-00",
+               phone_link: "+74957558300",
+               coordinates: [56.032987, 92.893005],
+            },
+            {
+               id: 9,
+               town: "Иркутск",
+               address: "664047, г. Иркутск, ул. Трудовая, дом 60",
+               phone: "+7 (495) 755-83-00",
+               phone_link: "+74957558300",
+               coordinates: [52.271516, 104.318560],
+            },
+            {
+               id: 10,
+               town: "Нефтеюганск (Пойковский)",
+               address: "628300, г. Нефтеюганск,  мкр. 16А, д.50, этаж 3",
+               phone: "+7 (495) 755-83-00",
+               phone_link: "+74957558300",
+               coordinates: [61.080925, 72.618253],
+            },
+            {
+               id: 11,
+               town: "Губкинский",
+               address: "629830 Ямало-Ненецкий автономный округ, г. Губкинский, промышленная зона, панель 1, производственная база №0027, дом 2.",
+               phone: "+7 (495) 755-83-00",
+               phone_link: "+74957558300",
+               coordinates: [64.436147, 76.436120],
+            },
+            {
+               id: 12,
+               town: "Усинск",
+               address: "169710,  г. Усинск, ул. Комсомольская, дом 23.",
+               phone: "+7 (82144) 54-800",
+               phone_link: "+78214454800",
+               coordinates: [65.988008, 57.541873],
+            },
+         ]
+
+         ymaps.ready(init);
+         function init() {
+            var myMap = new ymaps.Map("map", {
+               center: [55, 37],
+               zoom: 5,
+               controls: [],
+            });
+
+            let grid = document.querySelector(".contacts_grid__container");
+            let mainCard = document.querySelector(".contacts_hero__info");
+            let allPlaceMarks = [];
+
+            let i = 0;
+
+            for (let one of coordinates) {
+               i++;
+
+               let newPlaceMark = new ymaps.Placemark(one.coordinates, {}, {
+                  iconLayout: "default#image",
+
+                  iconImageHref: i === 1 ? "location-active.e4d04956.svg" : "location.1fd9a54b.svg",
+                  iconImageSize: [39, 54],
+                  // iconImageSize: [43, 60],
+                  // iconImageOffset: [-3, -42]
+               });
+
+               newPlaceMark.events.add('click', (e) => {
+                  for (let mark of allPlaceMarks) {
+                     mark.options.set({
+                        iconImageHref: 'location.1fd9a54b.svg',
+                     });
+                  }
+
+                  e.get('target').options.set({
+                     iconImageHref: 'location-active.e4d04956.svg',
+                  });
+
+                  mainCard.innerHTML = `<h3 class="contacts_grid__card__header h4 reg">${one.town}</h3>
+                     <p class="liltext light contacts_grid__card__label">Адрес:</p>
+                     <address class="contacts_grid__card__address maintext">${one.address}</address>
+                     <p class="liltext light contacts_grid__card__label">Телефон:</p>
+                     <a class="contacts_grid__card__link maintext" href="tel:${one.phone_link}">${one.phone}</a>`;
+
+                  myMap.setCenter(
+                     one.coordinates,
+                     11,
+                  );
+               });
+
+               myMap.geoObjects.add(newPlaceMark);
+               allPlaceMarks.push(newPlaceMark);
+
+               let newGeo = document.createElement("a");
+               newGeo.href = "#cont_header";
+               newGeo.classList.add("contacts_grid__card");
+
+               newGeo.innerHTML = `<h3 class="contacts_grid__card__header h5 reg">${one.town}</h3>
+                  <p class="liltext light contacts_grid__card__label">Адрес:</p>
+                  <address class="contacts_grid__card__address maintext">${one.address}</address>
+
+                  <p class="liltext light contacts_grid__card__label">Телефон:</p>
+                  <a class="contacts_grid__card__link maintext" href="tel:${one.phone_link}">${one.phone}</a>`;
+
+               newGeo.addEventListener("click", () => {
+                  myMap.setCenter(
+                     one.coordinates,
+                     11,
+                  );
+
+                  for (let mark of allPlaceMarks) {
+                     mark.options.set({
+                        iconImageHref: 'location.1fd9a54b.svg',
+                     });
+                  }
+
+                  newPlaceMark.options.set({
+                     iconImageHref: 'location-active.e4d04956.svg',
+                  });
+
+                  mainCard.innerHTML = `
+                     <h3 class="contacts_grid__card__header h4 reg">${one.town}</h3>
+                     <p class="liltext light contacts_grid__card__label">Адрес:</p>
+                     <address class="contacts_grid__card__address maintext">${one.address}</address>
+
+                     <p class="liltext light contacts_grid__card__label">Телефон:</p>
+                     <a class="contacts_grid__card__link maintext" href="tel:${one.phone_link}">${one.phone}</a>`;
+               });
+
+               grid.append(newGeo);
+            }
+
+            // Размещение геообъекта на карте.
+            myMap.controls.remove('geolocationControl'); // удаляем геолокацию
+            myMap.controls.remove('searchControl'); // удаляем поиск
+            myMap.controls.remove('trafficControl'); // удаляем контроль трафика
+            myMap.controls.remove('typeSelector'); // удаляем тип
+            myMap.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+            myMap.controls.remove('zoomControl'); // удаляем контрол зуммирования
+            myMap.controls.remove('rulerControl'); // удаляем контрол правил
+            myMap.controls.remove('gotoymaps'); // удаляем контрол правил
+            myMap.controls.remove('gototaxi__text'); // удаляем контрол правил ymaps-2-1-79-
+            myMap.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+            myMap.behaviors.disable('drag');
+
+            myMap.events.once('click', function () {
+               myMap.behaviors
+                  .enable(['scrollZoom'])
+                  .enable('drag');
+            });
+
+            myMap.events.once('touchstart', function () {
+               alert("eoeo");
+               myMap.behaviors
+                  .enable(['scrollZoom'])
+                  .enable('drag');
+            });
+         }
+
+      });
+   </script>
+
+   <include src="src/components/footer.html"></include>
+</body>
+
+</html>

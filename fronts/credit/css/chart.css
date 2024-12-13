@@ -1,0 +1,118 @@
+.chart {
+    margin-bottom: 200px;
+}
+
+.chart__left {
+    display: flex;
+    margin-right: auto;
+    padding: 120px 0 65px 0;
+}
+
+.chart__left_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 96px;
+}
+
+.chart__table {
+    width: 600px;
+    border-left: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+    align-self: flex-start;
+    outline: none;
+}
+
+.chart__table_cell {
+    width: 100%;
+    padding: 24px 20px;
+    cursor: pointer;
+    margin-top: -1px;
+    border-top: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.chart__table_cell--active {
+    color: #FFFFFF;
+    background: #21409A;
+    font-weight: bold;
+}
+
+.chart__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.chart__lint {
+    position: absolute;
+    top: -45px;
+    right: -75px;
+}
+
+.chart__lint .h4 {
+    color: #21409A;
+    text-align: right;
+    margin-bottom: 12px;
+}
+
+.chart__lint svg {
+    width: 241px;
+    height: 21px;
+}
+
+.chart__svg {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.75s;
+    transform-origin: center center;
+    border-radius: 50%;
+}
+
+.chart__svg circle {
+    fill: none;
+    stroke-width: 31.831;
+    clip-path: circle(50%);
+    /* cursor: pointer; */
+    transition: transform 0.75s, stroke 0.75s, opacity 0.75s;
+    transform-origin: center center;
+}
+
+.chart__svg circle:hover {
+    transform: scale(1.08);
+}
+
+.chart_label {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+.chart_label__item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.chart_label__item__square {
+    width: 1em;
+    height: 1em;
+    background: #CCEAF3;
+}
+
+.chart_label__item:last-child 
+.chart_label__item__square {
+    background: #F5DAD8;
+}
+
+.chart--container {
+    padding-top: 0 !important;
+}

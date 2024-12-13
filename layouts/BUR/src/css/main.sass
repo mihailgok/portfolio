@@ -1,0 +1,103 @@
+body
+   font-family: 'Roboto', sans-serif
+   -webkit-font-smoothing: antialiased
+   
+.container
+   max-width: 1920rem !important
+   width: 100%
+   margin: 0 auto
+   height: 100%
+   padding: 0 100rem
+
+*::-webkit-scrollbar,
+html *::-webkit-scrollbar
+   height: auto
+   width : 8rem
+
+*::-webkit-scrollbar-thumb,
+html *::-webkit-scrollbar-thumb 
+   background-color: $main-highlight
+   border-radius   : 15rem
+
+*::-webkit-scrollbar-track,
+html *::-webkit-scrollbar-track 
+   background: transparent
+
+
+.er404
+   padding: 244rem 0 290rem 0
+   background: $main-blue url("../img/404back.svg") right bottom no-repeat
+   background-size: 55%
+   .h2
+      margin-bottom: 60rem
+      color: $main-white
+      max-width: 1000rem
+   img
+      display: none
+   .btn_primary
+      width: 328rem
+      max-width: 90%
+      justify-content: center
+
+.privacity
+   padding: 235rem 0 160rem 0
+   h1, h5
+      color: #2D3A4D
+   .maintext
+      color: #3D3935
+   .h2
+      margin-bottom: 80rem
+      padding-top: 50rem
+      position: relative
+      &::before 
+         position: absolute
+         top: 0
+         left: 0
+         content: ""
+         width: 124rem
+         height: 12rem
+         background: #CE0E2D
+         transform: skew(-20deg)
+   .h5
+      margin-bottom: 32rem
+   p
+      margin-bottom: 1em
+      &:last-child
+         margin-bottom: 0
+   &__section
+      margin-bottom: 48rem
+      &:last-child
+         margin-bottom: 0
+
+@media (max-width: 650px) 
+   *::-webkit-scrollbar, html *::-webkit-scrollbar
+      height: auto
+      width : 4rem
+
+   .container
+      max-width: 100% !important
+      width: 100% !important
+      padding: 0 15rem
+
+   .er404
+      padding: 99rem 0 60rem 0
+      background: $main-blue
+      .h2
+         margin-bottom: 48rem
+      img
+         width: 100%
+         display: block
+         margin-bottom: 48rem
+      .btn_primary
+         margin: 0 auto
+
+   .privacity
+      padding: 99rem 0 60rem 0
+      .h2
+         margin-bottom: 40rem
+         padding-top: 24rem
+         &::before
+            height: 4rem
+            width: 38rem
+      .h5
+         margin-bottom: 16rem

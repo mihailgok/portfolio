@@ -1,0 +1,1163 @@
+
+//под стирку НАЧАЛО
+.ui
+   padding: 40rem 100rem
+
+.ui-row
+   margin-bottom: 40rem
+
+.colors__block
+   margin-right: 40rem
+   height: 120rem
+   width: 120rem
+   border: 1px solid #CBC6C6
+   &:nth-child(1)
+      background: $main-black
+   &:nth-child(2)
+      background: $main-highlight
+   &:nth-child(3)
+      background: $main-blue
+   &:nth-child(4)
+      background: $main-white
+   &:nth-child(5)
+      background: $main-lightgray
+   &:nth-child(6)
+      background: $main-gray
+
+.buttons
+   background: $main-blue
+   padding: 20rem 40rem
+   border: 1px dashed #9747FF
+   display: inline-flex
+   flex-direction: column
+   margin-right: 10rem
+   margin-bottom: 10rem
+   >*
+      margin-bottom: 20rem
+      &:last-child
+         margin-bottom: 0
+
+   &--light
+      background: none
+
+.header
+   margin-bottom: 30rem
+
+//под стирку КОНЕЦ
+
+.stop-scroll
+   overflow: hidden
+
+.flex
+   display: flex
+
+.light
+   font-weight: 300
+
+.reg
+   font-weight: 400
+
+.med
+   font-weight: 500
+
+.bold
+   font-weight: 700
+
+.caps
+   text-transform: uppercase
+
+.h1
+   font-size: 128rem
+   line-height: 112%
+
+.h2
+   font-size: 86rem
+   line-height: 106%
+
+.h3
+   font-size: 62rem
+   line-height: 106%
+
+.h4
+   font-size: 44rem
+   line-height: 116%
+
+.h5
+   font-size: 34rem
+   line-height: 128%
+
+.h6
+   font-size: 28rem
+   line-height: 128%
+
+.subtitle
+   font-size: 24rem
+   line-height: 132%
+
+.maintext
+   font-size: 20rem
+   line-height: 132%
+
+.liltext
+   font-size: 16rem
+   line-height: 132%
+
+.hero__title
+   // padding-top: 25rem
+   // margin-bottom: 40rem
+   position: relative
+   padding-top: 52rem
+   &::before
+      contant: ""
+      position: absolute
+      top: 0
+      left: 0
+      content: ""
+      width: 124rem
+      height: 12rem
+      background: #CE0E2D
+      transform: skew(-20deg)
+   .hero__header
+      margin-bottom: 40rem
+
+
+.desctop-hidden
+   display: none !important
+
+.header
+   color: $main-white
+   padding: 41rem 0 36rem 0
+   position: fixed
+   top: 0
+   left: 0
+   z-index: 3
+   width: 100%
+   transition: background $main_time
+   &__container
+      display: flex
+      align-items: center
+   &__logo
+      margin-right: 260rem
+      img
+         width: 228rem
+   &__phone
+      margin-left: auto
+      &:hover
+         text-decoration: underline
+   .menu_btn
+      display: none
+
+.header--active
+   background: $main-blue
+
+.header--permanent-active
+   background: $main-blue !important
+
+.nav
+   &__list
+      display: flex
+      align-items: center
+
+   &__item
+      margin-right: 134rem
+
+   &__link
+      position: relative
+      &::after
+         content: ""
+         position: absolute
+         bottom: 0
+         left: 0
+         height: 5rem
+         width: 0%
+         background: $main-highlight
+         transform: skew(-45deg) translateY(10rem)
+         transition: width $main_time
+      &:hover::after
+         width: 120%
+      &--active::after
+         width: 120%
+.nav-mobile
+   pointer-events: none
+   opacity: 0
+   display: none
+
+.btn_primary
+   // background: $main-highlight
+   padding: 22rem 75rem
+   position: relative
+   color: $main-white
+   display: flex
+   align-items: center
+   align-self: flex-start
+   *
+      position: relative
+      z-index: 1
+   span
+      margin-right: 16rem
+   svg
+      width: 16rem
+      height: 16rem
+      transform: rotate(-45deg)
+      transition: transform $main_time
+   &::after
+      content: ""
+      background: $main-highlight
+      transition: background $main_time
+      transform: skew(-20deg)
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      position: absolute
+   &:hover
+      svg
+         transform: rotate(0deg)
+      &::after
+         background: #9E0A22
+   &:active::after
+      background: #780D1E
+   &:disabled
+      svg
+         transform: rotate(-45deg)
+      &::after
+         background: #D8D7D7
+
+   &--noarrow
+      svg
+         display: none
+      span
+         margin-right: 0
+
+.btn_secondary
+   padding: 22rem 72rem
+   position: relative
+   color: $main-white
+   display: flex
+   align-items: center
+   span
+      position: relative
+      display: inline-block
+      overflow: hidden
+      color: $main-white
+      background: linear-gradient(to right, $main-blue, $main-blue 50%, $main-white 50%)
+      background-clip: text
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      background-size: 200% 100%
+      background-position: 100%
+      transition-property: background
+      transition-delay: calc($main_time * 0.2)
+      transition-duration: calc($main_time / 2.6)
+      text-decoration: none // text decorations are clipped in WebKit browsers
+      z-index: 1
+   &::before, &::after
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      border: 1px solid $main-white
+      width: 100%
+      height: 100%
+      transform: skew(-20deg)
+   &::after
+      border: none
+      background: $main-white
+      width: 0
+      transition: width $main_time
+      z-index: 0
+      border-color: transparent
+   &:hover
+      span
+         background-position: 0 100%
+      &::after
+         width: 100%
+   &:active
+      &::after
+         // width: 100%
+         background: #F4F7F9
+   &:disabled
+      span
+         background-position: 100%
+      &::after
+         width: 100%
+         background: #D8D7D7
+         border-color: #D8D7D7
+      &::before
+         border-color: #D8D7D7
+
+.btn_secondary--dark
+   color: $main-blue
+   span
+      color: $main-blue
+      background: linear-gradient(to right,$main-white, $main-white 50%, $main-blue 50%)
+      background-clip: text
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      background-size: 200% 100%
+      background-position: 100%
+      transition-property: background
+   &::before
+      border: 1px solid $main-blue
+   &::after
+      background: $main-blue
+   &:active
+      &::after
+         background: #1F2835
+
+.btn_third
+   display: flex
+   align-items: center
+   padding: 12rem 34rem 12rem 50rem //менять в адаптиве
+   position: relative
+   >*
+      position: relative
+      z-index: 1
+   span
+      color: $main-white
+      transition-property: margin, transform
+      transition-duration: $main_time
+   .btn_third__svg
+      width: 16rem
+      height: 16rem
+      right: 16rem
+      display: flex
+      align-items: center
+      svg
+         width: 0
+         height: 0
+         transition-property: height, width, transform
+         transition-duration: $main_time
+   &::before
+      content: ""
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      background: $main-blue
+      transform: skew(-20deg)
+   &::after
+      content: ""
+      height: 100%
+      width: 0
+      position: absolute
+      top: 0
+      left: 0
+      background: #576171
+      transition: width $main_time
+      transform: skew(-20deg)
+   &:hover
+      span
+         transform: translateX(-16rem)
+      svg
+         width: 100%
+         height: 100%
+         transform: translateX(16rem)
+      &::after
+         width: 100%
+   &:active
+      &::after
+         background: #818994
+
+   &:disabled
+      &::after
+         width: 100%
+         background: #D8D7D7
+      span
+         transform: none
+      svg
+         width: 0
+
+.arrow_link
+   display: flex
+   align-items: center
+   color: $main-blue
+   span
+      margin-right: 20rem
+   svg
+      width: 18rem
+      height: 18rem
+      transform: rotate(-45deg)
+      transition: transform $main_time
+      path
+         stroke: $main-blue
+   &:hover
+      svg
+         transform: rotate(0)
+   &:active
+      opacity: 0.8
+   &--disabled
+      span
+         color: #D8D7D7
+      svg
+         transform: rotate(-45deg)
+         path
+            stroke: #D8D7D7
+
+.tab_checkbox
+   cursor: pointer
+   input
+      display: none
+   span
+      display: inline-block
+      padding: 16rem 60rem
+      color: $main-blue
+      border-radius: 50rem
+      transition-property: background, color
+      transition-duration: $main_time
+      background: $main-white
+   &:hover
+      span
+         background: #F4F7F9
+   &:active
+      span
+         background: $main-highlight
+         color: $main-white
+
+   input:checked + span
+      background: $main-highlight
+      color: $main-white
+
+   input:disabled + span
+      background: gray
+      color: white
+
+.arrow_btn
+   padding: 21rem 50rem
+   position: relative
+   svg
+      width: 28rem
+      height: 28rem
+      transform: rotate(-45deg)
+      transition: transform 0.3s
+      position: relative
+      z-index: 1
+   &::after
+      content: ""
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      position: absolute
+      background: $main-highlight
+   &:hover
+      svg
+         transform: rotate(0)
+      &::after
+         background: #9E0A22
+
+   &:active
+      &::after
+         background: #780D1E
+
+   &:disabled
+      &:hover
+         svg
+            transform: rotate(-45deg)
+      &::after
+         background: #D8D7D7
+
+   &--left
+      transform: scale(-1, 1)
+
+//Селект
+.choices__inner
+   padding: 0 !important
+   border: none
+   min-height: auto
+   min-width: 250rem
+   background: #F4F7F9
+   color: $main-black
+   font-size: 20rem
+   line-height: 132%
+
+.choices__placeholder
+   opacity: 1
+   &::after
+      content: "*"
+      width: 1em
+      height: 1em
+      color: $main-highlight
+
+.choices__list
+   padding: 16rem 20rem
+
+.choices__list--single
+   padding: 0
+
+.choices__item
+   padding: 22rem 20rem
+
+.choices__list--dropdown
+   padding: 0
+   overflow: auto !important
+
+   &::-webkit-scrollbar
+      height: auto
+      width : 5rem
+   
+   &::-webkit-scrollbar-thumb 
+      background-color: $main-highlight
+      border-radius   : 15rem
+   
+   &::-webkit-scrollbar-track 
+      background: transparent
+   
+
+.choices__list--dropdown, .choices__list[aria-expanded]
+   border: none
+   background: #f4f7f9
+   z-index: 3
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted::after, .choices__list[aria-expanded] .choices__item--selectable.is-highlighted::after
+   display: none
+
+.choices__list--dropdown .choices__item--selectable, .choices__list[aria-expanded] .choices__item--selectable
+   padding: 8rem 0
+
+.choices__item--disabled
+   display: none
+
+.choices[data-type*=select-one]::after
+   background: url(../img/select-arrow.svg) center center no-repeat
+   background-size: contain
+   border: none
+   width: 22rem
+   height: 22rem
+   top: calc(50% - 8rem)
+
+.choices[data-type*=select-one].is-open::after
+   border-color: none
+   margin-top: 0
+   transform: scale(1, -1)
+
+.choices__list--dropdown .choices__list, .choices__list[aria-expanded] .choices__list
+   overflow: visible
+
+.choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item
+   font-size: 20rem
+   line-height: 132%
+
+.tenders
+   display: flex
+   align-items: center
+   &__text
+      margin-right: 9rem
+   &__list
+      display: flex
+      align-items: center
+   &__check
+      cursor: pointer
+      margin-right: 5rem
+      display: block
+      input
+         display: none
+      span
+         display: block
+         padding: 19rem 15rem 20rem 15rem
+         transition: background $main_time
+         &:hover
+            background: #F4F7F9
+      input:checked + span
+         background: #F4F7F9
+
+.pages
+   display: flex
+   align-items: center
+   .pages__page
+      padding: 19rem 20rem 20rem 19rem
+      transition: background $main_time
+      &:hover
+         background: #F4F7F9
+      &--active
+         background: #F4F7F9
+   .pages_arrow
+      svg
+         width: 20rem
+         height: 18rem
+   .pages_arrow-left
+      margin-right: 40rem
+   .pages_arrow-right
+      transform: scale(-1, 1)
+      margin-left: 40rem
+
+.label-input
+   position: relative
+   height: 70rem
+   width: 200rem
+   display: flex
+   align-items: center
+   input, textarea
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: $main-gray
+      color: $main-black
+      padding: 22rem 20rem
+   span
+      pointer-events: none
+      position: relative
+      left: 22rem
+      z-index: 1
+      transition-property: color, transform
+      transition-duration: $main_time
+      transform-origin: left top
+   span::before
+      content: ""
+      background: $main-gray
+      height: 13rem
+      width: calc(100% + 4rem)
+      position: absolute
+      bottom: 0
+      left: -2rem
+      z-index: -1
+   input:required + span::after, textarea:required + span::after
+      content: " *"
+      color: $main-highlight
+   input:focus + span, textarea:focus + span
+      transform: translateY(-32rem) scale(0.7)
+      color: #7B868C
+   input:not(:placeholder-shown) + span, textarea:not(:placeholder-shown) + span
+      transform: translateY(-32rem) scale(0.7)
+      color: #7B868C
+   &--error
+      // input, textarea
+      border: 1px solid $main-highlight
+      &::after
+         content: attr(data-error)
+         color: $main-highlight
+         position: absolute
+         bottom: 0
+         left: 0
+         font-size: 14rem
+         line-height: 132%
+         transform: translateY(calc(100% + 12rem))
+   &.textarea
+      height: 212rem
+      span
+         align-self: flex-start
+         top: 22rem
+
+.footer
+   background: $main-highlight
+   padding: 68rem 0 56rem 0
+   color: $main-white
+   .footer__vacancy
+      text-decoration: underline
+   .footer__copyright
+      a
+         text-decoration: underline
+   &__container
+      display: flex
+      align-items: flex-start
+   &__logo
+      margin-bottom: 32rem
+      width: 417rem
+   &__col
+      display: flex
+      flex-direction: column
+      &:first-child
+         margin-right: 159rem
+         align-self: stretch
+      &:nth-child(3)
+         margin-right: 44rem
+      &:nth-last-child(3)
+         max-width: 434rem
+      &:nth-last-child(2)
+         max-width: 372rem
+   &__copyright
+      margin-top: auto
+
+   &__header
+      margin-bottom: 16rem
+   &__row
+      margin-bottom: 36rem
+      &:last-child
+         margin-bottom: 0
+   &__address
+      font-style: normal
+   .company_info
+      display: none
+
+.footer-nav
+   margin-right: auto
+   &__item
+      margin-bottom: 20rem
+      &:last-child
+         margin-bottom: 0
+
+.base_link
+   &:hover
+      text-decoration: underline
+
+.form_sended
+   position: absolute
+   pointer-events: none
+   width: 100%
+   height: 100%
+   top: 0
+   left: 0
+   padding: 156rem 100rem
+   z-index: 2
+   background: rgba($main-black, 0.48)
+   transition: opacity $main_time
+   opacity: 0
+   &__container
+      background: $main-white
+      position: relative
+      width: 100%
+      height: 100%
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      padding: 0 15rem
+      .btn_primary
+         align-self: center
+   &__close
+      position: absolute
+      top: 48rem
+      right: 40rem
+   &__header
+      margin-bottom: 40rem
+   &__text
+      margin-bottom: 80rem
+      width: 700rem
+      max-width: 100%
+      text-align: center
+   &--fixed
+      position: fixed
+   &--active
+      opacity: 1
+      pointer-events: auto 
+
+.form__bottom
+   display: flex
+         
+.file_field
+   display: flex
+   margin-right: auto
+   cursor: pointer
+   svg
+      width: 17.5rem
+      height: 23.33rem
+      margin-right: 15.5rem
+   div
+      display: flex
+      flex-direction: column
+      span:first-child
+         margin-bottom: 9rem
+         &::after
+            content: " *"
+            color: #CE0E2D
+   input 
+      display: none
+
+
+.bottom_window
+   position: fixed
+   width: 100%
+   height: 100%
+   bottom: 0
+   left: 0
+   display: flex
+   align-items: flex-end
+   z-index: 10
+   background: rgba($main-black, 0.48)
+   overflow: hidden   
+   transition: opacity $main_time
+   opacity: 0
+   pointer-events: none
+   &__container
+      width: 100%
+      padding-top: 128rem
+      padding-bottom: 100rem
+      display: flex
+      background: $main-white
+      height: auto
+      position: relative
+      .h2
+         color: $main-blue
+         max-width: 750rem
+   &__close
+      position: absolute
+      top: 50rem
+      right: 100rem
+      svg
+         width: 36rem
+         height: 36rem
+   &__form
+      width: 850rem
+      max-width: 100%
+      flex-shrink: 0
+      .label-input
+         width: 100%
+         margin-bottom: 24rem
+      // margin-top: auto
+      div
+         margin-bottom: 60rem
+   &--active
+      opacity: 1
+      pointer-events: auto
+      
+
+
+.application
+   padding: 160rem 0
+   background: $main-gray
+   position: relative
+   &__header
+      width: 742rem
+      color: $main-blue
+      br
+         display: none
+         &:first-child
+            display: block
+   &__container
+      display: flex
+      justify-content: space-between
+   &-form
+      display: flex
+      flex-direction: column
+      .choices__inner
+         background: $main-white
+      .choices__list--dropdown, .choices__list[aria-expanded]
+         background: $main-white
+      .label-input
+         margin-bottom: 24rem
+         width: 850rem
+         input, textarea
+            background: $main-white
+         span::before
+            background: $main-white
+      .label-input.textarea
+         margin-bottom: 60rem
+      
+
+@media (max-width: 650px)
+   //под стирку НАЧАЛО
+   .ui
+      padding: 20rem 15rem
+
+   .colors__block 
+      margin-right: 10rem
+      height: 20rem
+      width: 20rem
+   
+   .buttons
+      padding: 10rem
+      // width: 100%
+   //под стирку КОНЕЦ
+
+   .desctop-hidden
+      display: block !important
+
+   .header
+      padding: 11rem 0
+      z-index: 11
+      &__logo
+         margin-right: auto
+         img
+            width: 96rem
+      &__phone
+         font-size: 11rem
+      .nav
+         display: none
+      .menu_btn
+         display: block
+         margin-left: 24rem
+         svg:first-child
+            display: block
+            width: 24rem
+            height: 14rem
+         svg:last-child
+            display: none
+            width: 24rem
+            height: 14rem
+         &--active
+            svg:first-child
+               display: none
+            svg:last-child
+               display: block
+            // path
+            //    transition: transform $main_time
+            // path:first-child
+            //    transform-origin: left center
+            // path:nth-child(2)
+            //    transform-origin: center
+         // &--active
+         //    svg
+         //       path:first-child
+         //          transform-origin: left center
+         //          transform: rotate(30deg) translate(0, -5%)
+         //       path:nth-child(2)
+         //          transform-origin: center
+         //          transform: rotate(-30deg) translate(0rem, 0rem)
+         //       path:last-child
+         //          display: none
+
+   .hero__title
+      padding-top: 25rem
+      margin-bottom: 40rem
+      &::before
+         width: 38rem
+         height: 4rem
+      .hero__header
+         marign-bottom: 12rem
+
+   .nav-mobile
+      position: fixed
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      z-index: 9
+      background: $main-blue
+      color: $main-white
+      display: flex
+      padding: 15rem
+      pointer-events: none
+      opacity: 0
+      .nav__list
+         flex-direction: column
+         justify-content: center
+         align-items: flex-start
+      .nav__item
+         margin-bottom: 56rem
+         margin-right: 0
+         &:last-child
+            margin-bottom: 0
+      .nav__link::after
+         display: none
+   .nav--active
+      opacity: 1
+      pointer-events: auto
+      
+
+   .h1
+      font-size: 32rem
+      line-height: 112%
+   
+   .h2
+      font-size: 26rem
+      line-height: 106%
+   
+   .h3
+      font-size: 24rem
+      line-height: 106%
+
+   .h4
+      font-size: 22rem
+      line-height: 116%
+
+   .h5 
+      font-size: 20rem
+      line-height: 132%
+
+   .h6
+      font-size: 16rem
+      line-height: 132%
+
+   .maintext
+      font-size: 16rem
+      line-height: 132%
+
+   .subtitle
+      font-size: 16rem
+      line-height: 132%
+
+   .liltext
+      font-size: 14rem
+      line-height: 132%
+
+   .btn_primary
+      padding: 20rem
+
+   .btn_secondary, .btn_third
+      padding: 14rem
+
+   .arrow_link span
+      margin-right: 12rem
+
+   .tab_checkbox span
+      padding: 8rem 16rem
+
+   .choices__inner
+      font-size: 16rem
+      line-height: 132%
+
+   .choices__item
+      padding: 16rem
+
+   .choices__input
+      font-size: 16rem
+
+   .pages 
+      .pages_arrow-left
+         margin-right: 30rem
+      .pages_arrow-right
+         margin-left: 30rem
+      .pages__page
+         padding: 6rem
+         &:not(:last-child)
+            margin-right: 8rem
+            
+
+
+   .label-input 
+      height: 53rem
+      width: 150rem
+      input, textarea
+         padding: 16rem
+      span
+         left: 16rem
+      input:focus + span, textarea:focus + span
+         transform: translateY(-24rem) scale(0.8)
+         color: #7B868C
+      input:focus + span, textarea:focus + span
+         transform: translateY(-24rem) scale(0.8)
+         color: #7B868C
+      input:not(:placeholder-shown) + span, textarea:not(:placeholder-shown) + span
+         transform: translateY(-24rem) scale(0.8)
+         color: #7B868C
+      &.textarea
+         height: 160rem
+         span
+            top: 16rem
+
+
+   .footer
+      padding: 32rem 0
+      position: relative
+      &__container
+         flex-direction: column
+      &__header
+         margin-bottom: 12rem
+      &__logo
+         width: 100%
+         margin-bottom: 0
+      &__col:first-child
+         margin-right: 0
+         margin-bottom: 40rem
+         .footer__link
+            display: none
+         .footer__copyright
+            display: none
+      &__col:nth-child(3)
+         margin-right: 0
+      // &__col:last-child
+      //    .footer__row:last-child
+      //       margin-bottom: 0 !important
+      &__col
+         margin-right: 0
+         margin-bottom: 32rem
+         &:last-child
+            margin-bottom: 0
+      &__row
+         margin-bottom: 32rem
+         &:last-child
+            margin-bottom: 0 !important
+      &-nav
+         margin-bottom: 48rem
+         &__list
+            display: grid
+            grid-template-columns: 1fr 1fr 
+            grid-column-gap: 68rem
+            width: 215rem
+         &__item
+            margin-bottom: 0
+            &:nth-last-child(n+3)
+               margin-bottom: 16rem
+      .desctop-hidden
+         >.footer__link
+            margin-bottom: 20rem
+            display: inline-block
+      .company_info
+         margin-top: 28rem
+         .footer__link
+            margin-bottom: 20rem
+            display: inline-block
+
+   .form_sended
+      position: fixed
+      padding: 0
+      z-index: 12
+      &__header
+         margin-bottom: 28rem
+      &__text
+         margin-bottom: 32rem
+      &__close
+         top: 43rem
+         right: 18rem
+      .btn_primary
+         width: 85%
+         justify-content: center
+         margin: 0 auto
+
+   .file_field
+      margin-bottom: 32rem
+      div
+         span:first-child
+            margin-bottom: 6rem
+      svg
+         width: 12.5rem
+         height: 16.5rem
+   .form__bottom
+      flex-direction: column
+
+
+   .bottom_window
+      z-index: 12
+      &__container
+         flex-direction: column
+         overflow: auto
+         padding-top: 80rem
+         padding-bottom: 54rem
+         overflow: auto
+         height: 100%
+         .h2
+            margin-bottom: 40rem
+            br
+               display: none
+      &__close
+         top: 43rem
+         right: 18rem
+         svg
+            width: 26rem 
+            height: 26rem
+      &__form
+         div
+            margin-bottom: 28rem
+         .label-input
+            margin-bottom: 12rem
+            &:last-child
+               margin-bottom: 0
+      .btn_primary
+         width: 100%
+         justify-content: center
+
+
+   .application
+      padding: 60rem 0
+      &__header
+         margin-bottom: 40rem
+         font-size: 26rem
+         max-width: 100%
+         br
+            display: block
+      &__container
+         flex-direction: column
+      &-form 
+         .label-input
+            max-width: 100%
+      &__btn
+         width: 90%
+         margin: 0 auto
+         align-items: center
+         span
+            margin: 0 auto
+      .label-input.textarea
+         margin-bottom: 32rem

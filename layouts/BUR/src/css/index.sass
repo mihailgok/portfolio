@@ -1,0 +1,479 @@
+.section
+   margin-bottom: 160rem
+   &__header
+      padding-top: 52rem
+      margin-bottom: 80rem
+      position: relative
+      &::before
+         position: absolute
+         top: 0
+         left: 0
+         content: ""
+         width: 124rem
+         height: 12rem
+         background: $main-highlight
+         transform: skew(-20deg)
+
+.section__top
+   display: flex
+   align-items: center
+   justify-content: space-between
+   margin-bottom: 80rem
+   padding-right: 152rem
+   .section__header
+      margin-bottom: 0
+
+.main
+   color: $main-blue
+
+.hero
+   padding: 237rem 0 104rem 0
+   background: url('../img/hero.jpg') center center no-repeat
+   background-size: cover
+   color: $main-white
+   margin-bottom: 240rem
+   position: relative
+   &::after
+      content: ""
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      position: absolute
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4))
+      z-index: 0
+   .container
+      position: relative
+      z-index: 1
+   video
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      position: absolute
+      object-fit: cover
+      // z-index: -1
+   &__back
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      object-fit: cover
+      z-index: -1
+   &__header
+      margin-bottom: 257rem
+   &-bottom
+      display: flex
+      &__list
+         margin-right: 307rem
+      &__right
+         p
+            margin-bottom: 80rem
+            max-width: 600rem
+      &__item
+         margin-bottom: 28rem
+         :last-child
+            margin-bottom: 0
+
+.about
+   &__info
+      span
+         font-weight: 400
+   &__cols
+      display: grid
+      grid-template-columns: 705rem 850rem
+      grid-column-gap: 165rem
+      max-width: 100%
+   &__col
+      display: flex
+      flex-direction: column
+      overflow: hidden
+   &__img
+      width: 100%
+      &_container
+         // border: 1px solid red
+         div
+            transition: transform 1s cubic-bezier(.22,.61,.36,1)
+            transform: translateY(100%)
+            overflow: hidden
+         img
+            transition: transform 1s cubic-bezier(.22,.61,.36,1)
+            transform: translateY(-100%)
+         &.active
+            div
+               transform: translateY(0)
+            img
+               transform: translateY(0)
+
+
+
+   &__info
+      max-width: 559rem
+      margin-bottom: 130rem
+      span
+         color: #CE0E2D
+
+   &__img-margin
+      margin-bottom: 60rem
+
+.services
+   background: $main-gray
+   padding: 160rem 0
+   .section__header
+      margin-left: auto
+
+   &__nav
+      margin-right: 468rem
+      display: flex
+      .services__swiper__prev
+         margin-right: 60rem
+         margin-left: auto
+         &:last-child
+            margin: 0
+   &__card
+      flex-shrink: 0
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      padding: 140rem 60rem 100rem 60rem
+      width: 560rem
+      height: 760rem
+      position: relative
+      margin-right: 20rem
+      color: $main-white
+      &:first-child
+         margin-left: 100rem
+      &::after
+         content: ""
+         width: 100%
+         height: 100%
+         position: absolute
+         top: 0
+         left: 0
+         background: $main-highlight
+         z-index: -1
+         opacity: 0
+         transition: opacity $main_time
+      .arrow_link
+         opacity: 0
+         transition: opacity $main_time
+         color: $main-white
+         svg path
+            stroke: $main-white
+         span
+            pointer-events: none
+         svg
+            pointer-events: none
+      &:hover
+         &::after
+            opacity: 1
+         .services__card__list, .arrow_link
+            opacity: 1
+   
+      &__list
+         opacity: 0
+         transition: opacity $main_time
+      &__item
+         margin-bottom: 24rem
+         display: flex
+         &:last-child
+            margin-bottom: 0
+         &::before
+            content: ""
+            height: 1em
+            width: 1em
+            margin-right: 12rem
+            background: url(../img/water.svg) center no-repeat
+            background-size: contain
+            flex-shrink: 0
+      &__img
+         width: 100%
+         height: 100%
+         position: absolute
+         top: 0
+         left: 0
+         object-fit: cover
+         z-index: -1
+   &__swiper
+      overflow: hidden
+      &-container
+         display: flex
+         margin-bottom: 60rem
+   &__modal
+      position: fixed
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      // padding: 120rem 100rem
+      padding: 0 100rem
+      background: rgba(61, 57, 53, 0.48)
+      z-index: 10
+      display: flex
+      align-items: auto
+      opacity: 0
+      pointer-events: none
+      transition: opacity $main_time
+      &.active
+         opacity: 1
+         pointer-events: auto
+      &_btn
+         margin: 0 auto
+         .maintext
+            margin: 0
+      &__card
+         width: 100%
+         padding: 100rem
+         // max-height: 100%
+         max-height: 90%
+         margin: auto 0 auto 0
+         background: $main-white
+         position: relative
+         overflow: auto
+         display: none
+         h3
+            margin-bottom: 100rem
+         &.active
+            display: block
+         &--multi
+            .services__modal__card__inner
+               display: grid
+               grid-template-columns: 1fr 1fr
+            .services__modal__list
+               height: auto
+      &__title
+         margin-bottom: 48rem
+      &__list
+         display: flex
+         flex-direction: column
+         flex-wrap: wrap
+         height: 568rem
+         margin-bottom: 80rem
+         &_item
+            width: 730rem
+            margin-bottom: 20rem
+            display: flex
+            margin-right: auto
+            &:nth-child(7)
+               margin-bottom: 0
+            &:nth-child(n+7)
+               margin-right: 0
+            &:last-child
+               margin-bottom: 0
+            &::before
+               content: ""
+               height: 1em
+               width: 1em
+               margin-right: 12rem
+               background: url(../img/water_black.svg) center no-repeat
+               background-size: contain
+               flex-shrink: 0
+      &__close
+         position: absolute
+         top: 48rem
+         right: 40rem
+         cursor: pointer
+         svg
+            width: 40rem
+            height: 40rem
+
+.partners
+   &__top
+      padding: 0
+      align-items: flex-start
+      &__text
+         max-width: 850rem
+
+   &__grid
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr 1fr
+      grid-row-gap: 20rem
+      grid-column-gap: 20rem
+      // display: flex
+      // justify-content: flex-end
+      // flex-wrap: wrap
+   &__card
+      // width: 415rem
+      height: 333rem
+      display: flex
+      align-items: center
+      justify-content: center
+      text-align: center
+      font-size: 36rem
+      line-height: 116%
+      background: $main-gray
+      position: relative
+      cursor: pointer
+      overflow: hidden
+      p, img
+         position: relative
+         z-index: 2
+      &::after
+         content: ""
+         width: 100%
+         height: 100%
+         position: absolute
+         bottom: -100%
+         right: -100%
+         background: $main-white
+         transition-property: bottom, right
+         transition-duration: $main-time
+      &:hover::after
+         bottom: 0
+         right: 0
+      img
+         width: 246rem
+
+.standart
+   background: url('../img/standarts.jpg') center center no-repeat
+   background-size: cover
+   color: $main-white
+   padding: 168rem 0 312rem 0
+   &__header
+      margin-bottom: 40rem
+   &__text
+      max-width: 1300rem
+
+@media (max-width: 650px)
+   .hero
+      padding: 120rem 0 60rem 0
+      margin-bottom: 60rem
+      &__header
+         margin-bottom: 88rem
+      &-bottom
+         flex-direction: column
+         &__list
+            margin-right: 0
+            margin-bottom: 99rem
+         &__right
+            p
+               margin-bottom: 28rem
+            .btn_primary
+               width: 90%
+               margin: 0 auto
+               justify-content: center
+         &__item
+            margin-bottom: 16rem
+            &:last-child
+               margin-bottom: 0
+
+   .section__header
+      padding-top: 25rem
+      margin-bottom: 28rem
+      &::before
+         height: 4rem
+         width: 40rem
+
+   .about
+      &__info
+         margin-bottom: 40rem
+      &__img
+         margin-bottom: 40rem
+      &__cols
+         grid-template-columns: 1fr
+         grid-column-gap: 0
+      &__col
+         &:last-child
+            flex-direction: column-reverse
+            .about__img
+               margin-bottom: 0
+         p
+            margin-bottom: 20rem
+
+   .section
+      margin-bottom: 60rem
+      &__top
+         flex-direction: column
+         align-items: flex-start
+         padding: 0
+         margin-bottom: 32rem
+      &-top__text
+         display: none
+
+   .services
+      padding: 60rem 0
+      .section__header
+         margin-left: 0
+      &__swiper-container
+         margin-bottom: 0
+      &__card
+         padding: 40rem 16rem
+         width: 80%
+         height: 404rem
+         &:first-child
+            margin-left: 15rem
+         &::after
+            opacity: 1
+         .services__card__list, .arrow_link
+            opacity: 1
+         &__item::before
+            margin-right: 8rem
+      &__nav
+         display: none
+      &__modal
+         padding: 0
+         z-index: 20
+         &__card
+            max-height: 100%
+            padding: 80rem 15rem 65rem 15rem
+            h3
+               margin-bottom: 36rem
+            
+            &--multi
+               .services__modal__card__inner
+                  display: grid
+                  grid-template-columns: 1fr
+         &__title
+            margin-bottom: 24rem
+            &.mobile_hide
+               display: none
+         &__close
+            top: 40rem
+            right: 15rem
+            svg
+               width: 32rem
+               height: 32rem
+         &__list
+            height: auto
+            margin-bottom: 32rem
+            &_item
+               margin-bottom: 12rem
+               width: auto
+         &_btn
+            width: 80%
+            margin: 0 auto
+            padding: 20rem 0
+            align-items: center
+            justify-content: center
+            position: fixed
+            bottom: 20rem
+            left: 0
+            right: 0
+
+   .partners
+      .section__top__text
+         margin-bottom: 36rem
+         font-size: 14rem
+         color: #3D3935
+      .placeholder
+         display: none
+      &__grid
+         grid-template-columns: 1fr 1fr
+         grid-row-gap: 8rem
+         grid-column-gap: 8rem
+      &__card 
+         font-size: 16rem
+         line-height: 132%
+         height: 112rem
+         &:last-child
+            grid-area: 4 / 2
+         img
+            max-width: 80%
+
+   .standart
+      padding: 120rem 0
+      background: url(../img/standarts-mobile.jpeg) center center no-repeat
+      background-size: cover
+      &__header
+         margin-bottom: 28rem

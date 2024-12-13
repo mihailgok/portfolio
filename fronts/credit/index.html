@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Кредитный калькулятор — быстро и удобно рассчитайте свой кредит</title>
+    <meta name="description" content="Используйте наш кредитный калькулятор для точного расчета ежемесячных платежей и общей суммы кредита.">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/satoshi.css">
+    <link rel="stylesheet" href="css/main.css?v=1.01">
+    <link rel="stylesheet" href="css/chart.css">
+    <script src="js/vue.js"></script>
+
+    <meta name="yandex-verification" content="2454211026ca188b" />
+
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <!-- 180x180 - ставим первым для safari -->
+    <link rel="icon" href="/favicon.ico" sizes="any"><!-- 32x32 -->
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="yandex-tableau-widget" href="/tableau.json">
+
+    <meta property="vk:image" content="https://credit.mihailgok.ru/skrin.png" data-rh="true">
+    <meta property="og:locale" content="ru_RU" data-rh="true">
+    <meta property="og:title" content="Кредитный калькулятор — расчет кредита за 1 минуту" data-rh="true">
+    <meta property="og:site_name" content="кредит">
+    <meta property="og:description" content="Легкий в использовании кредитный калькулятор поможет вам рассчитать платежи и выбрать оптимальные условия кредита. Попробуйте сейчас!">
+    <meta property="og:image" content="https://credit.mihailgok.ru/skrin.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="credit.mihailgok.ru" data-rh="true">
+    <meta name="twitter:card" content="summary_large_image" data-rh="true">
+    <meta name="twitter:image" content="https://credit.mihailgok.ru/skrin.png" data-rh="true">
+    <meta name="twitter:title" content="Кредитный калькулятор — быстро и удобно рассчитайте свой кредит">
+    <meta name="twitter:description" content="Используйте наш кредитный калькулятор для точного расчета ежемесячных платежей и общей суммы кредита. Попробуйте сейчас!">
+    <meta name="copyright" lang="ru" content="mihailgok">
+</head>
+
+<body>
+    <main id="mainapp">
+        <a href="https://t.me/gokjob" target="_blank" class="share share--tg">
+            <svg width="800px" height="800px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path
+                    d="M19.7773,4.42984 C20.8652,3.97177 22.0315,4.8917 21.8394,6.05639 L19.5705,19.8131 C19.3517,21.1395 17.8949,21.9006 16.678,21.2396 C15.6597,20.6865 14.1489,19.8352 12.7873,18.9455 C12.1074,18.5012 10.0255,17.0766 10.2814,16.0625 C10.5002,15.1954 14.0001,11.9375 16.0001,10 C16.7857,9.23893 16.4279,8.79926 15.5001,9.5 C13.1985,11.2383 9.50332,13.8812 8.28136,14.625 C7.20323,15.2812 6.64031,15.3932 5.96886,15.2812 C4.74273,15.0769 3.60596,14.7605 2.67788,14.3758 C1.42351,13.8558 1.48461,12.132 2.67703,11.63 L19.7773,4.42984 Z"
+                    fill="#FFF">
+                </path>
+            </svg>
+        </a>
+
+        <button class="share" @click="openModal">
+            <svg width="800px" height="800px" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M11 6C12.6569 6 14 4.65685 14 3C14 1.34315 12.6569 0 11 0C9.34315 0 8 1.34315 8 3C8 3.22371 8.02449 3.44169 8.07092 3.65143L4.86861 5.65287C4.35599 5.24423 3.70652 5 3 5C1.34315 5 0 6.34315 0 8C0 9.65685 1.34315 11 3 11C3.70652 11 4.35599 10.7558 4.86861 10.3471L8.07092 12.3486C8.02449 12.5583 8 12.7763 8 13C8 14.6569 9.34315 16 11 16C12.6569 16 14 14.6569 14 13C14 11.3431 12.6569 10 11 10C10.2935 10 9.644 10.2442 9.13139 10.6529L5.92908 8.65143C5.97551 8.44169 6 8.22371 6 8C6 7.77629 5.97551 7.55831 5.92908 7.34857L9.13139 5.34713C9.644 5.75577 10.2935 6 11 6Z" />
+            </svg>
+        </button>
+
+        <div class="share_panel" :class="activeModal ? 'active' : ''" @click="closeModal">
+            <div class="share_panel__container">
+                <div class="share_top">
+                    <a :href="`https://t.me/share/url?url=https://credit.mihailgok.ru/&text=Посмотри расчет кредита`"
+                        target="_blank" class="share__btn">
+                        <svg width="800px" height="800px" viewBox="0 0 24 24" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path
+                                d="M19.7773,4.42984 C20.8652,3.97177 22.0315,4.8917 21.8394,6.05639 L19.5705,19.8131 C19.3517,21.1395 17.8949,21.9006 16.678,21.2396 C15.6597,20.6865 14.1489,19.8352 12.7873,18.9455 C12.1074,18.5012 10.0255,17.0766 10.2814,16.0625 C10.5002,15.1954 14.0001,11.9375 16.0001,10 C16.7857,9.23893 16.4279,8.79926 15.5001,9.5 C13.1985,11.2383 9.50332,13.8812 8.28136,14.625 C7.20323,15.2812 6.64031,15.3932 5.96886,15.2812 C4.74273,15.0769 3.60596,14.7605 2.67788,14.3758 C1.42351,13.8558 1.48461,12.132 2.67703,11.63 L19.7773,4.42984 Z"
+                                fill="#FFF">
+                            </path>
+                        </svg>
+                    </a>
+                    <a :href="`https://vk.com/share.php?url=https://credit.mihailgok.ru/`" target="_blank"
+                        class="share__btn">
+                        <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M23.4493 5.94799C23.6161 5.40154 23.4493 5 22.6553 5H20.0297C19.3621 5 19.0543 5.34687 18.8874 5.72936C18.8874 5.72936 17.5521 8.92607 15.6606 11.0025C15.0487 11.6036 14.7705 11.7949 14.4367 11.7949C14.2698 11.7949 14.0194 11.6036 14.0194 11.0572V5.94799C14.0194 5.29225 13.8345 5 13.2781 5H9.15213C8.73494 5 8.48403 5.30434 8.48403 5.59278C8.48403 6.21441 9.42974 6.35777 9.52722 8.10641V11.9042C9.52722 12.7368 9.37413 12.8878 9.04032 12.8878C8.15023 12.8878 5.98507 9.67682 4.70093 6.00261C4.44927 5.28847 4.19686 5 3.52583 5H0.900218C0.150044 5 0 5.34687 0 5.72936C0 6.41244 0.890141 9.80039 4.14464 14.2812C6.31429 17.3412 9.37118 19 12.1528 19C13.8218 19 14.0283 18.6316 14.0283 17.997V15.6842C14.0283 14.9474 14.1864 14.8003 14.7149 14.8003C15.1043 14.8003 15.7719 14.9916 17.3296 16.467C19.1099 18.2156 19.4034 19 20.4047 19H23.0304C23.7805 19 24.1556 18.6316 23.9392 17.9045C23.7024 17.1799 22.8525 16.1286 21.7247 14.8823C21.1127 14.1719 20.1947 13.4069 19.9165 13.0243C19.5271 12.5326 19.6384 12.314 19.9165 11.8769C19.9165 11.8769 23.1155 7.45067 23.4493 5.94799Z"
+                                fill="#FFF" />
+                        </svg>
+                    </a>
+                    <button class="share__btn" @click="copyLink">
+                        <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M15.24 2H11.3458C9.58159 1.99999 8.18418 1.99997 7.09054 2.1476C5.96501 2.29953 5.05402 2.61964 4.33559 3.34096C3.61717 4.06227 3.29833 4.97692 3.14701 6.10697C2.99997 7.205 2.99999 8.60802 3 10.3793V16.2169C3 17.725 3.91995 19.0174 5.22717 19.5592C5.15989 18.6498 5.15994 17.3737 5.16 16.312L5.16 11.3976L5.16 11.3024C5.15993 10.0207 5.15986 8.91644 5.27828 8.03211C5.40519 7.08438 5.69139 6.17592 6.4253 5.43906C7.15921 4.70219 8.06404 4.41485 9.00798 4.28743C9.88877 4.16854 10.9887 4.1686 12.2652 4.16867L12.36 4.16868H15.24L15.3348 4.16867C16.6113 4.1686 17.7088 4.16854 18.5896 4.28743C18.0627 2.94779 16.7616 2 15.24 2Z"
+                                fill="#FFF" />
+                            <path
+                                d="M6.6001 11.3974C6.6001 8.67119 6.6001 7.3081 7.44363 6.46118C8.28716 5.61426 9.64481 5.61426 12.3601 5.61426H15.2401C17.9554 5.61426 19.313 5.61426 20.1566 6.46118C21.0001 7.3081 21.0001 8.6712 21.0001 11.3974V16.2167C21.0001 18.9429 21.0001 20.306 20.1566 21.1529C19.313 21.9998 17.9554 21.9998 15.2401 21.9998H12.3601C9.64481 21.9998 8.28716 21.9998 7.44363 21.1529C6.6001 20.306 6.6001 18.9429 6.6001 16.2167V11.3974Z"
+                                fill="#FFF" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="share_bottom">
+                    <div class="share__link">
+                        <span>{{ share_link }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="links" data-aos="fade-down" data-aos-easing="ease-in-out" data-aos-duration="800"
+                data-aos-delay="0">
+                <a href="https://blog.mihailgok.ru" class="links__link" target="_blank">Блог автора</a>
+                <a href="https://calculate.mihailgok.ru/" class="links__link" target="_blank">Калькулятор финансов</a>
+            </div>
+
+            <div class="links" data-aos="fade-down" data-aos-easing="ease-in-out" data-aos-duration="800"
+                data-aos-delay="0">
+                <a href="/article.html" class="links__link" target="_blank">Справка</a>
+            </div>
+
+            <h1 class="header" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="800"
+                data-aos-delay="0">Калькулятор кредита</h1>
+
+            <p class="title" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="800"
+                data-aos-delay="0">
+                Рассчитайте свой кредит прямо сейчас!<br>Наш калькулятор поможет вам узнать <b>ежемесячный платеж</b>,
+                <br>общую <b>сумму переплаты</b> и другие важные параметры займа.
+            </p>
+
+            <div class="row">
+                <label class="input_card" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="800"
+                    data-aos-delay="0">
+                    <span class="input_card__label">Ставка</span>
+                    <div class="input_card__input">
+                        <input class="input_card__input" type="number" v-model="stavka">
+                        <span>%</span>
+                    </div>
+                    <span>{{ Number(stavka).toLocaleString() }} %</span>
+                </label>
+
+                <label class="input_card" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="800"
+                    data-aos-delay="100">
+                    <span class="input_card__label">Сумма покупки</span>
+                    <div class="input_card__input">
+                        <input class="input_card__input" type="number" :min="Number(vznos)" v-model="summ">
+                        <span>₽</span>
+                    </div>
+                    <span>{{ Number(summ).toLocaleString() }}</span>
+                </label>
+
+                <label class="input_card" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="800"
+                    data-aos-delay="200">
+                    <span class="input_card__label">Срок</span>
+                    <div class="input_card__input">
+                        <input class="input_card__input" type="number" v-model="srok">
+                        <span>мес.</span>
+                    </div>
+                    <span>{{ Number(srok).toLocaleString() }} мес.</span>
+                </label>
+
+                <label class="input_card" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="800"
+                    data-aos-delay="300">
+                    <span class="input_card__label">Взнос</span>
+                    <div class="input_card__input">
+                        <input class="input_card__input" type="number" v-model="vznos">
+                        <span>₽</span>
+                    </div>
+                    <span>{{ Number(vznos).toLocaleString() }} | {{ Math.round(vznos / summ * 10000) / 100  }}%</span>
+                </label>
+            </div>
+
+            <div class="row row--main">
+                <div class="input_card input_card--main" data-aos="fade-up" data-aos-easing="ease-in-out"
+                    data-aos-duration="800" data-aos-delay="400">
+                    <span>Мес. платёж:</span>
+                    <span>
+                        {{ Math.round(mounthly).toLocaleString() }}&nbsp;₽
+                    </span>
+                </div>
+                <div class="input_card input_card--main" data-aos="fade-up" data-aos-easing="ease-in-out"
+                    data-aos-duration="800" data-aos-delay="500">
+                    <span>Сумма кредита:</span>
+                    <span>
+                        {{ Math.round(summ - vznos).toLocaleString() }}&nbsp;₽
+                    </span>
+                </div>
+
+                <div class="input_card input_card--main" data-aos="fade-up" data-aos-easing="ease-in-out"
+                    data-aos-duration="800" data-aos-delay="600">
+                    <span>Итог выплат:</span>
+                    <span>
+                        {{ Math.round(mounthly*srok).toLocaleString() }}&nbsp;₽
+                    </span>
+                </div>
+
+                <div class="input_card input_card--main red" data-aos="fade-up" data-aos-easing="ease-in-out"
+                    data-aos-duration="800" data-aos-delay="700">
+                    <span>Переплата | %&nbsp;сумм | %&nbsp;итог</span>
+                    <span>
+                        {{ Math.round(mounthly*srok - summ + vznos).toLocaleString() }}&nbsp;₽
+                        |
+                        {{ Math.round((mounthly*srok - summ + vznos) / (summ - vznos) * 100) }}&nbsp;%
+                        |
+                        {{ Math.round((mounthly*srok - summ + vznos) / (mounthly*srok) * 100) }}&nbsp;%
+                    </span>
+                </div>
+            </div>
+
+            <script>
+                window.yaContextCb.push(() => {
+                    Ya.Context.AdvManager.render({
+                        "blockId": "R-A-12452208-1",
+                        "renderTo": "yandex_rtb_R-A-12452208-1"
+                    })
+                })
+            </script>
+
+            <h2 class="subheader" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="800"
+                data-aos-delay="600">Таблица платежей по кредиту</h2>
+
+            <div class="pay_list" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="800"
+                data-aos-delay="600">
+                <div class="pay_list__item" v-for="i in srok">
+                    <div class="pay_list__item__block">{{ i }}</div>
+                    <div class="pay_list__item__block">{{ Math.round(mounthly).toLocaleString() }} ₽</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="container chart--container">
+        <div class="chart__wrapper">
+            <svg class="chart__svg" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+            </svg>
+        </div>
+        <div class="chart_label">
+            <div class="chart_label__item">
+                <div class="chart_label__item__square"></div>
+                <span class="chart_label__item__hint">Сумма кредита <span id="credit_summ"></span> </span>
+            </div>
+            <div class="chart_label__item">
+                <div class="chart_label__item__square"></div>
+                <span class="chart_label__item__hint">Проценты <span id="credit_cent"></span> </span>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<script src="js/chart.js"></script>
+
+<script src="js/app.js">
+
+</script>
+
+<script src="js/aos.js"></script>
+<script>
+    AOS.init({
+        disable: function () {
+            var maxWidth = 800;
+            return window.innerWidth < maxWidth;
+        },
+        once: true,
+    });
+</script>
+
+</html>

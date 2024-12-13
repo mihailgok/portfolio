@@ -1,0 +1,950 @@
+.hero
+   padding: 226rem 0 288rem 0
+   position: relative
+   background: url("../img/back/back1.jpg") center center no-repeat
+   background-size: cover
+   &__header
+      position: relative
+      z-index: 1
+      margin-bottom: 16rem
+      max-width: 746rem
+      span
+         color: $red
+   &__text 
+      max-width: 421rem
+      position: relative
+      z-index: 1
+   &__img 
+      width: 1408rem
+      height: 792rem
+      object-fit: cover
+      position: absolute
+      top: 80rem
+      right: 20rem
+   
+
+.pluses
+   padding: 88rem 0 74rem 0
+   background: url("../img/back/back2.jpg") center center no-repeat
+   background-size: cover
+   &__swiper 
+      display: flex
+      align-items: center
+      &__nav 
+         display: flex 
+         flex-direction: column
+         gap: 16rem
+         margin-right: 210rem
+         &__btn 
+            svg 
+               width: 64rem
+               height: 64rem
+               stroke: #FFFFFF
+               transition: stroke 0.3s
+            &:disabled
+               opacity: 0.5
+            &:hover 
+               svg 
+                  stroke: #F9D833
+      &__next 
+         svg 
+            transform: scale(1, -1)
+      &__cards 
+         display: flex 
+         flex-direction: column
+         margin-top: -50rem
+         width: 766rem
+         height: 1032rem
+         align-self: stretch
+         position: relative
+         overflow: hidden
+         -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 90%, 80% 80%, 71% 70%, 68% 50%, 70% 40%, 85% 20%, 100% 10%, 100% 0)
+         clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 90%, 80% 80%, 71% 70%, 68% 50%, 70% 40%, 85% 20%, 100% 10%, 100% 0)
+         // background: rgba(255, 255, 255, 0.4)
+      &__card
+         position: absolute
+         // margin-bottom: 104rem
+         width: 355rem
+         opacity: 0.55
+         transition: opacity 2s, top 2s, left 2s
+         transition-delay: 0.1s
+         .pluses__swiper__card__header
+            transition: color 1s
+         &1
+            top: -600rem
+            left: 1000rem
+         &2
+            top: -400rem
+            left: 700rem
+         &3
+            top: 0
+            left: 350rem
+         &4
+            top: 208rem
+            left: 137rem
+         &6
+            top: 672rem
+            left: 137rem
+         &7
+            top: 880rem
+            left: 350rem
+         &8
+            top: 1300rem
+            left: 700rem
+         &9
+            top: 1500rem
+            left: 1000rem
+         &.active 
+            top: 416rem
+            left: 0
+            opacity: 1
+            .pluses__swiper__card__header
+               color: #F9D833
+         // &:first-child
+         //    margin-bottom: 56rem
+         //    margin-left: auto
+         // &:nth-child(2), &:nth-child(4)
+         //    margin-left: 137rem
+         // &:last-child
+         //    margin-bottom: 0
+         //    margin-left: auto
+         &__header 
+            margin-bottom: 8rem
+            display: flex 
+            align-items: center
+            gap: 16rem
+            &::before
+               content: ""
+               background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTYuMDE4MjkgMEwwIDYuMDk1MjRIOS41NTI4NVYxNkwxNS42NjY3IDEwVjBINi4wMTgyOVoiIGZpbGw9IiNFRTM4M0EiLz4KPC9zdmc+Cg==") center center no-repeat
+               background-size: contain
+               width: 16rem 
+               height: 16rem
+      &__logo 
+         width: 838.6rem
+         height: 836.9rem
+         flex-shrink: 0
+         margin-left: -226rem
+         // background: url("../img/El1.svg") center center no-repeat
+         // background-size: contain
+         display: flex 
+         align-items: center
+         justify-content: center
+         position: relative
+      &__shadow
+         width: 100%
+         height: 100%
+         position: absolute
+         top: 0
+         left: 0
+         right: 0
+         bottom: 0
+         margin: auto
+         filter: blur(50rem)
+      &__svg
+         width: 100%
+         height: 100%
+         position: absolute
+         top: 0
+         left: 0
+         right: 0
+         bottom: 0
+         margin: auto
+         border: 1rem solid #FFFFFF
+         border-radius: 50%
+         &__btn 
+            background: $highlight
+            width: 10rem
+            height: 10rem
+            border: 1rem solid white
+            border-radius: 50%
+            box-shadow: 0 0 25rem #F9D833
+            transition: transform 1s
+            &:hover, &.active
+               transform: scale(1.5)
+            &.active 
+               pointer-events: none
+            &_1
+               position: absolute
+               bottom: 45%
+               right: -1%
+            &_2 
+               position: absolute
+               bottom: -0.5%
+               left: 40%
+            &_3
+               position: absolute
+               top: 16%
+               left: 11%
+            &_4
+               position: absolute
+               top: 50%
+               right: -1%
+            &_5
+               position: absolute
+               top: 8.5%
+               right: 20%
+            &_6
+               position: absolute
+               bottom: 19.5%
+               left: 9%         
+            &_7
+               position: absolute
+               top: 0
+               left: 41%
+            &_8
+               position: absolute
+               bottom: 0
+               right: 41%
+            &_9
+               position: absolute
+               top: 50%
+               left: -0.5%
+         // animation: rotateL 3s
+         &_anim
+            animation: rotateL 3s
+            animation-delay: 0.1s
+         &_R
+            animation: rotateR 3s
+            animation-delay: 0.1s
+      &__logo1
+         width: 687.82rem
+         height: 692rem
+         // background: url("../img/El_shadow.svg") center center no-repeat
+         background-size: contain
+         display: flex 
+         align-items: center
+         justify-content: center
+         flex-shrink: 0
+         // backdrop-filter: blur(2rem)
+      &__logo2
+         width: 644.118rem
+         height: 647.933rem
+         // background: url("../img/El2.svg") center center no-repeat
+         // background-size: contain
+         display: flex 
+         align-items: center
+         justify-content: center
+         flex-shrink: 0
+         position: relative
+      &__logo3
+         width: 448.862rem
+         height: 451.155rem
+         // background: url("../img/El3.svg") center center no-repeat
+         // background-size: contain
+         // background-position: center
+         display: flex 
+         align-items: center
+         justify-content: center
+         flex-shrink: 0
+         position: relative
+      &__logoL
+         position: absolute
+         top: 151.5rem
+         left: 139rem
+         width: 99.118rem 
+         height: 96.5rem 
+         &.logoL
+            animation: logoL 3s
+            animation-delay: 0.1s
+      &__logoR 
+         position: absolute
+         bottom: 170.7rem
+         right: 144.7rem
+         width: 100.586rem
+         height: 96.5rem
+         &.logoR
+            animation: logoR 3s
+            animation-delay: 0.1s
+
+@keyframes logoL
+   0%
+      transform: translate(0)
+   20%
+      transform: translateX(-74rem)
+   80%
+      transform: translateX(-74rem) rotate(-360deg)
+   100%
+      transform: translateX(0) rotate(-360deg)
+
+@keyframes logoR
+   0%
+      transform: translate(0)
+   20%
+      transform: translateX(74rem)
+   80%
+      transform: translateX(74rem) rotate(-360deg)
+   100%
+      transform: translateX(0) rotate(-360deg)
+
+@keyframes rotateL
+   0%
+      transform: translate(0)
+   100%
+      transform: translateX(0) rotate(-360deg)
+
+
+@keyframes rotateR
+   0%
+      transform: translate(0)
+   100%
+      transform: translateX(0) rotate(360deg)
+
+
+
+.canister 
+   position: relative
+   background: url("../img/back/back3.jpg") center center no-repeat
+   background-size: cover
+   padding: 112rem 0 106rem 0
+   .container 
+      display: flex
+      align-items: flex-start
+   &__hint 
+      // position: relative
+      // z-index: 2
+      padding: 24rem 
+      background: #40403F
+      display: inline-block
+      width: 322rem
+      position: absolute
+      opacity: 0
+      pointer-events: none 
+      transition: opacity 0.3s, bottom 0.3s, left 0.3s
+      &.active
+         opacity: 1
+         pointer-events: auto
+      &__top 
+         display: flex 
+         align-items: center
+         justify-content: space-between
+         margin-bottom: 10rem
+      &__close 
+         width: 20rem
+         height: 20rem
+         cursor: pointer
+      &__text 
+         line-height: 150%
+   &__top 
+      max-width: 665rem
+      margin-bottom: 50rem
+      .maintext
+         max-width: 530rem
+      &_more, &_less
+         font-weight: 700
+         text-decoration: underline
+         cursor: pointer
+         position: relative
+         z-index: 3
+      span:last-child
+         display: none 
+      input:checked + .canister__top_more 
+         display: none 
+      input:checked ~ span:last-child 
+         display: inline
+   &__header 
+      margin-bottom: 16rem
+      b 
+         color: $highlight
+   &__first 
+      .red_btn 
+         position: relative
+         z-index: 3
+         display: inline-flex 
+         align-items: center
+         gap: 8rem
+         margin-right: 8rem
+         svg 
+            width: 1em
+            height: 1em
+   &__scroller 
+      padding-top: 70rem
+      width: 400rem
+      // height: 530rem
+      display: flex 
+      flex-direction: column
+      align-items: center
+      justify-content: flex-start
+      &__card 
+         opacity: 0
+         pointer-events: none
+         transition: opacity 0.3s
+         display: none
+         &.active 
+            display: block
+            opacity: 1
+            pointer-events: auto
+      .viewer
+         width: 100%
+         height: 100%
+         // padding-bottom: 0rem
+         &::after
+            content: ""
+            position: absolute
+            width: 100%
+            height: 100%
+            top: 0
+            left: 0
+         img 
+            position: relative
+            z-index: 2
+            width: 100%
+            height: 100%
+            object-fit: contain
+      .scroll_shadow
+         opacity: 0.1
+         width: 100%
+         height: 0
+         pointer-events: none
+         img
+            transform: scale(1, -1) translateY(150rem)
+            width: 400rem
+            object-fit: contain
+      &__svg 
+         width: 173rem 
+         height: 47rem
+         flex-shrink: 0
+         pointer-events: none
+   &__btns 
+      display: flex 
+      margin-left: auto
+   &__btn 
+      height: 620rem
+      writing-mode: vertical-rl
+      transform: rotate(180deg)
+      padding: 32rem
+      border-left: 1rem solid #FFFFFF
+      line-height: 150%
+      font-weight: 500
+      &:first-child
+         border-right: 1rem solid #FFFFFF
+      &.active 
+         color: #F9D833
+   &__panel 
+      position: relative
+      z-index: 3
+      padding: 24rem
+      background: #32302C
+      display: flex 
+      flex-direction: column
+      gap: 24rem
+      width: 524rem
+      margin-bottom: 50rem
+      position: relative
+      &__line 
+         display: flex 
+         align-items: center
+         gap: 24rem 
+         padding-bottom: 16rem
+         border-bottom: 0.5rem solid #FFF
+         &__svg 
+            width: 24rem 
+            height: 24rem
+            cursor: pointer
+         &__main 
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr
+            gap: 8rem 32rem
+            &__item 
+               display: flex 
+               align-items: flex-start
+               gap: 4rem
+               svg 
+                  width: 15rem
+                  height: 15rem
+                  cursor: pointer
+
+.info 
+   padding: 110rem 0 137rem 0
+   background: url("../img/back/back4.jpg") center center no-repeat
+   background-size: cover
+   // margin-bottom: 106rem
+   &__header 
+      max-width: 1200rem
+      margin-bottom: 64rem
+      span 
+         color: $highlight
+   &__top 
+      display: flex 
+      margin-bottom: 64rem
+      &__left 
+         position: relative
+         -webkit-clip-path: polygon(0 23%, 0 100%, 87% 100%, 100% 77%, 100% 0, 13% 0)
+         clip-path: polygon(0 23%, 0 100%, 87% 100%, 100% 77%, 100% 0, 13% 0)
+         width: 798rem
+         height: 449rem
+         img 
+            width: 100% 
+            height: 100% 
+            object-fit: cover
+         &::after 
+            content: ""
+            width: 72rem 
+            height: 72rem
+            background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzIiIGhlaWdodD0iNzIiIHZpZXdCb3g9IjAgMCA3MiA3MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMzYiIGN5PSIzNiIgcj0iMzYiIGZpbGw9IiNFRTM4M0EiLz4KPHBhdGggZD0iTTQ2LjIxMjMgMzYuNTc1OUwzMS41MzY4IDQ2LjM1OTZDMzEuNDMyNSA0Ni40MjkgMzEuMzExNCA0Ni40Njg4IDMxLjE4NjMgNDYuNDc0OEMzMS4wNjEyIDQ2LjQ4MDggMzAuOTM2OSA0Ni40NTI3IDMwLjgyNjUgNDYuMzkzNkMzMC43MTYxIDQ2LjMzNDUgMzAuNjIzOCA0Ni4yNDY2IDMwLjU1OTQgNDYuMTM5MUMzMC40OTUgNDYuMDMxNyAzMC40NjEgNDUuOTA4OSAzMC40NjA5IDQ1Ljc4MzZWMjYuMjE2MkMzMC40NjEgMjYuMDkxIDMwLjQ5NSAyNS45NjgxIDMwLjU1OTQgMjUuODYwN0MzMC42MjM4IDI1Ljc1MzMgMzAuNzE2MSAyNS42NjU0IDMwLjgyNjUgMjUuNjA2M0MzMC45MzY5IDI1LjU0NzIgMzEuMDYxMiAyNS41MTkxIDMxLjE4NjMgMjUuNTI1MUMzMS4zMTE0IDI1LjUzMTEgMzEuNDMyNSAyNS41NzA5IDMxLjUzNjggMjUuNjQwMkw0Ni4yMTIzIDM1LjQyMzlDNDYuMzA3MSAzNS40ODcyIDQ2LjM4NDkgMzUuNTcyOCA0Ni40Mzg2IDM1LjY3MzNDNDYuNDkyNCAzNS43NzM4IDQ2LjUyMDUgMzUuODg2IDQ2LjUyMDUgMzUuOTk5OUM0Ni41MjA1IDM2LjExMzkgNDYuNDkyNCAzNi4yMjYxIDQ2LjQzODYgMzYuMzI2NkM0Ni4zODQ5IDM2LjQyNzEgNDYuMzA3MSAzNi41MTI3IDQ2LjIxMjMgMzYuNTc1OVoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=") center center no-repeat
+            background-size: contain
+            background-repeat: no-repeat
+            position: absolute
+            top: 0
+            left: 0
+            bottom: 0
+            right: 0
+            margin: auto
+            cursor: pointer
+            transition: opacity 0.3s
+         &:hover
+            &::after
+               opacity: 0.8
+      &__right 
+         max-width: 754rem 
+         margin-left: auto
+         display: flex 
+         align-items: flex-end
+         position: relative
+         &::after 
+            content: ""
+            width: 77rem 
+            height: 32rem
+            background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzciIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCA3NyAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTExLjkwODUgMEwwIDEyLjA2MDhIMTguOTAyNFYzMS42NTk2TDMxIDE5Ljc4NzJWMEgxMS45MDg1WiIgZmlsbD0iI0Y5RDgzMyIvPgo8cGF0aCBkPSJNNTcuOTA4NSAwTDQ2IDEyLjA2MDhINjQuOTAyNFYzMS42NTk2TDc3IDE5Ljc4NzJWMEg1Ny45MDg1WiIgZmlsbD0iI0VFMzgzQSIvPgo8L3N2Zz4K")
+            background-size: contain
+            background-repeat: no-repeat
+            position: absolute
+            top: 0
+            left: 0
+   &__bottom 
+      display: grid 
+      grid-template-columns: 1fr 1fr 1fr 
+      gap: 24rem 
+      // height: 
+      &__card 
+         -webkit-clip-path: polygon(0 20%, 0 100%, 80% 100%, 100% 80%, 100% 0, 20% 0)
+         clip-path: polygon(0 20%, 0 100%, 80% 100%, 100% 80%, 100% 0, 20% 0)
+         padding: 108rem 40rem
+         &:first-child
+            background: #32302C
+         &:nth-child(2)
+            background: $highlight
+         &:nth-child(3)
+            padding: 108rem 40rem 60rem 40rem
+            background: #FFFFFF
+            color: #353535
+            position: relative
+            .info__bottom__card__header
+               color: #000000
+            img
+               position: absolute
+               top: 16rem 
+               right: 36rem
+               width: 65.787rem
+               height: 125rem
+         &__header 
+            margin-bottom: 8rem
+         &__text 
+            margin-bottom: 16rem 
+            &:last-child
+               margin-bottom: 0
+
+
+            
+.series
+   background: url("../img/back/back5.jpg") center no-repeat
+   background-size: cover
+   padding: 106rem 0 80rem 0
+   position: relative
+   z-index: 2
+   &__container
+      display: flex
+   &__header
+      margin-bottom: 24rem
+   &__left 
+      flex-shrink: 0
+      margin-right: 30rem
+   &__panel 
+      display: flex
+      gap: 8rem
+      margin-bottom: 48rem
+      &__item 
+         cursor: pointer
+         span
+            display: inline-block
+            border: 1rem solid #FFFFFF
+            padding: 8rem 16rem
+            // font-size: 12rem
+            border-radius: 50rem
+            transition: color 0.3s, backgroud 0.3s
+         &:hover
+            span
+               background: rgba(255, 255, 255, 0.20)
+         input 
+            display: none 
+         input:checked + span 
+            background: $highlight 
+            font-weight: bold 
+            border-color: $highlight 
+   &__text 
+      max-width: 644rem 
+      line-height: 150%
+      &_more, &_less
+         font-weight: 700
+         text-decoration: underline
+         cursor: pointer
+         position: relative
+         z-index: 3
+      span:last-child
+         display: none 
+      input:checked + .series__text_more 
+         display: none 
+      input:checked ~ span:last-child 
+         display: inline
+   &__right
+      padding-top: 50rem
+      &__card
+         display: none
+         &.active 
+            display: flex
+         // align-items: flex-end
+      &_first
+         position: relative
+         width: 563rem
+         height: 510rem
+         transform: translateX(80rem)
+         pointer-events: none
+         img
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+      &_second 
+         width: 350rem 
+         height: 340rem
+         margin-left: -150rem
+         margin-top: 70rem
+         position: relative
+         pointer-events: none
+         img 
+            width: 100%
+
+
+
+@media (max-width: 650px)
+   .hero
+      background: url("../img/back/mback1.jpg") center center no-repeat
+      background-size: cover
+      padding: 116rem 0 354rem 0
+      &__header 
+         margin: 0 0 8rem 0
+   .pluses 
+      background: url("../img/back/mback2.jpg") center center no-repeat
+      background-size: cover
+      padding-bottom: 38rem
+      .h2 
+         margin-bottom: 32rem
+      &__swiper 
+         // order: 1
+         position: relative
+         display: flex 
+         flex-direction: column
+         &__nav 
+            position: absolute
+            z-index: 5
+            top: 285rem
+            left: 0
+            right: 0
+            margin: 0 auto
+            display: flex 
+            flex-direction: row 
+            justify-content: space-between
+            width: 94%
+            &__btn 
+               svg 
+                  width: 30rem
+                  height: 30rem
+         &__prev 
+            svg 
+               transform: rotate(-90deg)
+         &__next 
+            svg 
+               transform: rotate(90deg)
+         &__cards 
+            width: 100%
+            height: auto
+            overflow: hidden
+            margin-bottom: 20rem
+            margin-top: 0
+            clip-path: none 
+            -webkit-clip-path: none
+            &__container
+               display: flex 
+               flex-direction: row
+         &__card
+            position: static
+            width: 100%
+            // height: 300rem
+            margin-bottom: 0
+            flex-shrink: 0
+            opacity: 1
+            &.swiper-slide-active
+               .pluses__swiper__card__header
+                  color: #F9D833
+         &__logo
+            margin-left: 0
+            width: 290rem
+            height: 290rem
+            overflow: hidden
+            padding: 10rem 0
+         &__logo1
+            // width: 100%
+            width: 295rem
+            height: 295rem
+         &__logo2
+            width: 222rem
+            height: 222rem
+         &__logo3
+            width: 154rem
+            height: 155rem
+         &__logoL
+            width: 34rem
+            height: 34rem
+            top: 52rem
+            left: 47rem
+         &__logoR
+            width: 34rem
+            height: 34rem
+            bottom: 59rem
+            right: 50rem
+         &__shadow
+            display: none
+         &__svg 
+            width: 95%
+            height: 95%
+            &__btn 
+               width: 5rem
+               height: 5rem
+               pointer-events: none
+               &_1
+                  position: absolute
+                  bottom: 45%
+                  right: -2%
+               &_2 
+                  position: absolute
+                  bottom: -1.5%
+                  left: 39%
+               &_3
+                  position: absolute
+                  top: 16%
+                  left: 10%
+               &_4
+                  position: absolute
+                  top: 50%
+                  right: -1.5%
+               &_5
+                  position: absolute
+                  top: 8%
+                  right: 20%
+               &_6
+                  position: absolute
+                  bottom: 19%
+                  left: 9%         
+               &_7
+                  position: absolute
+                  top: -0.5%
+                  left: 41%
+               &_8
+                  position: absolute
+                  bottom: -0.5%
+                  right: 41%
+               &_9
+                  position: absolute
+                  top: 50%
+                  left: -1%
+
+   @keyframes logoL
+      0%
+         transform: translate(0)
+      20%
+         transform: translateX(-40rem)
+      80%
+         transform: translateX(-40rem) rotate(-360deg)
+      100%
+         transform: translateX(0) rotate(-360deg)
+
+   @keyframes logoR
+      0%
+         transform: translate(0)
+      20%
+         transform: translateX(40rem)
+      80%
+         transform: translateX(40rem) rotate(-360deg)
+      100%
+         transform: translateX(0) rotate(-360deg)
+   
+   .canister
+      background: url("../img/back/mback3.jpg") center center no-repeat
+      background-size: cover
+      padding: 0 0 348rem 0
+      position: relative
+      .container
+         flex-direction: column
+      &__top
+         margin-bottom: 16rem
+      &__header 
+         border-bottom: 1rem solid #FFFFFF
+         padding: 8rem 0
+         position: relative
+         &::after
+            content: ""
+            position: absolute
+            top: 10rem
+            right: 0
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDZMOCAxMEw0IDYiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo=') center no-repeat
+            background-size: contain
+            display: block
+            width: 20rem
+            height: 20rem
+      &__first
+         .red_btn
+            display: none
+      &__panel
+         width: auto
+         padding: 16rem 8rem
+         position: absolute
+         bottom: 0
+         left: 15rem
+         right: 15rem
+         margin-bottom: 5rem
+         &__line
+            align-items: flex-start
+            &__main 
+               gap: 8rem 24rem
+               grid-template-columns: 1fr 1fr
+      &__hint 
+         // overflow: auto
+         padding: 16rem
+         width: 100%
+         left: 0 !important
+         // display: none
+      &__scroller
+         width: 240rem
+         padding: 0
+         margin: 0 auto
+         &__svg 
+            width: 105rem
+            height: 24rem
+         .viewer
+            padding-bottom: 15rem
+            &::after
+               display: none
+         .scroll_shadow
+            width: 100%
+            img
+               transform: scale(1, -1) translateY(50rem)
+               width: 100%
+               object-fit: contain
+      &__btns 
+         position: absolute
+         top: 70rem
+         left: 0
+         flex-direction: column
+         width: 100%
+         background: #282621
+         padding: 15rem
+         z-index: 5
+         opacity: 0
+         pointer-events: none
+         transition: opacity 0.3s
+         &.active 
+            opacity: 1
+            pointer-events: auto
+      &__btn 
+         writing-mode: horizontal-tb
+         height: auto
+         transform: rotate(0)
+         border: none
+         border-bottom: 1rem solid #FFFFFF
+         padding: 8rem 0
+         &:first-child
+            border-right: none
+
+   .info
+      margin-bottom: 0
+      padding: 96rem 0 0 0
+      background: url("../img/back/mback4.jpg") center center no-repeat
+      background-size: cover
+      &__header
+         margin-bottom: 32rem
+      &__top 
+         flex-direction: column
+         margin-bottom: 32rem
+         &__left 
+            margin-bottom: 32rem
+            width: 100%
+            height: 162rem
+            &::after
+               width: 35rem
+               height: 35rem
+         &__right 
+            &::after
+               width: 50rem
+               height: 21rem
+         &__text 
+            padding-top: 36rem
+            text-align: justify
+      &__bottom
+         display: flex 
+         flex-direction: column
+         &__card 
+            padding: 60rem 22rem 42rem
+            &:nth-child(3)
+               padding: 60rem 22rem 96rem
+            img
+               display: none
+
+   .series
+      padding: 75rem 0 30rem 0
+      position: relative
+      background: url("../img/back/mback5.jpg") center center no-repeat
+      background-size: cover
+      overflow: hidden
+      &__container 
+         flex-direction: column
+      &__panel 
+         width: 100%
+         overflow-x: auto 
+         padding-bottom: 15rem
+         margin-bottom: 0rem
+
+         flex-wrap: wrap
+         justify-content: center
+         gap: 12rem 5rem
+         &__item 
+            flex-shrink: 0
+            span
+               padding: 8rem 12rem
+               font-size: 12rem
+      &__left 
+         margin-right: 0
+         margin-bottom: 30rem
+      &__text 
+         display: none
+      &__right
+         margin-bottom: 50rem
+         padding-top: 0
+         &__card 
+            width: 100%
+            position: relative
+            height: 200rem
+         &_first
+            position: absolute
+            left: 0
+            top: 0
+            width: 100%
+            z-index: 1
+            transform: none
+         &_second
+            margin: 0
+            position: absolute
+            top: 50rem
+            right: 0
+            width: 60%
+            transform: translateX(50rem)
+      &__mobtext
+         display: block

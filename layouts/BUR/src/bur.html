@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Компания «БурСервис»</title>
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+
+   <link rel="stylesheet" href="css/final.sass">
+
+   <script src="js/rem.js"></script>
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+   <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+</head>
+
+<body>
+
+   <include src="src/components/header.html"></include>
+   <main class="bur">
+
+      <section class="section vac-hero about_hero bur_hero">
+         <div class="container">
+            <div class="hero__title">
+               <h1 class="hero__header h2 reg">Буровые долота и отбор керна</h1>
+               <!-- <p class="vac-hero__subtitle subtitle light">Всего 35 вакансий</p> -->
+            </div>
+
+            <p class="h6 about_hero__list bur_hero__text">
+               Буровые долота и услуги, разработанные для обеспечения оптимальной эффективности и производительности в
+               соответствии с требованиями заказчика
+            </p>
+         </div>
+      </section>
+
+
+      <section class="section about about_page">
+         <div class="container">
+            <h2 class="about_page__header section__header h2 reg" data-aos="fade-up" data-aos-duration="1000">
+               Разрабатываем уникальные решения с учетом конкретных условий бурения
+            </h2>
+
+            <div class="about__cols">
+               <div class="about__col">
+                  <p class="about__info light subtitle" data-aos="fade-up" data-aos-duration="1000">
+                     Каждая скважина уникальна и поэтому какого-либо универсального решения, подходящего для всех, не
+                     существует.
+                  </p>
+                  <div class="about__img_container">
+                     <div>
+                        <img class="about__img" src="img/burpage1.png">
+                     </div>
+                  </div>
+               </div>
+
+               <div class="about__col">
+                  <div class="about__img_container">
+                     <div>
+                        <img class="about__img about__img-margin" src="img/burpage2.png">
+                     </div>
+                  </div>
+                  <p class="light subtitle" data-aos="fade-left" data-aos-delay="1000" data-aos-duration="1000">
+                     Подразделение <span>«Буровые долота»</span> располагает высококвалифицированными экспертами по
+                     оценке области применения и разработке конструкции породоразрущающего инструмента в своих
+                     региональных представительствах по всей России. Это позволяет нам разрабатывать оригинальные
+                     решения с учетом конкретных условий бурения, при непосредственном взаимодействии с заказчиком
+                  </p>
+               </div>
+            </div>
+         </div>
+
+         <script>
+            document.addEventListener("DOMContentLoaded", () => {
+               function onVisible(element, callback) {
+                  new IntersectionObserver((entries, observer) => {
+                     entries.forEach(entry => {
+                        if (entry.intersectionRatio > 0) {
+                           callback(element);
+                           observer.disconnect();
+                        }
+                     });
+                  }).observe(element);
+               }
+
+               function showImg(el) {
+                  setTimeout(() => {
+                     el.classList.add("active");
+                  }, 500);
+               }
+
+               const allImgs = document.querySelectorAll(".about__img_container");
+
+               for (let img of allImgs) {
+                  onVisible(img, showImg);
+               }
+            })
+         </script>
+      </section>
+
+      <section class="section bur_info">
+         <div class="container">
+            <h2 class="bur_info__header section__header h2 reg" data-aos="fade-up" data-aos-duration="1000">
+               Сочетаем местный опыт<br>
+               с возможностями самого <span>эффективного</span> в отрасли программного обеспечения
+            </h2>
+
+            <div class="bur_info__flex">
+               <img src="img/bur_info.png" alt="" class="bur_info__img">
+
+               <div class="bur_info__text h6 light">
+                  <p class="bur_info__p">
+                     По завершении этапа проектирования чертежи передаются непосредственно на производство, где буровые
+                     долота изготавливают в рамках кратчайших в отрасли производственных циклов.
+                  </p>
+                  <p class="bur_info__p">
+                     Благодаря процессу данному подходу компания ООО «БурСервис» достигает <span>рекордных
+                        показателей</span> и является одним из лидеров по оказанию услуг Технологического Сопровождения
+                     и Отработки Долот на территории РФ.
+                  </p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+
+      <section class="section about_statagy">
+         <div class="container">
+            <h2 class="about_statagy__header h2 reg">
+               Буровые долота с неподвижным вооружением <span>(PDC)</span>
+            </h2>
+
+
+            <div class="about_politics__grid">
+               <div class="about_politics__card">
+                  <h4 class="about_statagy__card__header h6 reg"></h4>
+                  <p class="about_statagy__card__text subtitle light">
+                     Долота Серии Premium – долота, создающие рекорды (GeoTech™, MegaForce™, SteelForce™
+                  </p>
+               </div>
+               <div class="about_politics__card">
+                  <h4 class="about_statagy__card__header h6 reg"></h4>
+                  <p class="about_statagy__card__text subtitle light">
+                     Импрегнированные Долота Серии Performance – надежное решение (Буровые долота IQ Series™,
+                     TurboForce™, I Series™)
+                  </p>
+               </div>
+               <div class="about_politics__card">
+                  <h4 class="about_statagy__card__header h6 reg"></h4>
+                  <p class="about_statagy__card__text subtitle light">
+                     Вращающийся элемент ограничения глубины внедрения резца в породу Cruzer™
+                  </p>
+               </div>
+               <div class="about_politics__card">
+                  <h4 class="about_statagy__card__header h6 reg"></h4>
+                  <p class="about_statagy__card__text subtitle light">
+                     Профилированные Резцы Geometrix ™
+                  </p>
+               </div>
+               <div class="about_politics__card">
+                  <h4 class="about_statagy__card__header h6 reg"></h4>
+                  <p class="about_statagy__card__text subtitle light">
+                     Датчики измерения параметров бурения в долоте (Cerebro™)
+                  </p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="bur_dolota">
+         <div class="container">
+            <div class="bur_dolota__top">
+               <h2 class="bur_dolota__header section__header h2 reg">
+                  Шарошечные долота
+               </h2>
+
+               <p class="bur_dolota__top__text subtitle light">
+                  Это породоразрушающий инструмент, у которого основным рабочим органом является <span>шарошка</span> —
+                  стальная конусообразная деталь, свободно посаженная на ось и несущая на своей поверхности инденторы —
+                  зубцы, штыри
+               </p>
+            </div>
+
+            <div class="bur_dolota__imgs">
+               <img src="img/dolota1.jpeg" alt="" class="bur_dolota__img">
+               <img src="img/dolota2.jpeg" alt="" class="bur_dolota__img bur_dolota__img--big">
+            </div>
+         </div>
+      </section>
+
+      <section class="bur_select">
+         <div class="container">
+            <div class="bur_select__first">
+               <h2 class="bur_select__header section__header h2 reg">
+                  Отбор керна
+               </h2>
+               <p class="subtitle light">
+                  Широкий спектр технологий, позволяет работать в породах от рыхлых до очень твердых и абразивных
+               </p>
+            </div>
+            <ul class="bur_select__sec h6">
+               <li class="bur_select__sec__item">
+                  Антизаклиночная Система превентивного типа (RockStrong™)
+               </li>
+               <li class="bur_select__sec__item">
+                  Система GliderTM - система изолирования керна от размыва
+               </li>
+               <li class="bur_select__sec__item">
+                  Услуги по консервации и обеспечению стабилизации керна
+               </li>
+            </ul>
+         </div>
+      </section>
+
+
+   </main>
+
+   <include src="src/components/footer.html"></include>
+</body>
+
+</html>

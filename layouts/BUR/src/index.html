@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Компания «БурСервис»</title>
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+   <link rel="stylesheet" href="css/final.sass">
+
+   <script src="js/rem.js"></script>
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+
+   <include src="src/components/header.html"></include>
+
+   <main class="main">
+      <section class="section hero">
+         <!-- <img src="img/hero_back2x.jpg" class="hero__back" data-aos="fade-up" data-aos-duration="1000"> -->
+         <video autoplay loop muted>
+            <!-- <source src="img/hero.webm" type="video/webm" />
+            <source src="img/hero.avi" type="video/avi" /> -->
+            <source src="img/hero1.mp4" type="video/mp4" />
+         </video>
+         <div class="container">
+            <h1 class="h1 med hero__header" data-aos="fade-down" data-aos-delay="1000" data-aos-duration="400">Компания
+               «БурСервис»</h1>
+
+            <div class="hero-bottom" data-aos="fade-down" data-aos-delay="1000" data-aos-duration="400">
+               <ul class="hero-bottom__list h6 bold">
+                  <li class="hero-bottom__item">- Бурение и оценка параметров пласта</li>
+                  <li class="hero-bottom__item">- Управление проектами и консультационные услуги</li>
+                  <li class="hero-bottom__item">- Заканчивание и добыча</li>
+               </ul>
+
+               <div class="hero-bottom__right" data-aos="fade-down" data-aos-delay="1000" data-aos-duration="400">
+                  <p class="h5 reg"> оказываем широкий спектр нефтесервисных услуг </p>
+                  <button class="btn_primary">
+                     <span class="maintext">Все услуги</span>
+                     <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 1.68652L23.3137 13.0002M23.3137 13.0002L12.508 23.806M23.3137 13.0002H0.686292"
+                           stroke="white" stroke-width="2"></path>
+                     </svg>
+                  </button>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="section about">
+         <div class="container">
+            <h2 class="section__header h2 reg" data-aos="fade-up" data-aos-duration="1000">
+               ООО «БурСервис» - один из крупнейших отечественных поставщиков нефтесервисных услуг в Российской
+               Федерации.
+            </h2>
+
+            <div class="about__cols">
+               <div class="about__col">
+                  <p class="about__info light subtitle" data-aos="fade-up" data-aos-duration="1000">
+                     В мае 2022 года компания <span>«БурСервис»</span> приобрела права на оказание нефтесервисных услуг
+                     в части всего бизнеса <span>Halliburton</span> в России.
+                  </p>
+                  <div class="about__img_container">
+                     <div>
+                        <img class="about__img" src="img/bur1.jpg">
+                     </div>
+                  </div>
+               </div>
+
+               <div class="about__col">
+                  <div class="about__img_container">
+                     <div>
+                        <img class="about__img about__img-margin" src="img/burship1.jpg">
+                     </div>
+                  </div>
+                  <p class="h5 reg" data-aos="fade-left" data-aos-delay="1000" data-aos-duration="1000">
+                     Стандарты безопасности и качества мирового класса, активная политика по развитию кадрового
+                     потенциала и импортозамещения, богатый опыт работ во всех нефтегазовых провинциях России позволяют
+                     «БурСервис» оставаться надёжным партнёром компаний-операторов и поддерживать высокий уровень
+                     оказываемых услуг.
+                  </p>
+               </div>
+            </div>
+         </div>
+         <script>
+            document.addEventListener("DOMContentLoaded", () => {
+               function onVisible(element, callback) {
+                  new IntersectionObserver((entries, observer) => {
+                     entries.forEach(entry => {
+                        if (entry.intersectionRatio > 0) {
+                           callback(element);
+                           observer.disconnect();
+                        }
+                     });
+                  }).observe(element);
+               }
+
+               function showImg(el) {
+                  setTimeout(() => {
+                     el.classList.add("active");
+                  }, 500);
+               }
+
+               const allImgs = document.querySelectorAll(".about__img_container");
+
+               for (let img of allImgs) {
+                  onVisible(img, showImg);
+               }
+            })
+         </script>
+      </section>
+
+      <section class="section services">
+         <div class="container services__container">
+            <div class="section__top">
+               <!-- <p class="section-top__text h5 light">
+                  Спектр промысловых услуг
+               </p> -->
+
+               <h2 class="section__header h2 reg" data-aos="fade-up" data-aos-duration="1000">
+                  Услуги компании
+               </h2>
+            </div>
+
+         </div>
+
+
+         <div class="services__swiper">
+            <div class="services__swiper-container">
+               <div class="services__card" data-aos="fade-left" data-aos-delay="0" data-aos-duration="500">
+                  <h4 class="h4 reg">Буровые растворы</h4>
+
+                  <ul class="services__card__list">
+                     <li class="services__card__item h6">
+                        Первичное цементирование нефтяных и газовых скважин;
+                     </li>
+                     <li class="services__card__item h6">
+                        Цементирование с вращением обсадной колонны;
+                     </li>
+                     <li class="services__card__item h6">
+                        Работы на скважинах с АВПД/АНПД;
+                     </li>
+                  </ul>
+
+                  <a href="#" class="arrow_link" data-target="services__modal1">
+                     <span class="maintext">Подробнее</span>
+                     <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 1.68652L23.3137 13.0002M23.3137 13.0002L12.508 23.806M23.3137 13.0002H0.686292"
+                           stroke="white" stroke-width="2" />
+                     </svg>
+                  </a>
+
+                  <img class="services__card__img" src="img/zavod3.jpg">
+               </div>
+               <div class="services__card" data-aos="fade-left" data-aos-delay="250" data-aos-duration="500">
+                  <h4 class="h4 reg">Бурение и телеметрия</h4>
+
+                  <ul class="services__card__list">
+                     <li class="services__card__item h6">
+                        Наклонно-направленное бурение, включая роторно-управляемые системы
+                     </li>
+                     <li class="services__card__item h6">
+                        Телеметрические сопровождение;
+                     </li>
+                     <li class="services__card__item h6">
+                        Каротаж в процессе бурения и интерпретация;
+                     </li>
+                  </ul>
+
+                  <a href="#" class="arrow_link" data-target="services__modal2">
+                     <span class="maintext">Подробнее</span>
+                     <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 1.68652L23.3137 13.0002M23.3137 13.0002L12.508 23.806M23.3137 13.0002H0.686292"
+                           stroke="white" stroke-width="2" />
+                     </svg>
+                  </a>
+
+                  <img class="services__card__img" src="img/zavod4.jpg">
+               </div>
+               <div class="services__card" data-aos="fade-left" data-aos-delay="500" data-aos-duration="500">
+                  <h4 class="h4 reg">Цементирование скважин</h4>
+
+                  <ul class="services__card__list">
+                     <li class="services__card__item h6">
+                        Растворы на водной основе (РВО);
+                     </li>
+                     <li class="services__card__item h6">
+                        Растворы на углеводородной основе (РУО);
+                     </li>
+                     <li class="services__card__item h6">
+                        Неповреждающие коллекторские свойства при первичном вскрытии;
+                     </li>
+                  </ul>
+
+                  <a href="#" class="arrow_link" data-target="services__modal3">
+                     <span class="maintext">Подробнее</span>
+                     <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 1.68652L23.3137 13.0002M23.3137 13.0002L12.508 23.806M23.3137 13.0002H0.686292"
+                           stroke="white" stroke-width="2" />
+                     </svg>
+                  </a>
+
+                  <img class="services__card__img" src="img/zavod1.jpg">
+               </div>
+               <div class="services__card" data-aos="fade-left" data-aos-delay="750" data-aos-duration="500">
+                  <h4 class="h4 reg">Бурение</h4>
+
+                  <ul class="services__card__list">
+                     <li class="services__card__item h6">
+                        Управление проектами и консультационные услуги;
+                     </li>
+                     <li class="services__card__item h6">
+                        Программное обеспечение и цифровые системы;
+                     </li>
+                     <li class="services__card__item h6">
+                        Обслуживание трубопроводов и технологических систем.
+                     </li>
+                  </ul>
+
+                  <a href="#" class="arrow_link" data-target="services__modal1">
+                     <span class="maintext">Подробнее</span>
+                     <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 1.68652L23.3137 13.0002M23.3137 13.0002L12.508 23.806M23.3137 13.0002H0.686292"
+                           stroke="white" stroke-width="2" />
+                     </svg>
+                  </a>
+
+                  <img class="services__card__img" src="img/zavod2.jpg">
+               </div>
+               <div class="services__card" data-aos="fade-left" data-aos-delay="2000" data-aos-duration="500">
+                  <h4 class="h4 reg">Бурение</h4>
+
+                  <ul class="services__card__list">
+                     <li class="services__card__item h6">
+                        Управление проектами и консультационные услуги;
+                     </li>
+                     <li class="services__card__item h6">
+                        Программное обеспечение и цифровые системы;
+                     </li>
+                     <li class="services__card__item h6">
+                        Обслуживание трубопроводов и технологических систем.
+                     </li>
+                  </ul>
+
+                  <a href="#" class="arrow_link" data-target="services__modal1">
+                     <span class="maintext">Подробнее</span>
+                     <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 1.68652L23.3137 13.0002M23.3137 13.0002L12.508 23.806M23.3137 13.0002H0.686292"
+                           stroke="white" stroke-width="2" />
+                     </svg>
+                  </a>
+
+                  <img class="services__card__img" src="img/zavod4.jpg">
+               </div>
+            </div>
+            <div class="services__nav">
+               <button class="arrow_btn arrow_btn--left services__swiper__prev">
+                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M12 1.68652L23.3137 13.0002M23.3137 13.0002L12.508 23.806M23.3137 13.0002H0.686292"
+                        stroke="white" stroke-width="2"></path>
+                  </svg>
+               </button>
+
+               <button class="arrow_btn services__swiper__next">
+                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M12 1.68652L23.3137 13.0002M23.3137 13.0002L12.508 23.806M23.3137 13.0002H0.686292"
+                        stroke="white" stroke-width="2"></path>
+                  </svg>
+               </button>
+            </div>
+         </div>
+
+         <div class="services__modal">
+            <div class="services__modal__card" id="services__modal1">
+               <button class="services__modal__close">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M1.5 2L19.5 20M37.5 38L19.5 20M19.5 20L37.5 2M19.5 20L1.5 38" stroke="black" />
+                  </svg>
+               </button>
+
+               <h3 class="h2 reg">Буровые растворы</h3>
+
+               <ul class="services__modal__list subtitle">
+                  <li class="services__modal__list_item subtitle">Первичное цементирование нефтяных и газовых скважин
+                  </li>
+                  <li class="services__modal__list_item">Установка цементных мостов (для забурки боковых стволов,
+                     ликвидации ствола скважины, ликвидации поглощений,)</li>
+                  <li class="services__modal__list_item">Пеноцементирование (с использованием азотного оборудования и
+                     системы автоматического впрыска азота и пенообразователя)</li>
+                  <li class="services__modal__list_item">Ремонтно-изоляционные работы (ликвидация негерметичности ОК и
+                     МКП, ликвидация поглощений во время строительства скважин)</li>
+                  <li class="services__modal__list_item">Цементирование с вращением обсадной колонны</li>
+                  <li class="services__modal__list_item">Работы на скважинах с АВПД/АНПД</li>
+                  <li class="services__modal__list_item">Закачивание / перекачивание жидкостей под высоким давлением
+                  </li>
+                  <li class="services__modal__list_item">Продажа высокотехнологичных материалов для цементирования /
+                     ремонта / ОВП скважин </li>
+                  <li class="services__modal__list_item">Сервис по приготовлению сухих смесей</li>
+                  <li class="services__modal__list_item">Продажа колонной оснастки / поплавкового оборудования /
+                     пакерных систем</li>
+                  <li class="services__modal__list_item">Лабораторное тестирование цементных растворов и буферных
+                     жидкостей по стандартам API, ISO и ГОСТ.</li>
+                  <li class="services__modal__list_item">Инженерный и консультационный сервис</li>
+                  <li class="services__modal__list_item">Программное моделирование процесса цементирования
+                     (гидравлические расчет, центрация, растяжение ОК, рачет вероятности флюидопроявления,
+                     3D-визуализация)</li>
+                  <li class="services__modal__list_item">Проведение учебных курсов по цементированию скважин</li>
+               </ul>
+
+               <button class="btn_primary services__modal_btn" type="submit">
+                  <span class="maintext">Оставить заявку</span>
+               </button>
+            </div>
+
+            <div class="services__modal__card" id="services__modal2">
+               <button class="services__modal__close">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M1.5 2L19.5 20M37.5 38L19.5 20M19.5 20L37.5 2M19.5 20L1.5 38" stroke="black" />
+                  </svg>
+               </button>
+
+               <h3 class="h2 reg">Бурение и телеметрия</h3>
+
+               <ul class="services__modal__list subtitle">
+                  <li class="services__modal__list_item subtitle">Наклонно-направленное бурение, включая
+                     роторно-управляемые системы
+                  </li>
+                  <li class="services__modal__list_item">Телеметрические сопровождение</li>
+                  <li class="services__modal__list_item">Каротаж в процессе бурения и интерпретация</li>
+                  <li class="services__modal__list_item">Удаленное сопровождение бурения</li>
+                  <li class="services__modal__list_item">Геонавигация</li>
+                  <li class="services__modal__list_item">Сервис Управления замерами</li>
+                  <li class="services__modal__list_item">Оптимизация процесса бурения</li>
+               </ul>
+
+               <button class="btn_primary services__modal_btn" type="submit">
+                  <span class="maintext">Оставить заявку</span>
+               </button>
+            </div>
+
+            <div class="services__modal__card services__modal__card--multi" id="services__modal3">
+               <button class="services__modal__close">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M1.5 2L19.5 20M37.5 38L19.5 20M19.5 20L37.5 2M19.5 20L1.5 38" stroke="black" />
+                  </svg>
+               </button>
+
+               <h3 class="h2 reg">Цементирование скважин</h3>
+
+               <div class="services__modal__card__inner">
+
+                  <div>
+                     <p class="h5 services__modal__title">1. Буровые растворы:</p>
+
+                     <ul class="services__modal__list subtitle">
+                        <li class="services__modal__list_item subtitle">Растворы на водной основе (РВО)</li>
+                        <li class="services__modal__list_item">Растворы на углеводородной основе (РУО)</li>
+                        <li class="services__modal__list_item">Неповреждающие коллекторские свойства при первичном
+                           вскрытии
+                        </li>
+                        <li class="services__modal__list_item">Жидкости заканчивания и другие технологические жидкости
+                        </li>
+                        <li class="services__modal__list_item">Системы для удаления фильтрационных корок</li>
+                     </ul>
+                  </div>
+
+                  <div>
+                     <p class="h5 services__modal__title">2. Управление отходами бурения:</p>
+
+                     <ul class="services__modal__list subtitle">
+                        <li class="services__modal__list_item subtitle">Сокращение объема отходов и очистка буровых
+                           растворов</li>
+                        <li class="services__modal__list_item">Сбор и транспортировка отходов</li>
+                        <li class="services__modal__list_item">Обратная закачка шлама в пласт (CRI, Full Сircle)</li>
+                        <li class="services__modal__list_item">Приготовление и хранение растворов </li>
+                     </ul>
+                  </div>
+
+                  <div>
+                     <p class="h5 services__modal__title">3. Испытательная лаборатория:</p>
+
+                     <ul class="services__modal__list subtitle">
+                        <li class="services__modal__list_item subtitle">Разработка систем буровых растворов и других
+                           технологических жидкостей (ТЖ) на водной и углеводородной основах для различных
+                           геолого-технических условий</li>
+                        <li class="services__modal__list_item">Контроль параметров буровых растворов и ТЖ при сервисном
+                           сопровождении буровых работ, оперативная оценка их качества, разработка рекомендаций</li>
+                     </ul>
+                  </div>
+
+                  <div>
+                     <p class="h5 services__modal__title mobile_hide">&nbsp;</p>
+                     <ul class="services__modal__list subtitle">
+                        <li class="services__modal__list_item">Поиск новых эффективных реагентов для ТЖ. Оценка качества
+                           реагентов, используемых в технологических процессах строительства и ремонта скважин</li>
+                        <li class="services__modal__list_item">Обучение персонала методикам проведения тестов, повышение
+                           квалификации персонала</li>
+                     </ul>
+                  </div>
+
+               </div>
+
+               <button class="btn_primary services__modal_btn" type="submit">
+                  <span class="maintext">Оставить заявку</span>
+               </button>
+            </div>
+         </div>
+
+         <script>
+            var swiper = new Swiper(".services__swiper", {
+               wrapperClass: 'services__swiper-container',
+               slideClass: 'services__card',
+               slidesPerView: "auto",
+               navigation: {
+                  nextEl: '.services__swiper__next',
+                  prevEl: '.services__swiper__prev',
+               },
+            });
+         </script>
+
+         <script>
+            // document.addEventListener("DOMContentLoaded", function () {
+            let modal_links = document.querySelectorAll(".services__card .arrow_link");
+            let modal_window = document.querySelector(".services__modal");
+
+            for (modal_link of modal_links) {
+               modal_link.addEventListener("click", function (e) {
+                  e.preventDefault();
+                  let currentList = document.querySelector("#" + e.target.dataset.target);
+
+                  modal_window.classList.add("active");
+                  currentList.classList.add("active");
+                  document.querySelector("body").classList.add("stop-scroll");
+
+                  currentList.querySelector(".services__modal__close").addEventListener('click', () => {
+                     modal_window.classList.remove("active");
+                     currentList.classList.remove("active");
+                     document.querySelector("body").classList.remove("stop-scroll");
+                  });
+               });
+            }
+
+            // });
+         </script>
+      </section>
+
+      <section class="section partners">
+         <div class="container">
+            <div class="section__top partners__top">
+               <p class="section__top__text h5 light">
+                  С кем мы работаем
+               </p>
+
+               <p class="partners__top__text h5 reg">
+                  Наши ключевые заказчики – крупнейшие российские нефтегазовые компании, а также малые и средние
+                  предприятия добывающей отрасли.
+               </p>
+            </div>
+
+            <div class="partners__grid">
+               <div class="partners__card" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
+                  <p style="color: #0079C2;">Газпром</p>
+                  <!-- <img src="img/partners/gazprom.svg"> -->
+               </div>
+               <div class="partners__card" data-aos="fade-up" data-aos-delay="250" data-aos-duration="1000">
+                  <p style="color: #0079C2;">Газпром нефть</p>
+                  <!-- <img src="img/partners/gazprom-neft.svg"> -->
+               </div>
+               <div class="partners__card" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                  <p style="color: #ED1A3A;">Лукойл</p>
+                  <!-- <img src="img/partners/lukoil.svg"> -->
+               </div>
+               <div class="partners__card" data-aos="fade-up" data-aos-delay="750" data-aos-duration="1000">
+                  <p style="color: #000000;">Роснефть</p>
+                  <!-- <img src="img/partners/rosneft.svg"> -->
+               </div>
+               <div class="placeholder"></div>
+               <div class="partners__card" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">
+                  <p style="color: #00539C;">Новатэк</p>
+                  <!-- <img src="img/partners/novatech.png"> -->
+               </div>
+               <div class="partners__card" data-aos="fade-up" data-aos-delay="1250" data-aos-duration="1000">
+                  <p style="color: #0067B1;">Сахалин - 1</p>
+                  <!-- <img src="img/partners/sahalin.png"> -->
+               </div>
+               <div class="partners__card" data-aos="fade-up" data-aos-delay="1500" data-aos-duration="1000">
+                  <p style="color: #101840;">Сахалинская<br>энергия</p>
+                  <!-- <img src="img/partners/sahalin-energy.png"> -->
+               </div>
+            </div>
+
+         </div>
+      </section>
+
+      <section class="application">
+         <div class="container application__container">
+            <h2 class="h2 reg application__header" data-aos="fade-up" data-aos-duration="1000">Оставьте заявку<br> и мы
+               свяжемся <br>с вами</h2>
+
+            <form class="application-form" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+               <label class="label-input" data-error="Поле заполнено некорректно">
+                  <input value="" type="text" class="maintext" placeholder="&nbsp;" required>
+                  <span class="maintext">Имя</span>
+               </label>
+               <label class="label-input" data-error="Поле заполнено некорректно">
+                  <input value="" type="text" class="maintext" placeholder="&nbsp;" required>
+                  <span class="maintext">Номер телефона</span>
+               </label>
+               <label class="label-input" data-error="Поле заполнено некорректно">
+                  <input value="" type="text" class="maintext" placeholder="&nbsp;" required>
+                  <span class="maintext">Почта</span>
+               </label>
+
+               <select name="" id="select_mat" class="select">
+                  <option value="">Обслуживание</option>
+                  <option value="">Бурение</option>
+                  <option value="">Обслуживание</option>
+                  <option value="">Обслуживание</option>
+                  <option value="">Обслуживание</option>
+                  <option value="">Обслуживание</option>
+                  <option value="" selected disabled>Выберите тему&nbsp;</option>
+               </select>
+               <script
+                  src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
+
+               <script>
+                  const choices = new Choices('.select', {
+                     searchEnabled: false,
+                     shouldSort: false,
+                     shouldSortItems: false,
+                  });
+
+                  var a = document.getElementsByClassName('select'), i = 0;
+                  while (a[i]) {
+                     if (/([a-zA-Z0-9-.])\*([a-zA-Z0-9-.])/.test(a[i].innerHTML))
+                        a[i].innerHTML = a[i].innerHTML.replace(/([a-zA-Z0-9-.])@([a-zA-Z0-9-.])/g, '$1<span class="dog">@</span>$2');
+                     ++i;
+                  }
+               </script>
+
+               <label class="label-input textarea" data-error="Поле заполнено некорректно">
+                  <textarea value="" type="text" class="maintext" placeholder="&nbsp;"></textarea>
+                  <span class="maintext">Ваш комментарий</span>
+               </label>
+
+               <button class="btn_primary application__btn" type="submit">
+                  <span class="maintext">Отправить</span>
+               </button>
+
+            </form>
+         </div>
+
+         <div class="form_sended">
+            <div class="form_sended__container">
+               <button class="form_sended__close">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M1.5 2L19.5 20M37.5 38L19.5 20M19.5 20L37.5 2M19.5 20L1.5 38" stroke="black" />
+                  </svg>
+               </button>
+
+               <h5 class="form_sended__header h2 reg">
+                  Спасибо за заявку!
+               </h5>
+
+               <p class="form_sended__text h5 light">Наши менеджеры свяжутся с&nbsp;вами в&nbsp;течение 15 минут.</p>
+
+               <button class="btn_primary">
+                  <span class="maintext">На главную</span>
+                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M12 1.68652L23.3137 13.0002M23.3137 13.0002L12.508 23.806M23.3137 13.0002H0.686292"
+                        stroke="white" stroke-width="2"></path>
+                  </svg>
+               </button>
+            </div>
+         </div>
+
+
+
+         <script src="js/open-window.js"></script>
+      </section>
+
+      <section class="standart">
+         <div class="container">
+            <h6 class="h6 light standart__header">Стандарты безопасности</h6>
+            <p class="h4 standart__text">
+               Мы придерживаемся высоких стандартов безопасности, охраны здоровья человека и окружающей среды и
+               безусловно сохраним данные приоритеты в долгосрочной&nbsp;перспективе.
+            </p>
+         </div>
+      </section>
+
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+         AOS.init();
+      </script>
+
+   </main>
+
+
+   <include src="src/components/footer.html"></include>
+
+</body>
+
+</html>

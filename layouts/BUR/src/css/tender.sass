@@ -1,0 +1,227 @@
+.tender_hero
+   // margin-top: 105rem
+   // padding: 225rem 0
+   padding: 100rem 0 0 0
+   background: $main-blue
+   color: $main-white
+   .arrow_link span
+      color: $main-white
+   .arrow_link svg path 
+      stroke: $main-white
+   &__container
+      background: url("../img/tender_arrow.svg")
+      background-position: right center
+      background-repeat: no-repeat
+      background-size: contain
+      padding-top: 120rem
+      padding-bottom: 116rem
+   &__links
+      position: relative
+      display: flex
+      margin-bottom: 24rem
+      padding-top: 60rem
+      &::before
+         position: absolute
+         top: 0
+         left: 0
+         content: ""
+         width: 124rem
+         height: 12rem
+         background: #CE0E2D
+         transform: skew(-20deg)
+      a:not(:last-child)
+         margin-right: 68rem
+   &__header
+      margin-bottom: 40rem
+   
+.tender_headers
+   &__container
+      background: $main-highlight
+      color: $main-white
+      display: grid
+      grid-template-columns: 146rem 135rem 197rem 388rem 112rem 215rem 197rem
+      grid-column-gap: 40rem
+      padding: 40rem 140rem
+
+.tender_list
+   margin-bottom: 60rem
+   &__row
+      display: grid
+      grid-template-columns: 135rem 125rem 187rem 378rem 100rem 205rem 135rem 20rem
+      grid-column-gap: 50rem
+      padding: 44rem 40rem 54rem 40rem
+      &:nth-child(even)
+         background: #F4F7F9
+   &__cell
+      &:last-child
+         svg
+            transition: transform calc($main_time/2) ease-out
+            width: 20rem
+            height: 20rem
+         &:hover 
+            svg
+               transform: rotate(45deg)
+
+.tender_panel
+   margin-bottom: 160rem
+   .btn_secondary
+      margin: 0 auto 0 230rem
+   &__container
+      display: flex
+
+
+.os_tender
+   padding: 120rem 0 152rem 0
+   margin-bottom: 0
+   background: #F4F7F9
+   &__container 
+      display: flex
+   &__header
+      margin-bottom: 32rem
+      color: $main-blue
+   &__left
+      max-width: 533rem
+      .subtitle
+         color: $main-black
+   &__right
+      width: 850rem
+      max-width: 100%
+      margin-left: auto
+      .label-input
+         width: 100%
+         margin-bottom: 60rem
+         input 
+            background: #FFFFFF
+         span::before
+            background: #FFFFFF
+      .btn_primary
+         span
+            margin-right: 0
+            
+
+
+
+@media (max-width: 650px)
+
+   .tender_hero
+      padding-top: 40rem
+      &__container
+         padding: 60rem 15rem
+         background: url('../img/tender-mobile.svg') right center
+         background-repeat: no-repeat
+         background-size: contain
+         display: flex
+         flex-direction: column
+      &__links
+         padding-top: 0
+         order: 3
+         flex-direction: column
+         margin-right: 0
+         margin-bottom: 0
+         a
+            svg
+               width: 13rem
+               height: 13rem
+            &:not(:last-child)
+               margin-right: 0
+               margin-bottom: 8rem
+         &::before
+            display: none
+            width: 38rem
+            height: 4rem
+      &__header
+         order: 1
+         margin-bottom: 12rem
+         padding-top: 20rem
+         position: relative
+         &::before
+            position: absolute
+            top: 0
+            left: 0
+            content: ""
+            width: 38rem
+            height: 4rem
+            background: #CE0E2D
+            transform: skew(-20deg)
+      &__count
+         order: 2
+         margin-bottom: 80rem
+
+   .tender_headers
+      width: 800rem
+      font-size: 11rem
+      &__container
+         grid-column-gap: 16rem
+         padding: 16rem 25rem 25rem 25rem
+         grid-template-columns: 68rem 61.5rem 64.5rem 138rem 76rem 125rem 95rem 
+      
+   .tender_list
+      margin-bottom: 0
+      &__row
+         // margin: 0 15rem
+         font-size: 11rem
+         width: 767rem
+         grid-template-columns: 68rem 61.5rem 64.5rem 138rem 76rem 125rem 95rem
+         grid-column-gap: 16rem
+         grid-row-gap: 16rem
+         padding: 16rem 12rem
+      &__cell:last-child
+         display: flex
+         align-items: center
+         svg
+            flex-shrink: 0
+            width: 9rem
+            height: 9rem
+            margin-left: 8rem
+         &::before
+            content: "Участвовать"
+            font-size: 11rem
+            line-height: 132%
+   
+   .tender_scroll
+      margin-bottom: 32rem
+      overflow: auto
+      width: 100%
+
+   .tender_panel
+      margin-bottom: 60rem
+      &__container
+         flex-direction: column
+      .pages
+         width: 100%
+         order: 2
+         &_arrow-left
+            margin-right: auto
+         &_arrow-right
+            margin-left: auto
+      .btn_secondary
+         order: 1
+         width: 95%
+         margin: 0 auto
+         margin-bottom: 24rem
+         span
+            margin: 0 auto
+            text-align: center
+      .tenders
+         display: none
+
+   .os_tender
+      padding: 60rem 0 100rem 0
+      &__container
+         flex-direction: column
+      &__left
+         margin-bottom: 40rem
+      &__right
+         .label-input
+            margin-bottom: 32rem
+      &__header
+         margin-bottom: 16rem
+      .btn_primary
+         width: 100%
+         justify-content: center
+         span
+            margin: 0 auto !important
+
+      
+   // .tender_list, .tender_panel, .tender_headers
+   //    overflow: scroll

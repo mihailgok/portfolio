@@ -1,0 +1,454 @@
+.section
+   // margin-bottom: 200rem
+   // overflow-x: hidden
+   &:last-child
+      margin-bottom: 0
+   &__top
+      display: flex
+      margin-bottom: 60rem
+   &__right
+      display: flex
+      margin-left: auto
+   &__header
+      &-half
+         width: 819rem
+
+.header 
+   position: fixed
+   top: 0
+   left: 0
+   z-index: 10
+   width: 100%
+   // background: black
+   color: #FFFFFF
+   padding: 24rem
+   background: #282621
+   &__container 
+      display: flex
+      align-items: center
+   &__logo 
+      // margin-right: auto
+      svg 
+         width: 150rem
+         height: 32rem
+   &__nav 
+      margin: 0 auto
+      &__list 
+         display: flex 
+         align-items: center
+         gap: 32rem
+      &__link
+         position: relative
+         &::after
+            content: ""
+            height: 1rem
+            width: 0%
+            transition: width 0.3s
+            position: absolute
+            margin: 0 auto
+            left: 0
+            right: 0
+            bottom: -4rem
+            background: #FFFFFF
+         &:hover::after 
+            width: 100%
+   &__country 
+      display: flex 
+      align-items: center
+      margin-right: 24rem
+      gap: 8rem
+      position: relative
+      color: #FFFFFF
+      &::after
+         content: ""
+         height: 1rem
+         width: 0%
+         transition: width 0.3s
+         position: absolute
+         margin: 0 auto
+         left: 0
+         right: 0
+         bottom: -4rem
+         background: #FFFFFF
+      &:hover::after 
+         width: 100%
+      svg 
+         flex-shrink: 0
+         width: 16rem
+         height: 16rem
+   &__lang
+      position: relative
+      margin-right: 24rem
+      &_main
+         position: relative
+         padding-right: 20rem
+         &::after
+            display: block
+            content: ""
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDZMOCAxMEw0IDYiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo=') center no-repeat
+            // transform: rotate(180deg)
+            background-position: center
+            background-size: contain
+            width: 16rem
+            height: 16rem
+            position: absolute
+            right: 0em
+            top: calc(50% - 4rem - 4rem)
+            transition: transform $time
+      &_block
+         pointer-events: none
+         opacity: 0
+         padding: 12rem 20rem
+         border-radius: 4rem
+         position: absolute
+         top: 20rem
+         right: -5rem
+         // background: #000000
+         background: rgba(255, 255, 255, 0.30)
+         display: flex
+         flex-direction: column
+         align-items: center
+         transition: opacity $time
+      &_link
+         margin-bottom: 12rem
+         &:hover
+            opacity: 0.6
+         &:last-child
+            margin-bottom: 0
+         &--active
+            color: #FFF
+      &:hover
+         .header__lang_main
+            &::after
+               transform: rotate(180deg)
+         .header__lang_block
+            opacity: 1
+            pointer-events: auto
+   &__burger
+      display: flex !important
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      gap: 4rem
+      width: 23rem
+      height: 12rem
+      span 
+         width: 100%
+         height: 1rem
+         background: #FFFFFF
+         display: block
+         transition: transform 0.3s
+      &.active 
+         span:first-child
+            transform: rotate(-40deg) translate(-1rem, 2rem)
+            // transform-origin: center
+         span:nth-child(2)
+            display: none 
+         span:last-child
+            transform: rotate(40deg) translate(-2rem, -2rem)
+            // transform-origin: center
+
+.stop-scroll
+   overflow: hidden
+
+.flex
+   display: flex
+   &-center
+      display: flex
+      align-items: center
+
+.red_btn 
+   padding: 12rem 24rem 
+   background: $red
+   border-radius: 48rem
+   color: $white
+   transition: background 0.3s
+   &:hover
+      background: #F75455
+   &:active
+      background: #F75455
+   &:disabled
+      background: #C7C7C7
+      
+
+.light
+   font-weight: 300
+
+.reg
+   font-weight: 400
+
+.med
+   font-weight: 500
+
+.demi
+   font-weight: 600
+
+.bold
+   font-weight: 700
+
+.caps
+   text-transform: uppercase
+
+.h1
+   font-size: 64rem
+   line-height: 110%
+   font-family: "EuropeExt"
+
+.h2
+   font-size: 48rem
+   font-family: "EuropeExt"
+
+.h3
+   font-size: 24rem
+   line-height: 150%
+
+.h4
+   font-size: 20rem
+   line-height: 120%
+   font-family: "EuropeExt"
+
+// .h5
+//    font-size: 28rem
+//    line-height: 126%
+
+// .h6
+//    font-size: 28rem
+//    line-height: 128%
+
+// .subtitle
+//    font-size: 24rem
+//    line-height: 126%
+
+.headline
+   font-size: 20rem
+   line-height: 126%
+
+.maintext
+   font-size: 16rem
+   line-height: 140%
+
+// .text2
+//    font-size: 14rem
+//    line-height: 144%
+
+.liltext
+   font-size: 14rem
+   line-height: 150%
+
+.opacity
+   transition: opacity $time
+   &:hover
+      opacity: 0.7
+   &:active
+      opacity: 0.4
+
+
+
+.footer 
+   padding: 50rem 0 190rem 0
+   background: url("../img/back/back6.jpg") center no-repeat
+   background-size: cover
+   position: relative
+   // z-index: 5
+   // overflow: hidden
+   *
+      position: relative
+      z-index: 2
+   &__container
+      display: flex 
+      align-items: flex-start
+      justify-content: space-between
+   // &__svg 
+   //    position: absolute
+   //    z-index: 1
+   //    right: 0
+   //    bottom: 0rem
+   //    width: 1283rem
+   //    height: 742rem
+   &__shadow 
+      width: 1248rem
+      height: 365rem
+      border-radius: 1248rem
+      filter: blur(150rem)
+      background: linear-gradient(180deg, rgba(51, 46, 34, 0.91) 0%, rgba(29, 27, 27, 0.91) 100%)
+      position: absolute
+      bottom: 0
+      right: 40rem
+      // &__container
+      //    width: 1248rem
+      //    height: 365rem
+      //    position: absolute
+      //    bottom: 0
+      //    right: 40rem
+      //    overflow: hidden
+   &__first 
+      .liltext
+         margin-bottom: 4rem
+         &:last-child
+            margin-bottom: 0
+   &__logo 
+      display: inline-block
+      margin-bottom: 36rem
+      svg 
+         width: 150rem
+         height: 30rem
+   &__nav 
+      // width: 270rem
+      display: grid 
+      grid-template-columns: 1fr 1fr
+      gap: 16rem 56rem
+      &__link 
+         transition: opacity 0.3s
+         &:hover 
+            opacity: 0.6
+   &__links 
+      display: flex 
+      flex-direction: column
+      gap: 16rem
+      &__link
+         display: flex 
+         align-items: center
+         gap: 8rem
+         transition: opacity 0.3s
+         &:hover 
+            opacity: 0.6
+         svg 
+            width: 24rem
+            height: 24rem
+      &__bottom 
+         display: flex 
+         gap: 13rem
+         &__link
+            transition: opacity 0.3s
+            &:hover 
+               opacity: 0.6
+            svg 
+               width: 25rem
+               height: 25rem
+            img
+               height: 24rem
+
+
+@media (min-width: 650px)
+   .desktop-hidden
+      display: none !important
+
+@media (max-width: 650px)
+   //под стирку НАЧАЛО
+   .ui
+      padding: 20rem 15rem
+
+   .ui-block
+      width: 100%
+      margin: 0
+
+   .colors__block
+      margin-right: 10rem
+      height: 20rem
+      width: 20rem
+
+   // .buttons
+   //    padding: 10rem
+      // width: 100%
+   //под стирку КОНЕЦ
+
+   .section
+      // margin-bottom: 48rem
+      &__top
+         margin-bottom: 20rem
+      &__header
+         &-half
+            width: 100%
+      // &__right
+      //    display: flex
+      //    margin-left: auto
+
+   .desktop-hidden
+      display: unset
+
+   .h1
+      font-size: 24rem
+      line-height: 110%
+
+   .h2
+      font-size: 24rem
+      line-height: 112%
+
+   .h3
+      font-size: 16rem
+      line-height: 112%
+
+   .h4
+      font-size: 20rem
+
+   .h5
+      font-size: 18rem
+
+   .subtitle
+      font-size: 18rem
+
+   .headline
+      font-size: 14rem
+
+   .maintext
+      font-size: 14rem
+      line-height: 127%
+
+   .liltext
+      font-size: 10rem
+
+   .mobile-hidden
+      display: none !important
+
+   .header
+      padding: 32rem 0 25rem 0
+      &__nav 
+         display: none
+      .lang 
+         margin-left: auto
+      &__country
+         display: none
+      .red_btn
+         display: none
+
+
+   .footer 
+      background: url("../img/back/mback6.jpg") center center no-repeat
+      background-size: cover
+      padding: 20rem 0 40rem 0
+      .container 
+         display: flex 
+         flex-direction: column
+         gap: 40rem
+
+
+   .mobile 
+      &_menu
+         background: #282621
+         opacity: 0
+         pointer-events: none
+         transform: translateY(-200rem)
+         position: fixed
+         top: 85rem
+         left: 0
+         width: 100%
+         z-index: 15
+         // background: #191919
+         padding: 15rem 0 40rem 0
+         transition: opacity 0.3s, transform 0.3s
+         .header__country
+            display: flex
+            margin-bottom: 35rem
+         .red_btn 
+            width: 100%
+         &.active 
+            opacity: 1
+            pointer-events: auto
+            transform: translateY(0)
+      &__nav
+         margin-bottom: 35rem
+         &__list
+            display: flex 
+            flex-direction: column
+            gap: 12rem
+      
