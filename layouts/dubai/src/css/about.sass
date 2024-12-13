@@ -1,0 +1,138 @@
+.aboutus
+   &__header 
+      margin-bottom: 40rem
+      color: $green 
+   &_hero
+      padding-top: 141rem
+      &__main
+         display: flex 
+         flex-direction: column
+         margin-bottom: 54rem
+         text-align: center
+         .h5 
+            margin-bottom: 54rem 
+            max-width: 567rem
+            margin: 0 auto
+            color: $black
+      &__img 
+         width: 100%
+         height: 384rem 
+         background: url('../img/aboutus.png') center center no-repeat
+         background-size: cover
+   &_card 
+      &__wrapper
+         background: $white
+         padding: 100rem 148rem
+         border-radius: 20rem
+         text-align: center 
+      &__subtitle 
+         margin-bottom: 40rem
+         padding-top: 38rem
+         background: url("../img/header_svg.svg") top center no-repeat
+         background-size: 116rem 13rem
+      &__maintext 
+         max-width: 654rem 
+         margin: 0 auto
+         margin-top: 28rem
+   &_twocards 
+      &__container
+         display: flex 
+         align-items: center
+      &__left 
+         border: 20rem 
+         width: 850rem
+         height: 346rem
+         object-fit: cover
+         border-radius: 20rem
+      &__right 
+         width: 850rem 
+         padding: 80rem 189rem 80rem 80rem
+         background: $white
+         border-radius: 20rem 
+         margin-left: auto
+   &_three 
+      &__container
+         display: grid 
+         grid-template-columns: 1fr 1fr 1fr 
+         grid-column-gap: 60rem
+      &__card 
+         border-radius: 20rem
+         background: white
+         display: flex 
+         flex-direction: column
+         align-items: center
+         padding: 40rem 28rem
+         svg 
+            width: 80rem
+            height: 80rem
+            margin-bottom: 28rem 
+         &__h6 
+            margin-bottom: 20rem
+         &--beige 
+            background: $beige 
+            justify-content: center
+            svg 
+               margin-bottom: 0
+               width: 233rem
+               height: 137rem 
+
+
+@media (max-width: 650px) 
+   .aboutus
+      &_hero
+         padding-top: 70rem
+         .container 
+            padding: 0 14rem
+         &__img 
+            height: 82rem
+         &__main 
+            margin-bottom: 28rem
+      &__header 
+         margin-bottom: 16rem
+      &_card 
+         &__wrapper 
+            padding: 48rem 12rem
+         &__subtitle 
+            padding-top: 25rem 
+            background-size: 74rem 9rem
+            margin-bottom: 28rem
+      &_twocards
+         &__container 
+            flex-direction: column
+         &__left 
+            width: 100%
+            border-radius: 8rem
+            margin-bottom: 8rem
+            height: 120rem
+         &__right 
+            width: 100%
+            padding: 28rem 12rem
+      &_three
+         &__container
+            display: flex 
+            flex-direction: column
+            gap: 8rem
+         &__card 
+            width: 100%
+            padding: 28rem 12rem
+            &:nth-child(1)
+               order: 2
+            &:nth-child(2)
+               order: 1
+            &:nth-child(3)
+               order: 3
+            &__h6 
+               margin-bottom: 12rem
+            svg 
+               width: 56rem 
+               height: 56rem
+               align-self: flex-start
+               margin-bottom: 16rem
+            
+            &--beige 
+               padding: 84rem 84rem 100rem 84rem
+               svg 
+                  width: 124rem 
+                  height: 74rem
+               
+               

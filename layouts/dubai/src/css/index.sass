@@ -1,0 +1,337 @@
+.hero
+   background: url(../img/hero.jpeg) center center no-repeat
+   background-size: cover
+   padding-top: 320rem
+   padding-bottom: 180rem
+   color: $white
+   &__container
+      display: flex
+      flex-direction: column
+      align-items: center
+      text-align: center
+   &__title
+      margin-bottom: 40rem
+   &__subtitle
+      margin-bottom: 84rem
+
+
+.services
+   &__cards
+      display: grid
+      grid-template-columns: repeat(4, 1fr)
+      grid-column-gap: 60rem
+      margin-bottom: 240rem
+   &__card
+      background: $white
+      border-radius: 20rem
+      display: flex
+      align-items: center
+      flex-direction: column
+      text-align: center
+      padding: 40rem 28rem
+      svg
+         width: 48rem
+         height: 48rem
+         margin-bottom: 28rem
+
+   &__main
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-column-gap: 60rem
+      &__card
+         position: relative
+         color: $white
+         padding: 60rem 60rem 40rem 60rem
+         border-radius: 20rem
+         overflow: hidden
+         height: 412rem
+         display: flex
+         flex-direction: column
+         transform: translate(0)
+         &::after 
+            content: ""
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 60.56%)
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            z-index: 2
+         &:hover
+            .arrow_link
+               opacity: 1
+            .services__main__img
+               transform: scale(1.2)
+      &__header
+         position: relative
+         z-index: 3
+      &__img
+         position: absolute
+         top: 0
+         left: 0
+         width: 100%
+         height: 100%
+         transition: transform $main_time
+      .arrow_link
+         // position: relative
+         z-index: 3
+         margin-top: auto
+         margin-left: auto
+         // bottom: 40rem
+         // right: 60rem
+         opacity: 0
+         transition: opacity $main_time
+         svg
+            width: 57rem
+            height: 39rem
+            stroke: $white
+         &::after
+            content: ""
+            position: absolute
+            width: 100%
+            height: 100%
+            top: 0
+            left: 0
+            z-index: 4
+
+
+.special
+   &__container
+      padding-right: 0
+      padding-left: 0
+      position: relative
+   .section__top
+      padding-right: 80rem
+      padding-left: 80rem
+   &__swiper
+      overflow: hidden
+   &__wrapper
+      display: flex
+      padding-top: 20rem
+      padding-bottom: 20rem
+      // padding-right: 60rem
+   .house_card
+      flex-shrink: 0
+      &:first-child
+         margin-left: 80rem
+   &__arrow
+      position: absolute
+      top: calc(50% + 50rem)
+      right: 52rem
+
+
+.manage
+   position: relative
+   .section__top
+      align-items: flex-start
+      padding: 0 80rem
+   .section__header
+      padding-left: 0
+      background: none
+      margin-right: 196rem
+   &__container
+      padding: 0
+
+   &__text
+      width: 547rem
+      max-width: 100%
+      margin-right: auto
+   &__card
+      position: relative
+      flex-shrink: 0
+      background: $white
+      border-radius: 20rem 
+      overflow: hidden
+      &:first-child
+         margin-left: 80rem
+      &__text
+         padding: 28rem
+         .subtitle
+            margin-bottom: 20rem
+   &__img
+      width: 395rem
+      height: 454rem
+      // margin-bottom: 28rem
+      // border-radius: 20rem 20rem 0 0
+   &__tel
+      color: $beige
+      display: inline-block
+      margin-bottom: 8rem
+   &__swiper
+      overflow: hidden
+   &__wrapper
+      display: flex
+   .manage__arrow
+      position: absolute
+      top: calc(50% + 70rem)
+      right: 58rem
+
+.news
+   .section__top
+      padding: 0 80rem
+   &__container
+      padding: 0
+   &__swiper
+      overflow: hidden
+   &__wrapper
+      display: flex
+   &__card
+      display: flex
+      width: 850rem
+      height: 412rem
+      border-radius: 20rem
+      overflow: hidden
+      position: relative
+      flex-shrink: 0
+      &:first-child
+         margin-left: 80rem
+      &__text
+         padding: 60rem 45rem 40rem 40rem
+         background: $white
+         display: flex
+         flex-direction: column
+      &__time
+         margin-bottom: 12rem
+      &__img
+         width: 412rem
+         height: 100%
+         object-fit: cover
+      &__link
+         margin-top: auto
+         color: $beige
+         align-self: flex-start
+         // &::before
+         //    content: ""
+         //    position: absolute
+         //    top: 0
+         //    left: 0
+         //    width: 100%
+         //    height: 100%
+
+
+
+@media (max-width: 650px)
+
+   .hero
+      padding-top: 240rem
+      padding-bottom: 200rem
+      &__title
+         margin-bottom: 12rem
+      &__subtitle
+         margin-bottom: 48rem
+      .green_btn 
+         width: 193rem
+   
+   .services 
+      &__cards 
+         grid-template-columns: 1fr
+         grid-row-gap: 8rem
+         margin-bottom: 80rem
+      &__card
+         border-radius: 8rem
+         flex-direction: row
+         text-align: left
+         padding: 20rem 16rem
+         .subtitle
+            font-size: 13rem
+         svg
+            margin-bottom: 0
+            margin-right: 28rem
+            flex-shrink: 0
+      &__main
+         grid-template-columns: 1fr
+         grid-row-gap: 8rem
+         .arrow_link
+            display: none
+         &__card
+            padding: 16rem
+            border-radius: 8rem
+            height: 140rem
+
+
+   .special
+      &__container
+         padding-bottom: 45rem
+      &__wrapper 
+         padding: 0
+      .section__top
+         padding: 0 15rem
+         .link_arrow
+            position: absolute
+            bottom: 0
+            right: 15rem
+      .house_card
+         &:first-child
+            margin-left: 15rem
+      .arrow_btn
+         display: none
+
+   .manage
+      position: relative
+      padding-bottom: 45rem
+      margin-bottom: 80rem
+      .section__top
+         flex-direction: column
+         padding: 0 15rem
+      .section__header 
+         margin-right: 0
+         margin-bottom: 20rem
+         padding-top: 0
+      .link_arrow
+         position: absolute
+         bottom: 0
+         right: 15rem
+      .arrow_btn
+         display: none
+      &__text
+         font-size: 15rem
+      &__card
+         border-radius: 8rem
+         &:first-child
+            margin-left: 15rem
+         &__text
+            padding: 16rem 12rem 20rem 12rem 
+            .subtitle
+               margin-bottom: 16rem
+               font-size: 15rem
+               br 
+                  display: none
+            .manage__tel
+               margin-bottom: 6rem
+      &__img
+         width: 290rem
+         height: 333rem
+
+   .news
+      position: relative
+      padding-bottom: 45rem
+      .section__top
+         padding: 0 15rem
+      .link_arrow
+         position: absolute
+         bottom: 0
+         right: 15rem
+      &__wrapper
+         flex-direction: column
+         padding: 0 15rem
+      &__card
+         flex-direction: column-reverse
+         width: 290rem
+         height: auto
+         border-radius: 8rem
+         margin-bottom: 8rem
+         &__text
+            padding: 16rem 12rem 20rem 12rem
+         &__img
+            width: 290rem
+            height: 198rem
+         &:first-child
+            margin-left: 0
+         &__time
+            margin-bottom: 12rem
+         &__header
+            margin-bottom: 35rem
+         &__link
+            font-size: 16rem
+            
+         

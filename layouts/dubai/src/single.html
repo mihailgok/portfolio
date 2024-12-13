@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <include src="src/components/headers.html" locals='{
+      "title": "Страница недвижимости"
+   }'></include>
+</head>
+
+
+<body>
+
+   <include src="src/components/header.html" locals=''></include>
+
+   <main class="main single">
+      <section class="single_hero">
+         <div class="container">
+            <div class="navigation maintext">
+               <a href="index.html" class="navigation__link">Главная</a>
+               <!-- <span>/</span> -->
+               <a href="catalog.html" class="navigation__link">Недвижимость</a>
+               <a href="catalog.html" class="navigation__link">Вторичная недвижимость</a>
+               <a href="#" class="navigation__link">Студия Peninsula 3 в центре Дубая от Select Group</a>
+            </div>
+
+            <div class="house_card__location maintext light">
+               <svg fill="none">
+                  <use xlink:href="img/sprite.svg#location"></use>
+               </svg>
+               <span>Дубай. Palm West Beach</span>
+            </div>
+
+            <div class="single_hero__top">
+               <h2 class="single_hero__header h2 reg caps">
+                  Студия Peninsula 3 в центре Дубая от <span>Select Group</span>
+               </h2>
+               <div class="single_hero__top__buttons">
+                  <a href="#" class="icon_btn maintext caps" disabled>
+                     <svg fill="none">
+                        <use xlink:href="img/sprite.svg#mail"></use>
+                     </svg>
+
+                     <span>Написать на почту</span>
+                  </a>
+
+                  <a href="#" class="icon_btn maintext light caps" disabled>
+                     <svg fill="none">
+                        <use xlink:href="img/sprite.svg#whatsAppMini"></use>
+                     </svg>
+
+                     <span>Написать в Whatsapp</span>
+                  </a>
+               </div>
+            </div>
+
+
+         </div>
+      </section>
+
+      <!-- <section class="section"> -->
+      <div class="single_swiper">
+         <div class="single_swiper_container">
+            <img src="img/single1.jpeg" alt="" class="single_swiper__img">
+            <img src="img/single1.jpeg" alt="" class="single_swiper__img">
+            <img src="img/single1.jpeg" alt="" class="single_swiper__img">
+         </div>
+
+         <button class="single_swiper_prev arrow_btn arrow_btn--left">
+            <svg>
+               <use xlink:href="img/sprite.svg#arrow-right"></use>
+            </svg>
+         </button>
+
+         <button class="single_swiper_next arrow_btn">
+            <svg>
+               <use xlink:href="img/sprite.svg#arrow-right"></use>
+            </svg>
+         </button>
+
+         <button class="single_swiper_all filter_btn maintext">
+            <span>Все фотографии</span>
+            <img src="img/single1.jpeg" alt="иконка карты">
+         </button>
+
+      </div>
+      <!-- </section> -->
+
+      <script>
+         document.addEventListener("DOMContentLoaded", () => {
+            let single_swiper = new Swiper(".single_swiper", {
+               wrapperClass: 'single_swiper_container',
+               slideClass: 'single_swiper__img',
+               slidesPerView: 1,
+               spaceBetween: "1%",
+               navigation: {
+                  nextEl: '.single_swiper_next',
+                  prevEl: '.single_swiper_prev',
+               },
+               // breakpoints: {
+               //    650: {
+               //       slidesPerView: "auto",
+               //    }
+               // }
+            });
+         });
+      </script>
+
+      <section class="single_desc">
+         <div class="container">
+            <div class="single_desc__panel">
+               <div class="single_desc__panel__block">
+                  <p class="maintext single_desc__panel__block__text">Площадь</p>
+                  <div class="single_desc__panel__block__main h6">
+                     <svg>
+                        <use xlink:href="img/sprite.svg#room"></use>
+                     </svg>
+                     <span>68 м<sup>2</sup></span>
+                  </div>
+               </div>
+               <div class="single_desc__panel__block">
+                  <p class="maintext single_desc__panel__block__text">Количество спален</p>
+                  <div class="single_desc__panel__block__main h6">
+                     <svg>
+                        <use xlink:href="img/sprite.svg#bed"></use>
+                     </svg>
+                     <span>2 спальни</span>
+                  </div>
+               </div>
+               <div class="single_desc__panel__block">
+                  <p class="maintext single_desc__panel__block__text">Количество ванных</p>
+                  <div class="single_desc__panel__block__main h6">
+                     <svg>
+                        <use xlink:href="img/sprite.svg#bath"></use>
+                     </svg>
+                     <span>1 ванная</span>
+                  </div>
+               </div>
+               <div class="single_desc__panel__block single_desc__panel__block--gold">
+                  <h4 class="h4 single_desc__panel__block__header">7 269 064 AED</h4>
+                  <p class="maintext">269 064 AED / м<sup>2</sup></p>
+               </div>
+            </div>
+
+            <div class="single_desc__info">
+               <div class="single_desc__info__left">
+                  <h6 class="h6 caps single_desc__info__left__header">Описание</h6>
+
+                  <div class="single_desc__info__maintext maintext">
+                     <p>
+                        Peninsula One предлагает на выбор 518 отдельных единиц жилья, удовлетворяя самый широкий спектр
+                        предпочтений в одном комплексе в Бизнес-Бэй. От 36-этажной башни, из которой открывается
+                        непревзойденный вид на культовый район Downtown Skyline, с 433 квартирами - преимущественно
+                        студиями и односпальными кроватями, которые отвечают потребностям современного работающего
+                        профессионала, до 15 симплексов на подиуме премиум-класса с выбором от 1 до 3 спален. Кроме
+                        того,
+                        Peninsula One будет включать 70 роскошных симплексов на набережной, расположенных на 6 этажах.
+                     </p>
+                     <br>
+                     <p>
+                        Peninsula One будет занимать площадь более 372 000 кв. футов и предложит самые уникальные
+                        варианты
+                        жилья в этом районе. Площадь квартир будет варьироваться от студий площадью от 385 кв. футов (35
+                        кв. метров) до просторных трехкомнатных квартир площадью 1 950 кв. футов (181 кв. метров).
+                     </p>
+                  </div>
+
+                  <div class="single_desc__info__panel">
+                     <button class="filter_btn maintext">
+                        <span>Смотреть видео</span>
+                        <img src="img/play.svg" alt="иконка плей">
+                     </button>
+                     <button class="filter_btn maintext">
+                        <span>Смотреть панораму</span>
+                        <img src="img/map.png" alt="иконка плей">
+                     </button>
+                  </div>
+               </div>
+               <div class="single_desc__info__right">
+                  <h6 class="h6 caps single_desc__info__left__header">Описание</h6>
+
+                  <ul class="single_desc__info__right_ul">
+                     <li class="single_desc__info__right_li">
+                        <p class="maintext">Тип объекта</p>
+                        <p class="maintext">Квартира</p>
+                     </li>
+                     <li class="single_desc__info__right_li">
+                        <p class="maintext">Тип здания</p>
+                        <p class="maintext">Новый проект</p>
+                     </li>
+                     <li class="single_desc__info__right_li">
+                        <p class="maintext">Рынок</p>
+                        <p class="maintext">Первичный</p>
+                     </li>
+                     <li class="single_desc__info__right_li">
+                        <p class="maintext">Квартал сдачи в эксплуатацию</p>
+                        <p class="maintext">4-й квартал</p>
+                     </li>
+                     <li class="single_desc__info__right_li">
+                        <p class="maintext">Год сдачи в эксплуатацию</p>
+                        <p class="maintext">2024</p>
+                     </li>
+                     <li class="single_desc__info__right_li">
+                        <p class="maintext">Этаж</p>
+                        <p class="maintext">20</p>
+                     </li>
+                     <li class="single_desc__info__right_li">
+                        <p class="maintext">Вид</p>
+                        <p class="maintext">Вид на море/океан/залив</p>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="section single_preferences">
+         <div class="container">
+            <h6 class="h6 single_desc__info__left__header">Преимущества</h6>
+
+            <div class="single_preferences__panel">
+               <div class="single_preferences__panel__block subtitle">
+                  <svg>
+                     <use xlink:href="img/sprite.svg#preferences"></use>
+                  </svg>
+                  <span>Балкон</span>
+               </div>
+               <div class="single_preferences__panel__block subtitle">
+                  <svg>
+                     <use xlink:href="img/sprite.svg#preferences"></use>
+                  </svg>
+                  <span>Домашние животные</span>
+               </div>
+               <div class="single_preferences__panel__block subtitle">
+                  <svg>
+                     <use xlink:href="img/sprite.svg#preferences"></use>
+                  </svg>
+                  <span>Бассейн</span>
+               </div>
+               <div class="single_preferences__panel__block subtitle">
+                  <svg>
+                     <use xlink:href="img/sprite.svg#preferences"></use>
+                  </svg>
+                  <span>Охрана и видеонаблюдение</span>
+               </div>
+               <div class="single_preferences__panel__block subtitle">
+                  <svg>
+                     <use xlink:href="img/sprite.svg#preferences"></use>
+                  </svg>
+                  <span>Домашние животные</span>
+               </div>
+               <div class="single_preferences__panel__block subtitle">
+                  <svg>
+                     <use xlink:href="img/sprite.svg#preferences"></use>
+                  </svg>
+                  <span>Балкон</span>
+               </div>
+               <div class="single_preferences__panel__block subtitle">
+                  <svg>
+                     <use xlink:href="img/sprite.svg#preferences"></use>
+                  </svg>
+                  <span>Охрана и видеонаблюдение</span>
+               </div>
+               <div class="single_preferences__panel__block subtitle">
+                  <svg>
+                     <use xlink:href="img/sprite.svg#preferences"></use>
+                  </svg>
+                  <span>Балкон</span>
+               </div>
+            </div>
+         </div>
+      </section>
+
+
+      <section class="section single_map">
+         <div class="container">
+            <h2 class="h2 section__header caps reg">Расположение и Инфраструктура</h2>
+            <div class="single_map__panel">
+               <div class="single_map__panel__flex">
+                  <label class="checkbox maintext">
+                     <input type="checkbox" name="" id="">
+                     <div>
+                        <span>Все объекты</span>
+                     </div>
+                  </label>
+                  <label class="checkbox maintext">
+                     <input type="checkbox" name="" id="">
+                     <div>
+                        <span>Бутики и магазины</span>
+                     </div>
+                  </label>
+                  <label class="checkbox maintext">
+                     <input type="checkbox" name="" id="">
+                     <div>
+                        <span>Парки</span>
+                     </div>
+                  </label>
+                  <label class="checkbox maintext">
+                     <input type="checkbox" name="" id="">
+                     <div>
+                        <span>Спорт</span>
+                     </div>
+                  </label>
+                  <label class="checkbox maintext">
+                     <input type="checkbox" name="" id="">
+                     <div>
+                        <span>Кафе</span>
+                     </div>
+                  </label>
+                  <label class="checkbox maintext">
+                     <input type="checkbox" name="" id="">
+                     <div>
+                        <span>Детские сады</span>
+                     </div>
+                  </label>
+                  <label class="checkbox maintext">
+                     <input type="checkbox" name="" id="">
+                     <div>
+                        <span>Образование</span>
+                     </div>
+                  </label>
+                  <label class="checkbox maintext">
+                     <input type="checkbox" name="" id="">
+                     <div>
+                        <span>Культура</span>
+                     </div>
+                  </label>
+               </div>
+
+               <div class="desktop-hidden single_map__panel__select">
+                  <label class="select maintext">
+                     <button class="select_btn select_main">
+                        <span>Все объекты</span>
+                     </button>
+                     <div class="select_block">
+                        <div class="select_block__container">
+                           <label class="select_btn">
+                              <input type="checkbox" name="" id="" value="Красный">
+                              <span>Бутики и магазины</span>
+                           </label>
+                           <label class="select_btn">
+                              <input type="checkbox" name="" id="" value="Белый">
+                              <span>Парки</span>
+                           </label>
+                           <label class="select_btn">
+                              <input type="checkbox" name="" id="" value="Черный">
+                              <span>Спорт</span>
+                           </label>
+                           <label class="select_btn">
+                              <input type="checkbox" name="" id="" value="Зелёный">
+                              <span>Кафе</span>
+                           </label>
+                           <label class="select_btn">
+                              <input type="checkbox" name="" id="" value="Золотой">
+                              <span>Детские сады</span>
+                           </label>
+                           <label class="select_btn">
+                              <input type="checkbox" name="" id="" value="Золотой">
+                              <span>Образование</span>
+                           </label>
+                           <label class="select_btn">
+                              <input type="checkbox" name="" id="" value="Золотой">
+                              <span>Культура</span>
+                           </label>
+                        </div>
+                     </div>
+                  </label>
+               </div>
+
+               <div class="single_map__map" id="map">
+
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <script src="js/single_map.js"></script>
+
+      <section class="section single_builder">
+         <div class="container">
+            <h2 class="h2 reg caps single_builder__header">
+               Застройщик проекта - <br><span>компания Binghatti Developers</span>
+            </h2>
+
+            <div class="single_builder__flex">
+               <img src="img/builder.png" alt="" class="single_builder__img">
+               <div class="single_builder__info">
+                  <h4 class="h4 caps reg">Binghatti — это инновационный застройщик, который предлагает жилье премиум
+                     качества.</h4>
+                  <p class="h6">Помимо строительства недвижимости компания занимается гостиничным бизнесом,
+                     промышленностью, продуктами питания, напитками и дизайном.</p>
+                  <p class="maintext single_builder__info__text">Это развивающаяся фирма, которая после сдачи готовых
+                     жилых комплексов, сразу
+                     приступает к возведению новых жилых и коммерческих объектов.</p>
+
+                  <a href="#" class="icon_btn maintext caps" disabled="">
+                     <span>Оставить заявку</span>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="section special">
+         <div class="container special__container">
+            <div class="section__top">
+               <h2 class="h2 section__header caps reg">Похожие объекты</h2>
+
+               <a href="catalog.html" class="link_arrow caps maintext med">
+                  <span>смотреть все</span>
+                  <svg>
+                     <use xlink:href="img/sprite.svg#arrow-right"></use>
+                  </svg>
+               </a>
+            </div>
+
+            <div class="special__swiper">
+               <div class="special__wrapper">
+                  <div class="house_card">
+                     <div class="house_card__slider">
+                        <img src="img/house_card.jpeg" alt="" class="house_card__img house_card__img--active">
+                        <img src="img/house_card1.jpeg" alt="" class="house_card__img">
+                        <img src="img/house_card2.jpeg" alt="" class="house_card__img">
+
+                        <div class="house_card__pagination">
+                        </div>
+                     </div>
+                     <div class="house_card__text">
+                        <div class="house_card__location maintext light">
+                           <svg fill="none">
+                              <use xlink:href="img/sprite.svg#location"></use>
+                           </svg>
+                           <span>Дубай. Palm West Beach</span>
+                        </div>
+
+                        <h4 class="house_card__header subtitle reg caps">Студия Peninsula 3 в центре Дубая от Select
+                           Group
+                        </h4>
+
+                        <div class="house_card__info maintext">
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#bed"></use>
+                              </svg>
+                              2 спальни
+                           </div>
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#bath"></use>
+                              </svg>
+                              1 ванная
+                           </div>
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#room"></use>
+                              </svg>
+                              2 спальни
+                           </div>
+                        </div>
+
+                        <div class="house_card__price">
+                           <p class="house_card__price_full h6 demi">7 269 064 AED</p>
+
+                           <p class="house_card__price_per maintext light">269 064 AED / м<sup>2</sup></p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="house_card">
+                     <div class="house_card__slider">
+                        <img src="img/house_card1.jpeg" alt="" class="house_card__img house_card__img--active">
+                        <img src="img/house_card.jpeg" alt="" class="house_card__img">
+                        <img src="img/house_card2.jpeg" alt="" class="house_card__img">
+
+                        <div class="house_card__pagination">
+                        </div>
+                     </div>
+                     <div class="house_card__text">
+                        <div class="house_card__location maintext light">
+                           <svg fill="none">
+                              <use xlink:href="img/sprite.svg#location"></use>
+                           </svg>
+                           <span>Дубай. Palm West Beach</span>
+                        </div>
+
+                        <h4 class="house_card__header subtitle reg caps">Студия Peninsula 3 в центре Дубая от Select
+                           Group
+                        </h4>
+
+                        <div class="house_card__info maintext">
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#bed"></use>
+                              </svg>
+                              2 спальни
+                           </div>
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#bath"></use>
+                              </svg>
+                              1 ванная
+                           </div>
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#room"></use>
+                              </svg>
+                              2 спальни
+                           </div>
+                        </div>
+
+                        <div class="house_card__price">
+                           <p class="house_card__price_full h6 demi">7 269 064 AED</p>
+
+                           <p class="house_card__price_per maintext light">269 064 AED / м<sup>2</sup></p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="house_card">
+                     <div class="house_card__slider">
+                        <img src="img/house_card2.jpeg" alt="" class="house_card__img house_card__img--active">
+                        <img src="img/house_card1.jpeg" alt="" class="house_card__img">
+                        <img src="img/house_card.jpeg" alt="" class="house_card__img">
+
+                        <div class="house_card__pagination">
+                        </div>
+                     </div>
+                     <div class="house_card__text">
+                        <div class="house_card__location maintext light">
+                           <svg fill="none">
+                              <use xlink:href="img/sprite.svg#location"></use>
+                           </svg>
+                           <span>Дубай. Palm West Beach</span>
+                        </div>
+
+                        <h4 class="house_card__header subtitle reg caps">Студия Peninsula 3 в центре Дубая от Select
+                           Group
+                        </h4>
+
+                        <div class="house_card__info maintext">
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#bed"></use>
+                              </svg>
+                              2 спальни
+                           </div>
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#bath"></use>
+                              </svg>
+                              1 ванная
+                           </div>
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#room"></use>
+                              </svg>
+                              2 спальни
+                           </div>
+                        </div>
+
+                        <div class="house_card__price">
+                           <p class="house_card__price_full h6 demi">7 269 064 AED</p>
+
+                           <p class="house_card__price_per maintext light">269 064 AED / м<sup>2</sup></p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="house_card">
+                     <div class="house_card__slider">
+                        <img src="img/house_card.jpeg" alt="" class="house_card__img house_card__img--active">
+                        <img src="img/house_card1.jpeg" alt="" class="house_card__img">
+                        <img src="img/house_card2.jpeg" alt="" class="house_card__img">
+
+                        <div class="house_card__pagination">
+                        </div>
+                     </div>
+                     <div class="house_card__text">
+                        <div class="house_card__location maintext light">
+                           <svg fill="none">
+                              <use xlink:href="img/sprite.svg#location"></use>
+                           </svg>
+                           <span>Дубай. Palm West Beach</span>
+                        </div>
+
+                        <h4 class="house_card__header subtitle reg caps">Студия Peninsula 3 в центре Дубая от Select
+                           Group
+                        </h4>
+
+                        <div class="house_card__info maintext">
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#bed"></use>
+                              </svg>
+                              2 спальни
+                           </div>
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#bath"></use>
+                              </svg>
+                              1 ванная
+                           </div>
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#room"></use>
+                              </svg>
+                              2 спальни
+                           </div>
+                        </div>
+
+                        <div class="house_card__price">
+                           <p class="house_card__price_full h6 demi">7 269 064 AED</p>
+
+                           <p class="house_card__price_per maintext light">269 064 AED / м<sup>2</sup></p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+
+               <button class="arrow_btn special__arrow">
+                  <svg>
+                     <use xlink:href="img/sprite.svg#arrow-right"></use>
+                  </svg>
+               </button>
+            </div>
+         </div>
+      </section>
+
+      <script>
+         document.addEventListener("DOMContentLoaded", () => {
+            var swiper = new Swiper(".special__swiper", {
+               wrapperClass: 'special__wrapper',
+               slideClass: 'house_card',
+               slidesPerView: "auto",
+               spaceBetween: "3%",
+               navigation: {
+                  nextEl: '.special__arrow',
+               }
+            });
+         });
+      </script>
+
+
+      <div class="single_window">
+         <div class="single_window__panel">
+
+            <button class="arrow_btn arrow_btn--prev opacity">
+               <svg>
+                  <use xlink:href="img/sprite.svg#arrow-right"></use>
+               </svg>
+            </button>
+
+            <div class="single_window__panel__main">
+               <!-- <img src="img/builder.png" alt="">
+               <img src="img/builder.png" alt="">
+               <img src="img/builder.png" alt=""> -->
+            </div>
+
+            <button class="arrow_btn arrow_btn--next opacity">
+               <svg>
+                  <use xlink:href="img/sprite.svg#arrow-right"></use>
+               </svg>
+            </button>
+         </div>
+
+         <div class="single_window__main">
+            <img src="img/builder.png" alt="">
+         </div>
+
+         <button class="single_window_close opacity">
+            <svg>
+               <use xlink:href="img/sprite.svg#close-big"></use>
+            </svg>
+         </button>
+      </div>
+
+      <script>
+         document.addEventListener("DOMContentLoaded", () => {
+            let single_close = document.querySelector(".single_window_close");
+            let single_open = document.querySelector(".single_swiper_all");
+            let single_window = document.querySelector(".single_window")
+
+            let single_main_img = document.querySelector(".single_window__main img");
+            let single_panel = document.querySelector(".single_window__panel__main");
+            let all_imgs_s = [];
+
+            single_open.addEventListener("click", () => {
+               single_window.classList.add("single_window--active");
+               document.body.classList.add("stop-scroll");
+               
+            });
+
+            single_close.addEventListener("click", () => {
+               single_window.classList.remove("single_window--active");
+               document.body.classList.remove("stop-scroll");
+            });
+
+            let single_imgs = [
+               "img/builder.png",
+               "img/aboutus.png",
+               "img/services.jpeg",
+               "img/services2.jpeg",
+            ];
+
+            let one_img = 0;
+            let single_order = 0;
+
+            let single_next = document.querySelector(".arrow_btn--next");
+            let single_prev = document.querySelector(".arrow_btn--prev");
+
+            single_next.addEventListener("click", () => {
+               all_imgs_s[(++single_order) % single_imgs.length].click();
+            });
+
+            single_prev.addEventListener("click", () => {
+               if (single_order <= 0) {
+                  single_order = single_imgs.length;
+               }
+               all_imgs_s[(--single_order) % single_imgs.length].click();
+            });
+
+            for (let s_img of single_imgs) {
+               let new_img = document.createElement("img");
+               new_img.src = s_img;
+
+               new_img.id = one_img;
+
+               if (one_img === 0) {
+                  new_img.classList.add("active")
+               }
+               one_img++;
+
+               single_panel.append(new_img);
+               all_imgs_s.push(new_img);
+
+               new_img.addEventListener("click", () => {
+                  single_main_img.src = s_img;
+
+                  single_order = new_img.id;
+
+                  for (let one_img_s of all_imgs_s) {
+                     one_img_s.classList.remove("active");
+                  }
+
+                  new_img.classList.add("active");
+               });
+            }
+         });
+      </script>
+
+
+      <include src="src/components/feedback.html" locals=''></include>
+
+   </main>
+
+   <include src="src/components/footer.html" locals=''></include>
+
+</body>
+
+</html>

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <include src="src/components/headers.html" locals='{
+      "title": "UI"
+   }'></include>
+</head>
+
+
+<body>
+
+   <include src="src/components/header.html" locals=''></include>
+
+   <main class="main">
+      <section class="section">
+         <div class="container">
+            <div class="colors flex">
+               <div class="colors__block"></div>
+               <div class="colors__block"></div>
+               <div class="colors__block"></div>
+               <div class="colors__block"></div>
+               <div class="colors__block"></div>
+               <div class="colors__block"></div>
+            </div>
+
+            <h1 class="h1 med">H1 102px Medium</h1>
+            <h1 class="h1 reg">H1 102px Regular</h1>
+            <h2 class="h2 reg">H2 62px Regular</h2>
+            <h3 class="h3 reg">H3 42px Regular</h3>
+            <h3 class="h3 light">H3 42px Light</h3>
+            <h4 class="h4 demi">H4 34px SemiBold</h4>
+            <h4 class="h4 reg">H4 34px Regular</h4>
+            <h5 class="h5 reg caps">H5 28px Regular капсом</h5>
+            <h5 class="h5 light">H5 28px Light</h5>
+            <h5 class="h5 reg">H5 28px Regular</h5>
+
+            <h6 class="h6 demi">H6 24px Semibold</h6>
+            <h6 class="h6 reg">H6 24px Regular</h6>
+            <h6 class="h6 reg caps">H6 24px капсом Regular</h6>
+
+            <p class="subtitle med caps">Subtitle 20px Medium капсом</p>
+            <p class="subtitle reg">Subtitle 20px Regular</p>
+            <p class="subtitle light caps">Subtitle 20px Regular капсом</p>
+            <p class="subtitle">Subtitle 24px Regular</p>
+
+            <p class="maintext demi">Основной текст 16px Semibold</p>
+            <p class="maintext med caps">Текст в кнопках 16px Medium капсом</p>
+            <p class="maintext light caps">Текст в кнопках 16px Light капсом</p>
+            <p class="maintext">Основной текст 16px Regular</p>
+            <p class="maintext light">Основной текст 16px Regular</p>
+
+            <p class="liltext caps">Маленький текст 14px Regular капсом</p>
+            <p class="liltext light">Текст в статьях 16px Light</p>
+
+
+            <div class="ui-block" style="background: green;">
+               <button class="footer_btn maintext caps">
+                  Заказать консультацию
+               </button>
+
+               <button class="footer_btn maintext caps" disabled>
+                  Заказать консультацию
+               </button>
+            </div>
+
+            <div class="ui-block">
+               <button class="green_btn maintext light caps">
+                  <span>О компании</span>
+                  <svg fill="none">
+                     <use xlink:href="img/sprite.svg#arrow-right"></use>
+                  </svg>
+               </button>
+               <button class="green_btn maintext light caps" disabled>
+                  <span>О компании</span>
+                  <svg fill="none">
+                     <use xlink:href="img/sprite.svg#arrow-right"></use>
+                  </svg>
+               </button>
+            </div>
+
+
+            <div class="ui-block">
+               <a href="#" class="icon_btn maintext caps" disabled>
+                  <svg fill="none">
+                     <use xlink:href="img/sprite.svg#mail"></use>
+                  </svg>
+
+                  <span>Написать на почту</span>
+               </a>
+
+               <a href="#" class="icon_btn maintext light caps" disabled>
+                  <svg fill="none">
+                     <use xlink:href="img/sprite.svg#whatsAppMini"></use>
+                  </svg>
+
+                  <span>Написать в Whatsapp</span>
+               </a>
+            </div>
+
+            <div class="ui-block">
+               <a href="#" class="link_arrow caps maintext med">
+                  <span>В каталог</span>
+                  <svg>
+                     <use xlink:href="img/sprite.svg#arrow-right"></use>
+                  </svg>
+               </a>
+
+               <a href="#" class="link_arrow link_arrow--disabled caps maintext med">
+                  <span>В каталог</span>
+                  <svg>
+                     <use xlink:href="img/sprite.svg#arrow-right"></use>
+                  </svg>
+               </a>
+            </div>
+
+
+            <div class="ui-block">
+               <button class="arrow_btn">
+                  <svg>
+                     <use xlink:href="img/sprite.svg#arrow-right"></use>
+                  </svg>
+               </button>
+            </div>
+
+         </div>
+
+      </section>
+
+
+      <section class="section">
+         <div class="container">
+            <div class="house_card">
+               <div class="house_card__slider">
+                  <img src="img/house_card.jpeg" alt="" class="house_card__img house_card__img--active">
+                  <img src="img/house_card1.jpeg" alt="" class="house_card__img">
+                  <img src="img/house_card2.jpeg" alt="" class="house_card__img">
+
+                  <div class="house_card__pagination">
+                  </div>
+               </div>
+               <div class="house_card__text">
+                  <div class="house_card__location maintext light">
+                     <svg fill="none">
+                        <use xlink:href="img/sprite.svg#location"></use>
+                     </svg>
+                     <span>Дубай. Palm West Beach</span>
+                  </div>
+
+                  <h4 class="house_card__header subtitle reg caps">Студия Peninsula 3 в центре Дубая от Select Group
+                  </h4>
+
+                  <div class="house_card__info maintext">
+                     <div class="house_card__info_block">
+                        <svg fill="none">
+                           <use xlink:href="img/sprite.svg#bed"></use>
+                        </svg>
+                        2 спальни
+                     </div>
+                     <div class="house_card__info_block">
+                        <svg fill="none">
+                           <use xlink:href="img/sprite.svg#bath"></use>
+                        </svg>
+                        1 ванная
+                     </div>
+                     <div class="house_card__info_block">
+                        <svg fill="none">
+                           <use xlink:href="img/sprite.svg#room"></use>
+                        </svg>
+                        68 м<sup>2</sup>
+                     </div>
+                  </div>
+
+                  <div class="house_card__price">
+                     <p class="house_card__price_full h6 demi">7 269 064 AED</p>
+
+                     <p class="house_card__price_per maintext light">269 064 AED / м<sup>2</sup></p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <script>
+         document.addEventListener("DOMContentLoaded", () => {
+            let swipers = document.querySelectorAll(".house_card__slider");
+
+            for (let swiper of swipers) {
+               let all_imgs = swiper.querySelectorAll(".house_card__img");
+               let pagination = swiper.querySelector(".house_card__pagination");
+               let i = 0
+               for (let img of all_imgs) {
+                  i++;
+                  let new_btn = document.createElement("button");
+                  new_btn.addEventListener("mouseover", function () {
+                     for (oneimg of all_imgs) {
+                        oneimg.classList.remove("house_card__img--active");
+                     }
+                     all_btns = this.parentNode.querySelectorAll(".house_card__pagination_btn");
+                     for (let all_btn of all_btns) {
+                        all_btn.classList.remove("house_card__pagination_btn--active");
+                     }
+
+                     this.classList.add("house_card__pagination_btn--active");
+                     img.classList.add("house_card__img--active");
+                  });
+
+                  new_btn.classList.add("house_card__pagination_btn");
+                  if (i === 1)
+                     new_btn.classList.add("house_card__pagination_btn--active");
+
+                  pagination.append(new_btn);
+               }
+            }
+
+         });
+      </script>
+
+
+
+      <section class="section">
+         <div class="container">
+            <div class="ui-block">
+               <label class="checkbox maintext">
+                  <input type="checkbox" name="" id="">
+                  <div>
+                     <svg>
+                        <use xlink:href="img/sprite.svg#apartmens"></use>
+                     </svg>
+                     <span>Квартира</span>
+                  </div>
+               </label>
+               <label class="checkbox maintext">
+                  <input type="checkbox" name="" id="">
+                  <div>
+                     <svg>
+                        <use xlink:href="img/sprite.svg#apart"></use>
+                     </svg>
+                     <span>Апартаменты</span>
+                  </div>
+               </label>
+               <label class="checkbox maintext">
+                  <input type="checkbox" name="" id="">
+                  <div>
+                     <svg>
+                        <use xlink:href="img/sprite.svg#tawn"></use>
+                     </svg>
+                     <span>Таунхаус</span>
+                  </div>
+               </label>
+               <label class="checkbox maintext">
+                  <input type="checkbox" name="" id="">
+                  <div>
+                     <svg>
+                        <use xlink:href="img/sprite.svg#home"></use>
+                     </svg>
+                     <span>Дом</span>
+                  </div>
+               </label>
+               <label class="checkbox maintext">
+                  <input type="checkbox" name="" id="">
+                  <div>
+                     <span>Балкон</span>
+                  </div>
+               </label>
+            </div>
+         </div>
+      </section>
+
+
+      <section class="section">
+         <div class="container">
+            <label class="radio caps h6">
+               <input type="radio" name="neworold" id="">
+               <span>Новостройки</span>
+            </label>
+            <label class="radio caps h6">
+               <input type="radio" name="neworold" id="">
+               <span>Вторичная недвижимость</span>
+            </label>
+         </div>
+      </section>
+
+      <section class="section">
+         <div class="container">
+            <div class="pages">
+               <button class="pages__nav pages__prev pages__btn">
+                  <svg>
+                     <use xlink:href="img/sprite.svg#arrow-right"></use>
+                  </svg>
+               </button>
+
+               <div class="pages__box maintext">
+                  <button class="pages__page pages__btn">1</button>
+                  <button class="pages__page pages__page--active pages__btn">2</button>
+                  <button class="pages__page pages__btn">3</button>
+                  <button class="pages__page pages__btn">...</button>
+                  <button class="pages__page pages__btn">9</button>
+               </div>
+
+               <button class="pages__nav pages__next pages__btn">
+                  <svg>
+                     <use xlink:href="img/sprite.svg#arrow-right"></use>
+                  </svg>
+               </button>
+            </div>
+         </div>
+      </section>
+
+      <section class="section">
+         <div class="container">
+
+            <div class="ui-block ui-block--center">
+               <button class="filter_btn maintext">
+                  <span>Все фильтры</span>
+                  <svg>
+                     <use xlink:href="img/sprite.svg#filter"></use>
+                  </svg>
+               </button>
+
+               <button class="filter_btn maintext">
+                  <span>На карту</span>
+                  <img src="img/map.png" alt="иконка карты">
+               </button>
+            </div>
+
+            <div class="ui-block ui-block--center">
+               <button class="circle_btn maintext">
+                  <span>1</span>
+               </button>
+               <button class="circle_btn circle_btn--active maintext">
+                  <span>1</span>
+               </button>
+            </div>
+
+
+            <div class="ui-block ui-block--center">
+               <label class="circle_btn maintext">
+                  <input type="checkbox" name="" id="">
+                  <span>1</span>
+               </label>
+               <label class="circle_btn circle_btn--active maintext">
+                  <input type="checkbox" name="" id="">
+                  <span>1</span>
+               </label>
+            </div>
+
+            <div class="ui-block">
+               <div class="select_wrapper">
+                  <label class="select maintext">
+                     <button class="select_btn select_main">
+                        <span>Любой</span>
+                     </button>
+                     <div class="select_block">
+                        <div class="select_block__container">
+                           <label class="select_btn">
+                              <input type="checkbox" name="" id="" value="Красный">
+                              <span>Красный</span>
+                           </label>
+                           <label class="select_btn">
+                              <input type="checkbox" name="" id="" value="Белый">
+                              <span>Белый</span>
+                           </label>
+                           <label class="select_btn">
+                              <input type="checkbox" name="" id="" value="Черный">
+                              <span>Черный</span>
+                           </label>
+                           <label class="select_btn">
+                              <input type="checkbox" name="" id="" value="Зелёный">
+                              <span>Зелёный</span>
+                           </label>
+                           <label class="select_btn">
+                              <input type="checkbox" name="" id="" value="Золотой">
+                              <span>Золотой</span>
+                           </label>
+                        </div>
+                     </div>
+                  </label>
+               </div>
+            </div>
+
+
+            <div class="ui-block">
+               <label class="search maintext">
+                  <div class="search_wrapper">
+                     <div class="search_main">
+                        <button class="search_btn search_first">
+                           <svg>
+                              <use xlink:href="img/sprite.svg#search"></use>
+                           </svg>
+                        </button>
+                        <input class="search_main__input" type="text" placeholder="Район или местоположение" name=""
+                           id="">
+                        <button class="search_btn search_reset">
+                           <svg>
+                              <use xlink:href="img/sprite.svg#close"></use>
+                           </svg>
+                        </button>
+                     </div>
+                     <div class="search_block">
+                        <div class="search_block__wrapper">
+                           <button class="search__btn"><span>Д</span>аунтаун Дубай</button>
+                           <button class="search__btn"><span>Д</span>жумейра</button>
+                           <button class="search__btn">Палм Джумейра</button>
+                           <button class="search__btn">Бур Дубай </button>
+                           <button class="search__btn">Джумейра</button>
+                           <button class="search__btn">Даунтаун Дубай</button>
+                           <button class="search__btn">Джумейра</button>
+                           <button class="search__btn">Палм Джумейра</button>
+                           <button class="search__btn">Бур Дубай </button>
+                        </div>
+                     </div>
+                  </div>
+               </label>
+            </div>
+
+            <div class="ui-block ui-block--center">
+               <label class="sort_checkbox maintext">
+                  <input type="checkbox" name="" id="">
+                  <span>Новизне</span>
+               </label>
+               <label class="sort_checkbox maintext">
+                  <input type="checkbox" name="" id="">
+                  <span>Цене</span>
+                  <svg>
+                     <use xlink:href="img/sprite.svg#arrow-down"></use>
+                  </svg>
+               </label>
+               <label class="sort_checkbox sort_checkbox--up maintext">
+                  <input type="checkbox" name="" id="">
+                  <span>Цене</span>
+                  <svg>
+                     <use xlink:href="img/sprite.svg#arrow-down"></use>
+                  </svg>
+               </label>
+            </div>
+
+         </div>
+      </section>
+
+      <section class="section">
+         <div class="container">
+
+            <div class="filter">
+               <div class="filter__wrapper maintext">
+                  <div class="price-input">
+                     <div class="filter_price_text">Цена:</div>
+
+                     <div class="field">
+                        <input type="text" class="input-min" value="200 000">
+                     </div>
+                     <div class="separator">-</div>
+                     <div class="field">
+                        <input type="text" class="input-max" value="10 000 000">
+                     </div>
+
+                     <div class="filter__lang header__lang liltext">
+                        <a href="#" class="header__lang_main">EN</a>
+                        <div class="header__lang_block">
+                           <a href="#" class="header__lang_link header__lang_link--active">AED</a>
+                           <a href="#" class="header__lang_link">AED</a>
+                           <a href="#" class="header__lang_link">USD</a>
+                           <a href="#" class="header__lang_link">RUB</a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="slider">
+                     <div class="progress"></div>
+                  </div>
+                  <div class="range-input">
+                     <input type="range" class="range-min" min="200000" max="25000000" value="20000" step="10000">
+                     <input type="range" class="range-max" min="200000" max="25000000" value="12000000" step="10000">
+                  </div>
+               </div>
+            </div>
+
+         </div>
+      </section>
+
+   </main>
+
+
+   <include src="src/components/footer.html" locals=''></include>

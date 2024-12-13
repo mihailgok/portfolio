@@ -1,0 +1,60 @@
+.new
+   color: $black
+   margin-bottom: 120rem
+   padding-top: 141rem
+   &_main 
+      padding: 0 243rem
+      display: flex
+      flex-direction: column
+   &__time 
+      color: $gray 
+      margin-bottom: 28rem
+      text-align: center
+   &__header 
+      margin-bottom: 40rem
+      text-align: center
+   &_body 
+      display: flex
+      flex-direction: column
+      padding: 80rem 455rem
+      background: $white
+      border-radius: 20rem
+      a 
+         color: $beige
+         font-weight: 400
+      .h4 
+         margin-bottom: 32rem
+      .h6 
+         margin-bottom: 32rem
+      .maintext
+         margin-bottom: 48rem
+   &_img
+      width: 850rem 
+      height: 490rem
+      margin: 0 auto
+      border-radius: 20rem
+      object-fit: cover
+      margin-bottom: 60rem
+
+@media (max-width: 650px) 
+   .new 
+      margin-bottom: 60rem
+      padding-top: 70rem
+      &_main 
+         padding: 0
+      &__time 
+         margin-bottom: 16rem 
+      &__header 
+         margin-bottom: 24rem
+      &_img 
+         width: 100%
+         height: 168rem
+         margin-bottom: 36rem
+      &_body 
+         padding: 36rem 12rem
+         .h4 
+            margin-bottom: 12rem
+         .h6 
+            margin-bottom: 16rem
+         .maintext
+            margin-bottom: 24rem

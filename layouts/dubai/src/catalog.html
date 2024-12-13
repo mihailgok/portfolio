@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <include src="src/components/headers.html" locals='{
+      "title": "Каталог"
+   }'></include>
+</head>
+
+
+<body>
+
+   <include src="src/components/header.html" locals=''></include>
+
+
+   <main class="main catalog">
+      <section class="catalog_hero">
+         <div class="container catalog_hero__container">
+            <div class="navigation maintext">
+               <a href="index.html" class="navigation__link">Главная</a>
+               <!-- <span>/</span> -->
+               <a href="#" class="navigation__link">Недвижимость</a>
+            </div>
+
+            <h1 class="h2 caps reg catalog_hero__header">Недвижимость</h1>
+
+            <div class="catalog_hero__radio">
+               <label class="radio caps h6">
+                  <input type="radio" name="neworold" id="" checked>
+                  <span>Новостройки</span>
+               </label>
+               <label class="radio caps h6">
+                  <input type="radio" name="neworold" id="">
+                  <span>Вторичная недвижимость</span>
+               </label>
+            </div>
+         </div>
+      </section>
+
+
+      <section class="catalog_filters">
+         <div class="container catalog_filters__container">
+            <div class="catalog_filters__type">
+               <label class="checkbox maintext">
+                  <input type="checkbox" name="" id="">
+                  <div>
+                     <svg>
+                        <use xlink:href="img/sprite.svg#apartmens"></use>
+                     </svg>
+                     <span>Квартира</span>
+                  </div>
+               </label>
+               <label class="checkbox maintext">
+                  <input type="checkbox" name="" id="" checked>
+                  <div>
+                     <svg>
+                        <use xlink:href="img/sprite.svg#apart"></use>
+                     </svg>
+                     <span>Апартаменты</span>
+                  </div>
+               </label>
+               <label class="checkbox maintext">
+                  <input type="checkbox" name="" id="">
+                  <div>
+                     <svg>
+                        <use xlink:href="img/sprite.svg#tawn"></use>
+                     </svg>
+                     <span>Таунхаус</span>
+                  </div>
+               </label>
+               <label class="checkbox maintext">
+                  <input type="checkbox" name="" id="">
+                  <div>
+                     <svg>
+                        <use xlink:href="img/sprite.svg#home"></use>
+                     </svg>
+                     <span>Дом</span>
+                  </div>
+               </label>
+            </div>
+
+            <div class="filter">
+               <div class="filter__wrapper maintext">
+                  <div class="price-input">
+                     <div class="filter_price_text">Цена:</div>
+
+                     <div class="field">
+                        <input type="text" class="input-min" value="200 000">
+                     </div>
+                     <div class="separator">-</div>
+                     <div class="field">
+                        <input type="text" class="input-max" value="10 000 000">
+                     </div>
+
+                     <div class="filter__lang header__lang liltext">
+                        <a href="#" class="header__lang_main">USD</a>
+                        <div class="header__lang_block">
+                           <a href="#" class="header__lang_link header__lang_link--active">AED</a>
+                           <a href="#" class="header__lang_link">AED</a>
+                           <a href="#" class="header__lang_link">USD</a>
+                           <a href="#" class="header__lang_link">RUB</a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="slider">
+                     <div class="progress" style="left: 0.8%; right: 60%;"></div>
+                  </div>
+                  <div class="range-input">
+                     <input type="range" class="range-min" min="200000" max="25000000" value="20000" step="10000">
+                     <input type="range" class="range-max" min="200000" max="25000000" value="12000000" step="10000">
+                  </div>
+               </div>
+            </div>
+
+            <div class="catalog_main__amount maintext">найдено <span>87</span> объектов</div>
+
+            <div class="catalog_filters__btns">
+               <button class="filter_btn filter_open maintext">
+                  <span>Все фильтры</span>
+                  <svg>
+                     <use xlink:href="img/sprite.svg#filter"></use>
+                  </svg>
+               </button>
+
+               <button class="filter_btn maintext map_btn">
+                  <span class="map-open">На карту</span>
+                  <span class="list-open">Списком</span>
+                  <img src="img/map.png" alt="иконка карты" class="map-open">
+                  <img src="img/list.svg" alt="иконка списка" class="list-open">
+               </button>
+            </div>
+         </div>
+      </section>
+
+      <div class="filter_window">
+         <div class="filter_window__wrapper">
+            <div class="filter_window__top">
+               <button class="desktop-hidden maintext">Очистить</button>
+
+               <h2 class="h1 caps reg">Фильтры</h2>
+
+               <button class="filter_window_close">
+                  <svg>
+                     <use xlink:href="img/sprite.svg#close-big"></use>
+                  </svg>
+               </button>
+            </div>
+
+            <div class="filter_window__main">
+               <div class="filter_window__block">
+                  <p class="maintext filter_window__p">Локация</p>
+
+                  <label class="search maintext">
+                     <div class="search_wrapper">
+                        <div class="search_main">
+                           <button class="search_btn search_first">
+                              <svg>
+                                 <use xlink:href="img/sprite.svg#search"></use>
+                              </svg>
+                           </button>
+                           <input class="search_main__input" type="text" placeholder="Район или местоположение" name=""
+                              id="">
+                           <button class="search_btn search_reset">
+                              <svg>
+                                 <use xlink:href="img/sprite.svg#close"></use>
+                              </svg>
+                           </button>
+                        </div>
+                        <div class="search_block">
+                           <div class="search_block__wrapper">
+                              <button class="search__btn"><span>Д</span>аунтаун Дубай</button>
+                              <button class="search__btn"><span>Д</span>жумейра</button>
+                              <button class="search__btn">Палм Джумейра</button>
+                              <button class="search__btn">Бур Дубай </button>
+                              <button class="search__btn">Джумейра</button>
+                              <button class="search__btn">Даунтаун Дубай</button>
+                              <button class="search__btn">Джумейра</button>
+                              <button class="search__btn">Палм Джумейра</button>
+                              <button class="search__btn">Бур Дубай </button>
+                              <button class="search__btn">Бур Дубай </button>
+                              <button class="search__btn">Бур Дубай </button>
+                              <button class="search__btn">Бур Дубай </button>
+                           </div>
+                        </div>
+                     </div>
+                  </label>
+               </div>
+
+               <div class="filter_window__block">
+                  <div class="filter">
+                     <div class="filter__wrapper maintext">
+                        <div class="price-input">
+                           <div class="filter_price_text">Цена:</div>
+
+                           <div class="field">
+                              <input type="text" class="input-min" value="200 000">
+                           </div>
+                           <div class="separator">-</div>
+                           <div class="field">
+                              <input type="text" class="input-max" value="10 000 000">
+                           </div>
+
+                           <div class="filter__lang header__lang liltext">
+                              <a href="#" class="header__lang_main">USD</a>
+                              <div class="header__lang_block">
+                                 <a href="#" class="header__lang_link header__lang_link--active">AED</a>
+                                 <a href="#" class="header__lang_link">AED</a>
+                                 <a href="#" class="header__lang_link">USD</a>
+                                 <a href="#" class="header__lang_link">RUB</a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="slider">
+                           <div class="progress" style="left: 0.8%; right: 60%;"></div>
+                        </div>
+                        <div class="range-input">
+                           <input type="range" class="range-min" min="200000" max="25000000" value="20000" step="10000">
+                           <input type="range" class="range-max" min="200000" max="25000000" value="12000000"
+                              step="10000">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="filter_window__block">
+                  <p class="maintext filter_window__p">Спален</p>
+                  <div class="filter_window__flex">
+                     <label class="circle_btn maintext">
+                        <input type="checkbox" name="" id="">
+                        <span>1</span>
+                     </label>
+                     <label class="circle_btn maintext">
+                        <input type="checkbox" name="" id="">
+                        <span>2</span>
+                     </label>
+                     <label class="circle_btn maintext">
+                        <input type="checkbox" name="" id="">
+                        <span>3</span>
+                     </label>
+                     <label class="circle_btn maintext">
+                        <input type="checkbox" name="" id="">
+                        <span>4</span>
+                     </label>
+                     <label class="circle_btn maintext">
+                        <input type="checkbox" name="" id="">
+                        <span>5</span>
+                     </label>
+                     <label class="circle_btn maintext">
+                        <input type="checkbox" name="" id="">
+                        <span>6</span>
+                     </label>
+                     <label class="circle_btn maintext">
+                        <input type="checkbox" name="" id="">
+                        <span>7+</span>
+                     </label>
+                  </div>
+               </div>
+
+               <div class="filter_window__block">
+                  <p class="maintext filter_window__p">Тип жилья</p>
+                  <div class="filter_window__flex">
+                     <label class="checkbox maintext">
+                        <input type="checkbox" name="" id="">
+                        <div>
+                           <svg>
+                              <use xlink:href="img/sprite.svg#apartmens"></use>
+                           </svg>
+                           <span>Квартира</span>
+                        </div>
+                     </label>
+                     <label class="checkbox maintext">
+                        <input type="checkbox" name="" id="" checked>
+                        <div>
+                           <svg>
+                              <use xlink:href="img/sprite.svg#apart"></use>
+                           </svg>
+                           <span>Апартаменты</span>
+                        </div>
+                     </label>
+                     <label class="checkbox maintext">
+                        <input type="checkbox" name="" id="">
+                        <div>
+                           <svg>
+                              <use xlink:href="img/sprite.svg#tawn"></use>
+                           </svg>
+                           <span>Таунхаус</span>
+                        </div>
+                     </label>
+                     <label class="checkbox maintext">
+                        <input type="checkbox" name="" id="">
+                        <div>
+                           <svg>
+                              <use xlink:href="img/sprite.svg#home"></use>
+                           </svg>
+                           <span>Дом</span>
+                        </div>
+                     </label>
+                  </div>
+               </div>
+
+
+               <div class="filter_window__block">
+                  <div class="filter noinput">
+                     <div class="filter__wrapper maintext">
+                        <div class="price-input">
+                           <div class="filter_price_text">Площадь:</div>
+
+                           <div class="field">
+                              <input type="text" class="input-min" value="28" disabled>
+                           </div>
+                           <div class="separator">-</div>
+                           <div class="field">
+                              <input type="text" class="input-max" value="200" disabled>
+                           </div>
+
+                           <div>м<sup>2</sup></div>
+                        </div>
+                        <div class="slider">
+                           <div class="progress" style="left: 0.8%; right: 60%;"></div>
+                        </div>
+                        <div class="range-input">
+                           <input type="range" class="range-min" min="20" max="500" value="28" step="1">
+                           <input type="range" class="range-max" min="20" max="500" value="200" step="1">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="filter_window__block">
+                  <p class="maintext filter_window__p">Ванных</p>
+                  <div class="filter_window__flex">
+                     <label class="circle_btn maintext">
+                        <input type="checkbox" name="" id="">
+                        <span>1</span>
+                     </label>
+                     <label class="circle_btn maintext">
+                        <input type="checkbox" name="" id="">
+                        <span>2</span>
+                     </label>
+                     <label class="circle_btn maintext">
+                        <input type="checkbox" name="" id="">
+                        <span>3</span>
+                     </label>
+                  </div>
+               </div>
+
+               <div class="filter_window__block">
+                  <p class="maintext filter_window__p">Удобства</p>
+                  <div class="filter_window__flex">
+                     <label class="checkbox maintext">
+                        <input type="checkbox" name="" id="">
+                        <div>
+                           <span>Балкон</span>
+                        </div>
+                     </label>
+                     <label class="checkbox maintext">
+                        <input type="checkbox" name="" id="">
+                        <div>
+                           <span>Лифт</span>
+                        </div>
+                     </label>
+                     <label class="checkbox maintext">
+                        <input type="checkbox" name="" id="">
+                        <div>
+                           <span>Парковка</span>
+                        </div>
+                     </label>
+                     <label class="checkbox maintext">
+                        <input type="checkbox" name="" id="">
+                        <div>
+                           <span>Гараж</span>
+                        </div>
+                     </label>
+                     <label class="checkbox maintext">
+                        <input type="checkbox" name="" id="">
+                        <div>
+                           <span>Бассейн</span>
+                        </div>
+                     </label>
+                     <label class="checkbox maintext">
+                        <input type="checkbox" name="" id="">
+                        <div>
+                           <span>Терраса</span>
+                        </div>
+                     </label>
+                     <label class="checkbox maintext">
+                        <input type="checkbox" name="" id="">
+                        <div>
+                           <span>Вид на море</span>
+                        </div>
+                     </label>
+                  </div>
+               </div>
+
+
+               <div class="filter_window__block">
+                  <p class="maintext filter_window__p">Застройщик</p>
+
+                  <div class="select_wrapper">
+                     <label class="select maintext">
+                        <button class="select_btn select_main">
+                           <span>Любой</span>
+                        </button>
+                        <div class="select_block">
+                           <div class="select_block__container">
+                              <label class="select_btn">
+                                 <input type="checkbox" name="" id="" value="Любой">
+                                 <span>Любой</span>
+                              </label>
+                              <label class="select_btn">
+                                 <input type="checkbox" name="" id="" value="Binghatti Developers">
+                                 <span>Binghatti Developers</span>
+                              </label>
+                              <label class="select_btn">
+                                 <input type="checkbox" name="" id="" value="Binghatti Developers">
+                                 <span>Binghatti Developers</span>
+                              </label>
+                              <label class="select_btn">
+                                 <input type="checkbox" name="" id="" value="Binghatti Developers">
+                                 <span>Binghatti Developers</span>
+                              </label>
+                              <label class="select_btn">
+                                 <input type="checkbox" name="" id="" value="Binghatti Developers">
+                                 <span>Binghatti Developers</span>
+                              </label>
+                           </div>
+                        </div>
+                     </label>
+                  </div>
+               </div>
+
+
+               <div class="filter_window__block">
+                  <p class="maintext filter_window__p">&nbsp;</p>
+
+
+                  <div class="filter_window__flex">
+                     <button class="green_btn maintext light caps">
+                        <span>Найдено 86 объектов</span>
+                     </button>
+                     <button class="footer_btn footer_btn--green maintext caps">
+                        Очистить фильтры
+                     </button>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+      </div>
+
+
+
+      <section class="catalog_main">
+         <div class="container catalog_main__container">
+            <div class="catalog_main__top maintext">
+               <div class="catalog_main__amount">найдено <span>87</span> объектов</div>
+
+               <div class="catalog_main__sort">
+                  <div class="catalog_main__sort__header">Сортировать по</div>
+
+                  <label class="sort_checkbox maintext">
+                     <input type="checkbox" name="" id="">
+                     <span>Новизне</span>
+                  </label>
+                  <label class="sort_checkbox maintext">
+                     <input type="checkbox" name="" id="">
+                     <span>Цене</span>
+                     <svg>
+                        <use xlink:href="img/sprite.svg#arrow-down"></use>
+                     </svg>
+                  </label>
+                  <label class="sort_checkbox sort_checkbox--up maintext">
+                     <input type="checkbox" name="" id="">
+                     <span>Цене</span>
+                     <svg>
+                        <use xlink:href="img/sprite.svg#arrow-down"></use>
+                     </svg>
+                  </label>
+               </div>
+            </div>
+
+
+
+            <div class="catalog__grid">
+
+               <div class="catalog_main__grid">
+                  <div class="house_card">
+                     <div class="house_card__slider">
+                        <img src="img/house_card.jpeg" alt="" class="house_card__img house_card__img--active">
+                        <img src="img/house_card1.jpeg" alt="" class="house_card__img">
+                        <img src="img/house_card2.jpeg" alt="" class="house_card__img">
+
+                        <div class="house_card__pagination">
+                        </div>
+                     </div>
+                     <div class="house_card__text">
+                        <div class="house_card__location maintext light">
+                           <svg fill="none">
+                              <use xlink:href="img/sprite.svg#location"></use>
+                           </svg>
+                           <span>Дубай. Palm West Beach</span>
+                        </div>
+
+                        <h4 class="house_card__header subtitle reg caps">Студия Peninsula 3 в центре Дубая от Select
+                           Group
+                        </h4>
+
+                        <div class="house_card__info maintext">
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#bed"></use>
+                              </svg>
+                              2 спальни
+                           </div>
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#bath"></use>
+                              </svg>
+                              1 ванная
+                           </div>
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#room"></use>
+                              </svg>
+                              68 м<sup>2</sup>
+                           </div>
+                        </div>
+
+                        <div class="house_card__price">
+                           <p class="house_card__price_full h6 demi">7 269 064 AED</p>
+
+                           <p class="house_card__price_per maintext light">269 064 AED / м<sup>2</sup></p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="house_card">
+                     <div class="house_card__slider">
+                        <img src="img/house_card1.jpeg" alt="" class="house_card__img house_card__img--active">
+                        <img src="img/house_card.jpeg" alt="" class="house_card__img">
+                        <img src="img/house_card2.jpeg" alt="" class="house_card__img">
+
+                        <div class="house_card__pagination">
+                        </div>
+                     </div>
+                     <div class="house_card__text">
+                        <div class="house_card__location maintext light">
+                           <svg fill="none">
+                              <use xlink:href="img/sprite.svg#location"></use>
+                           </svg>
+                           <span>Дубай. Palm West Beach</span>
+                        </div>
+
+                        <h4 class="house_card__header subtitle reg caps">Студия Peninsula 3 в центре Дубая от Select
+                           Group
+                        </h4>
+
+                        <div class="house_card__info maintext">
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#bed"></use>
+                              </svg>
+                              2 спальни
+                           </div>
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#bath"></use>
+                              </svg>
+                              1 ванная
+                           </div>
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#room"></use>
+                              </svg>
+                              68 м<sup>2</sup>
+                           </div>
+                        </div>
+
+                        <div class="house_card__price">
+                           <p class="house_card__price_full h6 demi">7 269 064 AED</p>
+
+                           <p class="house_card__price_per maintext light">269 064 AED / м<sup>2</sup></p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="house_card">
+                     <div class="house_card__slider">
+                        <img src="img/house_card2.jpeg" alt="" class="house_card__img house_card__img--active">
+                        <img src="img/house_card1.jpeg" alt="" class="house_card__img">
+                        <img src="img/house_card.jpeg" alt="" class="house_card__img">
+
+                        <div class="house_card__pagination">
+                        </div>
+                     </div>
+                     <div class="house_card__text">
+                        <div class="house_card__location maintext light">
+                           <svg fill="none">
+                              <use xlink:href="img/sprite.svg#location"></use>
+                           </svg>
+                           <span>Дубай. Palm West Beach</span>
+                        </div>
+
+                        <h4 class="house_card__header subtitle reg caps">Студия Peninsula 3 в центре Дубая от Select
+                           Group
+                        </h4>
+
+                        <div class="house_card__info maintext">
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#bed"></use>
+                              </svg>
+                              2 спальни
+                           </div>
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#bath"></use>
+                              </svg>
+                              1 ванная
+                           </div>
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#room"></use>
+                              </svg>
+                              68 м<sup>2</sup>
+                           </div>
+                        </div>
+
+                        <div class="house_card__price">
+                           <p class="house_card__price_full h6 demi">7 269 064 AED</p>
+
+                           <p class="house_card__price_per maintext light">269 064 AED / м<sup>2</sup></p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="house_card">
+                     <div class="house_card__slider">
+                        <img src="img/house_card.jpeg" alt="" class="house_card__img house_card__img--active">
+                        <img src="img/house_card1.jpeg" alt="" class="house_card__img">
+                        <img src="img/house_card2.jpeg" alt="" class="house_card__img">
+
+                        <div class="house_card__pagination">
+                        </div>
+                     </div>
+                     <div class="house_card__text">
+                        <div class="house_card__location maintext light">
+                           <svg fill="none">
+                              <use xlink:href="img/sprite.svg#location"></use>
+                           </svg>
+                           <span>Дубай. Palm West Beach</span>
+                        </div>
+
+                        <h4 class="house_card__header subtitle reg caps">Студия Peninsula 3 в центре Дубая от Select
+                           Group
+                        </h4>
+
+                        <div class="house_card__info maintext">
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#bed"></use>
+                              </svg>
+                              2 спальни
+                           </div>
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#bath"></use>
+                              </svg>
+                              1 ванная
+                           </div>
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#room"></use>
+                              </svg>
+                              68 м<sup>2</sup>
+                           </div>
+                        </div>
+
+                        <div class="house_card__price">
+                           <p class="house_card__price_full h6 demi">7 269 064 AED</p>
+
+                           <p class="house_card__price_per maintext light">269 064 AED / м<sup>2</sup></p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="house_card">
+                     <div class="house_card__slider">
+                        <img src="img/house_card1.jpeg" alt="" class="house_card__img house_card__img--active">
+                        <img src="img/house_card.jpeg" alt="" class="house_card__img">
+                        <img src="img/house_card2.jpeg" alt="" class="house_card__img">
+
+                        <div class="house_card__pagination">
+                        </div>
+                     </div>
+                     <div class="house_card__text">
+                        <div class="house_card__location maintext light">
+                           <svg fill="none">
+                              <use xlink:href="img/sprite.svg#location"></use>
+                           </svg>
+                           <span>Дубай. Palm West Beach</span>
+                        </div>
+
+                        <h4 class="house_card__header subtitle reg caps">Студия Peninsula 3 в центре Дубая от Select
+                           Group
+                        </h4>
+
+                        <div class="house_card__info maintext">
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#bed"></use>
+                              </svg>
+                              2 спальни
+                           </div>
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#bath"></use>
+                              </svg>
+                              1 ванная
+                           </div>
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#room"></use>
+                              </svg>
+                              68 м<sup>2</sup>
+                           </div>
+                        </div>
+
+                        <div class="house_card__price">
+                           <p class="house_card__price_full h6 demi">7 269 064 AED</p>
+
+                           <p class="house_card__price_per maintext light">269 064 AED / м<sup>2</sup></p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="house_card">
+                     <div class="house_card__slider">
+                        <img src="img/house_card2.jpeg" alt="" class="house_card__img house_card__img--active">
+                        <img src="img/house_card1.jpeg" alt="" class="house_card__img">
+                        <img src="img/house_card.jpeg" alt="" class="house_card__img">
+
+                        <div class="house_card__pagination">
+                        </div>
+                     </div>
+                     <div class="house_card__text">
+                        <div class="house_card__location maintext light">
+                           <svg fill="none">
+                              <use xlink:href="img/sprite.svg#location"></use>
+                           </svg>
+                           <span>Дубай. Palm West Beach</span>
+                        </div>
+
+                        <h4 class="house_card__header subtitle reg caps">Студия Peninsula 3 в центре Дубая от Select
+                           Group
+                        </h4>
+
+                        <div class="house_card__info maintext">
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#bed"></use>
+                              </svg>
+                              2 спальни
+                           </div>
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#bath"></use>
+                              </svg>
+                              1 ванная
+                           </div>
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#room"></use>
+                              </svg>
+                              68 м<sup>2</sup>
+                           </div>
+                        </div>
+
+                        <div class="house_card__price">
+                           <p class="house_card__price_full h6 demi">7 269 064 AED</p>
+
+                           <p class="house_card__price_per maintext light">269 064 AED / м<sup>2</sup></p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="house_card">
+                     <div class="house_card__slider">
+                        <img src="img/house_card.jpeg" alt="" class="house_card__img house_card__img--active">
+                        <img src="img/house_card1.jpeg" alt="" class="house_card__img">
+                        <img src="img/house_card2.jpeg" alt="" class="house_card__img">
+
+                        <div class="house_card__pagination">
+                        </div>
+                     </div>
+                     <div class="house_card__text">
+                        <div class="house_card__location maintext light">
+                           <svg fill="none">
+                              <use xlink:href="img/sprite.svg#location"></use>
+                           </svg>
+                           <span>Дубай. Palm West Beach</span>
+                        </div>
+
+                        <h4 class="house_card__header subtitle reg caps">Студия Peninsula 3 в центре Дубая от Select
+                           Group
+                        </h4>
+
+                        <div class="house_card__info maintext">
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#bed"></use>
+                              </svg>
+                              2 спальни
+                           </div>
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#bath"></use>
+                              </svg>
+                              1 ванная
+                           </div>
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#room"></use>
+                              </svg>
+                              68 м<sup>2</sup>
+                           </div>
+                        </div>
+
+                        <div class="house_card__price">
+                           <p class="house_card__price_full h6 demi">7 269 064 AED</p>
+
+                           <p class="house_card__price_per maintext light">269 064 AED / м<sup>2</sup></p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="house_card">
+                     <div class="house_card__slider">
+                        <img src="img/house_card1.jpeg" alt="" class="house_card__img house_card__img--active">
+                        <img src="img/house_card.jpeg" alt="" class="house_card__img">
+                        <img src="img/house_card2.jpeg" alt="" class="house_card__img">
+
+                        <div class="house_card__pagination">
+                        </div>
+                     </div>
+                     <div class="house_card__text">
+                        <div class="house_card__location maintext light">
+                           <svg fill="none">
+                              <use xlink:href="img/sprite.svg#location"></use>
+                           </svg>
+                           <span>Дубай. Palm West Beach</span>
+                        </div>
+
+                        <h4 class="house_card__header subtitle reg caps">Студия Peninsula 3 в центре Дубая от Select
+                           Group
+                        </h4>
+
+                        <div class="house_card__info maintext">
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#bed"></use>
+                              </svg>
+                              2 спальни
+                           </div>
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#bath"></use>
+                              </svg>
+                              1 ванная
+                           </div>
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#room"></use>
+                              </svg>
+                              68 м<sup>2</sup>
+                           </div>
+                        </div>
+
+                        <div class="house_card__price">
+                           <p class="house_card__price_full h6 demi">7 269 064 AED</p>
+
+                           <p class="house_card__price_per maintext light">269 064 AED / м<sup>2</sup></p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="house_card">
+                     <div class="house_card__slider">
+                        <img src="img/house_card2.jpeg" alt="" class="house_card__img house_card__img--active">
+                        <img src="img/house_card1.jpeg" alt="" class="house_card__img">
+                        <img src="img/house_card.jpeg" alt="" class="house_card__img">
+
+                        <div class="house_card__pagination">
+                        </div>
+                     </div>
+                     <div class="house_card__text">
+                        <div class="house_card__location maintext light">
+                           <svg fill="none">
+                              <use xlink:href="img/sprite.svg#location"></use>
+                           </svg>
+                           <span>Дубай. Palm West Beach</span>
+                        </div>
+
+                        <h4 class="house_card__header subtitle reg caps">Студия Peninsula 3 в центре Дубая от Select
+                           Group
+                        </h4>
+
+                        <div class="house_card__info maintext">
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#bed"></use>
+                              </svg>
+                              2 спальни
+                           </div>
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#bath"></use>
+                              </svg>
+                              1 ванная
+                           </div>
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#room"></use>
+                              </svg>
+                              68 м<sup>2</sup>
+                           </div>
+                        </div>
+
+                        <div class="house_card__price">
+                           <p class="house_card__price_full h6 demi">7 269 064 AED</p>
+
+                           <p class="house_card__price_per maintext light">269 064 AED / м<sup>2</sup></p>
+                        </div>
+                     </div>
+                  </div>
+
+               </div>
+
+               <div class="catalog__map">
+                  <label class="search maintext">
+                     <div class="search_wrapper">
+                        <div class="search_main">
+                           <button class="search_btn search_first">
+                              <svg>
+                                 <use xlink:href="img/sprite.svg#search"></use>
+                              </svg>
+                           </button>
+                           <input class="search_main__input" type="text" placeholder="Район или местоположение" name=""
+                              id="">
+                           <button class="search_btn search_reset">
+                              <svg>
+                                 <use xlink:href="img/sprite.svg#close"></use>
+                              </svg>
+                           </button>
+                        </div>
+                        <div class="search_block">
+                           <div class="search_block__wrapper">
+                              <button class="search__btn"><span>Д</span>аунтаун Дубай</button>
+                              <button class="search__btn"><span>Д</span>жумейра</button>
+                              <button class="search__btn">Палм Джумейра</button>
+                              <button class="search__btn">Бур Дубай </button>
+                              <button class="search__btn">Джумейра</button>
+                              <button class="search__btn">Даунтаун Дубай</button>
+                              <button class="search__btn">Джумейра</button>
+                              <button class="search__btn">Палм Джумейра</button>
+                              <button class="search__btn">Бур Дубай </button>
+                           </div>
+                        </div>
+                     </div>
+                  </label>
+
+                  <div class="map" id="map">
+                  </div>
+
+                  <!-- 
+                     https://maps.googleapis.com/maps/api/staticmap?center=25.229763,55.289308&zoom=10&size=790x947&scale=2&key=YOUR_API_KEY&signature=YOUR_SIGNATURE
+                  -->
+
+                  <div class="house_card map_house_card">
+                     <div class="house_card__slider">
+                        <img src="img/house_card.jpeg" alt="" class="house_card__img house_card__img--active">
+                        <img src="img/house_card1.jpeg" alt="" class="house_card__img">
+                        <img src="img/house_card2.jpeg" alt="" class="house_card__img">
+
+                        <div class="house_card__pagination">
+                        </div>
+                     </div>
+                     <div class="house_card__text">
+                        <div class="house_card__location maintext light">
+                           <svg fill="none">
+                              <use xlink:href="img/sprite.svg#location"></use>
+                           </svg>
+                           <span>Дубай. Palm West Beach</span>
+                        </div>
+
+                        <h4 class="house_card__header subtitle reg caps">Студия Peninsula 3 в центре Дубая от Select
+                           Group
+                        </h4>
+
+                        <div class="house_card__info maintext">
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#bed"></use>
+                              </svg>
+                              2 спальни
+                           </div>
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#bath"></use>
+                              </svg>
+                              1 ванная
+                           </div>
+                           <div class="house_card__info_block">
+                              <svg fill="none">
+                                 <use xlink:href="img/sprite.svg#room"></use>
+                              </svg>
+                              68 м<sup>2</sup>
+                           </div>
+                        </div>
+
+                        <div class="house_card__price">
+                           <p class="house_card__price_full h6 demi">7 269 064 AED</p>
+
+                           <p class="house_card__price_per maintext light">269 064 AED / м<sup>2</sup></p>
+                        </div>
+                     </div>
+
+                     <button class="house_card__close">
+                        <svg>
+                           <use xlink:href="img/sprite.svg#close-circle"></use>
+                        </svg>
+                     </button>
+                  </div>
+               </div>
+
+            </div>
+
+            <div class="pages">
+               <button class="pages__nav pages__prev pages__btn">
+                  <svg>
+                     <use xlink:href="img/sprite.svg#arrow-right"></use>
+                  </svg>
+               </button>
+
+               <div class="pages__box maintext">
+                  <button class="pages__page pages__btn">1</button>
+                  <button class="pages__page pages__page--active pages__btn">2</button>
+                  <button class="pages__page pages__btn">...</button>
+                  <button class="pages__page pages__btn">9</button>
+               </div>
+
+               <button class="pages__nav pages__next pages__btn">
+                  <svg>
+                     <use xlink:href="img/sprite.svg#arrow-right"></use>
+                  </svg>
+               </button>
+            </div>
+         </div>
+      </section>
+   </main>
+
+
+   <include src="src/components/footer.html" locals=''></include>
+
+</body>
+
+</html>

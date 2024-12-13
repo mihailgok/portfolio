@@ -1,0 +1,1364 @@
+
+//под стирку НАЧАЛО
+.ui
+   padding: 40rem 100rem
+
+.ui-row
+   margin-bottom: 40rem
+
+.ui-block
+   width: 600rem
+   padding: 20rem
+   margin: 10rem
+   display: inline-flex
+   flex-direction: column
+   gap: 20rem
+   border: 1px dashed #9747FF
+   border-radius: 5px
+
+.ui-block--center
+   align-items: center
+
+.colors__block
+   margin-right: 40rem
+   height: 120rem
+   width: 120rem
+   border: 1px solid #CBC6C6
+   &:nth-child(1)
+      background: $black
+   &:nth-child(2)
+      background: $beige
+   &:nth-child(3)
+      background: $green
+   &:nth-child(4)
+      background: $white
+   &:nth-child(5)
+      background: $gray
+   &:nth-child(6)
+      background: $lightgray
+
+.sitemap 
+   padding: 150rem 0 80rem 0
+   .container
+      display: flex 
+      flex-direction: column
+      gap: 20rem
+      a
+         padding: 20rem
+         border: 1rem solid $beige
+         display: flex 
+         align-items: center
+         justify-content: center
+         color: $beige
+         transition: background $main_time, color $main_time 
+         &:hover 
+            background: $beige
+            color: $white
+
+//под стирку КОНЕЦ
+
+.stop-scroll
+   overflow: hidden
+
+.desktop-hidden
+   display: none
+
+.flex
+   display: flex
+
+.light
+   font-weight: 300
+
+.reg
+   font-weight: 400
+
+.med
+   font-weight: 500
+
+.demi
+   font-weight: 600
+
+.bold
+   font-weight: 700
+
+.caps
+   text-transform: uppercase
+
+.h1
+   font-size: 102rem
+   line-height: 106%
+
+.h2
+   font-size: 62rem
+   line-height: 110%
+
+.h3
+   font-size: 42rem
+   line-height: 110%
+
+.h4
+   font-size: 34rem
+   line-height: 110%
+
+.h5
+   font-size: 28rem
+   line-height: 110%
+
+.h6
+   font-size: 24rem
+   line-height: 120%
+
+.subtitle
+   font-size: 20rem
+   line-height: 128%
+
+.maintext
+   font-size: 16rem
+   line-height: 130%
+
+.liltext
+   font-size: 14rem
+   line-height: 130%
+
+.footer_btn
+   padding: 16rem 24rem
+   border: 1rem solid $white
+   border-radius: 6rem
+   color: $white
+   transition: opacity $main_time, border-color $main_time
+   &:hover
+      border-color: $beige
+   &:active
+      border-color: $beige
+      opacity: 0.8
+   &:disabled
+      pointer-events: none
+      color: $white
+      border-color: $white
+      opacity: 0.4
+   &--green 
+      border: 1rem solid rgba($green, 0.4)
+      color: $green
+
+.checkbox
+   cursor: pointer
+   div
+      padding: 12rem 16rem
+      display: flex
+      justify-content: center
+      align-items: center
+      border-radius: 6rem
+      border: 1rem solid #E2E3DE
+      transition: background $main_time, border $main_time
+   input
+      display: none
+   svg
+      width: 1.2em
+      height: 1.2em
+      margin-right: 10rem
+      fill: $black
+   &:hover div
+      background: $white
+   &:active div
+      color: $gray
+   input:checked + div
+      background: $green
+      color: $white
+      border: 1rem solid $green
+      svg
+         fill: $white
+
+.radio
+   cursor: pointer
+   input
+      display: none
+   span
+      padding: 0 76rem 32rem 76rem
+      color: #E2E3DE
+      border-bottom: 1rem solid #E2E3DE
+      transition: color $main_time, border $main_time
+      display: inline-block
+   input:checked + span
+      color: $green
+      border-color: $green
+
+.pages
+   display: flex
+   align-items: center
+   &__btn
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 60rem
+      height: 60rem
+      border: 1rem solid #E2E3DE
+      border-radius: 50%
+      color: $gray
+   &__nav
+      background: rgba($white, 0.4)
+      transition: background $main_time, opacity $main_time
+      svg
+         width: 31rem
+         height: 21rem
+         stroke: $gray
+      &:hover 
+         background: rgba($white, 0.7)
+      &:active 
+         background: rgba($white, 0.8)
+      &:disabled
+         background: $white
+         opacity: 0.2
+   &__prev
+      transform: scale(-1, 1)
+   &__box
+      display: flex
+      margin: 0 auto
+      gap: 8rem
+   &__page
+      transition: color $main_time, background $main_time
+      &:hover
+         background: $white
+      &:active
+         background: $white
+         opacity: 0.8
+      &--active
+         background: $green
+         color: $white
+         pointer-events: none
+
+.filter_btn
+   display: flex
+   align-items: center
+   border-radius: 6rem
+   border: 1rem solid #E2E3DE
+   padding: 12rem 16rem
+   transition: background $main_time, opacity $main_time
+   svg, img
+      width: 21rem
+      height: 21rem
+      margin-left: 10rem
+      border-radius: 50%
+   &:hover 
+      background: $white
+   &:active
+      background: $white
+      opacity: 0.8
+
+.sort_checkbox
+   display: flex 
+   align-items: center
+   justify-content: center
+   color: #646464
+   cursor: pointer
+   input 
+      display: none
+   span 
+      transition: color $main_time
+   svg 
+      height: 14rem
+      width: 12rem
+      margin-left: 8rem
+      stroke: #646464
+      transition: stroke $main_time
+   input:checked 
+      + span 
+         color: $green
+         font-weight: 500
+      ~ svg 
+         stroke: $green
+   &--up 
+      svg 
+         transform: scale(1, -1)
+      
+
+.opacity
+   transition: opacity $main_time
+   &:hover
+      opacity: 0.6
+
+.after
+   position: relative
+   transition: opacity $main_time
+   &::after
+      content: ""
+      display: inline-block
+      width: 0%
+      height: 1rem
+      background: $beige
+      position: absolute
+      bottom: -3rem
+      left: 0
+      transition: width $main_time
+   &:hover::after
+      width: 100%
+   &:active
+      opacity: 0.4
+
+.green_btn
+   background: $green
+   padding: 16rem 32rem
+   color: $white
+   display: flex
+   align-items: center
+   justify-content: center
+   border-radius: 6rem
+   svg
+      margin-left: 16rem
+      width: 23rem
+      height: 16rem
+      stroke: $white
+   &:hover
+      background: #1E4841
+   &:active
+      background: #6A8884
+   &:disabled, &--disabled
+      background: #D1D1D1
+
+.icon_btn
+   background: $green
+   padding: 16rem 32rem
+   color: $white
+   display: flex
+   align-items: center
+   justify-content: center
+   border-radius: 6rem
+   svg 
+      margin-right: 12rem
+      width: 21rem 
+      height: 21rem
+      stroke: $white
+   span 
+      line-height: 1
+   &.light 
+      background: none
+      color: $green 
+      border: 1px solid $green
+      svg 
+         stroke: none 
+      
+
+
+.link_arrow
+   display: flex
+   align-items: center
+   color: $beige
+   transition: color $main_time, opacity $main_time
+   svg
+      width: 23rem
+      height: 16rem
+      stroke: $beige
+      margin-left: 16rem
+      transition: transform $main_time
+   &:hover
+      opacity: 0.8
+      svg
+         transform: translateX(8rem)
+   &:active
+      opacity: 0.4
+   &:disabled, &--disabled
+      pointer-events: none
+      color: #D1D1D1
+      svg
+         stroke: #D1D1D1
+
+.arrow_btn
+   background: rgba($white, 0.4)
+   padding: 20rem 14rem 19rem 15rem
+   border-radius: 50%
+   &--left 
+      svg 
+         transform: scale(-1, 1)
+   svg
+      width: 31rem
+      height: 21rem
+      stroke: #646464
+   &:hover
+      background: rgba($white, 0.7)
+   &:active
+      background: rgba($white, 0.8)
+   &:disabled
+      pointer-events: none
+      opacity: 0.1
+
+.circle_btn
+   cursor: pointer
+   input
+      display: none
+   span
+      display: block
+      width: 60rem
+      height: 60rem
+      border: 1rem solid #E2E3DE
+      border-radius: 50%
+      transition: background $main_time, opacity $main_time, color $main_time
+      display: flex 
+      align-items: center
+      justify-content: center
+   &:hover span
+      background: #ffffff
+   &:active span
+      opacity: 0.8
+      background: #ffffff
+   input:checked + span
+      background: #063832
+      color: #ffffff
+      &:hover
+         background: #063832
+         color: #ffffff
+      &:active 
+         background: #063832
+         color: #ffffff
+
+      
+.select
+   display: flex
+   flex-direction: column
+   overflow: hidden
+   max-width: 200rem
+   white-space: nowrap
+   color: $gray
+   &_wrapper 
+      height: 60rem
+   &_btn
+      text-align: left
+   &_main
+      color: $gray
+      padding: 16rem 18rem
+      border: 1rem solid #E2E3DE
+      border-radius: 6rem
+      display: flex 
+      align-items: center
+      position: relative
+      z-index: 3
+      span
+         margin-right: 1em
+         max-width: 180rem
+         max-width: 100%
+         overflow: hidden
+         display: block
+         box-shadow: inset -10em 0em 1em rgba(255, 255, 255, 0.6)
+      &::after 
+         content: ""
+         background: url("../img/arrow_select.svg") center center no-repeat
+         background-size: contain
+         width: 1.4em
+         height: 1.4em
+         display: block
+         margin-left: auto
+         margin-top: -0.32rem
+         position: absolute
+         top: calc(18rem + 8rem - 0.8em)
+         right: 18rem
+   &:hover 
+      .select_main
+         border-bottom-left-radius: 0
+         border-bottom-right-radius: 0
+      .select_block
+         &__container
+            max-height: 129rem
+            opacity: 1
+         padding: 18rem 26rem 16rem 16rem
+         border: 1rem solid #E2E3DE
+         border-top-left-radius: 0
+         border-top-right-radius: 0
+   &_block 
+      &__container
+         display: flex
+         flex-direction: column
+         max-height: 0
+         transition: max-height calc($main_time * 1.2) ease-in-out, padding calc($main_time * 1.2), border calc($main_time * 1.2)
+         overflow: auto
+         padding-right: 1em
+         &::-webkit-scrollbar
+            height: auto
+            width : 2rem
+         &::-webkit-scrollbar-thumb
+            background-color: $beige
+         &::-webkit-scrollbar-track
+            background: #EFEFEF
+      position: relative
+      z-index: 2
+      background: #F8F8F8
+      transition: max-height calc($main_time * 1.2) ease-in-out, padding calc($main_time * 1.2), border calc($main_time * 1.2)
+      padding: 0 26rem 0 16rem
+      border-radius: 6rem
+      border: 1rem solid transparent
+      margin-top: -1rem
+      .select_btn
+         margin-bottom: 12rem
+         cursor: pointer
+         span
+            background: url('../img/check_white.svg') left center no-repeat
+            background-size: 18rem 18rem
+            padding-left: 30rem
+         input 
+            display: none
+         input:checked + span
+            background: url('../img/check_gold.svg') left center no-repeat
+            background-size: 18rem 18rem
+         &:hover 
+            opacity: 0.6
+         &:last-child
+            margin-bottom: 0
+
+.search
+   height: 60rem
+   display: block
+   &_main
+      display: flex 
+      align-items: center
+      width: 100%
+      padding: 18rem 16rem
+      border: 1rem solid #E2E3DE
+      border-radius: 6rem
+      position: relative
+      z-index: 3
+      background: #F8F8F8
+      &__input
+         width: 100%
+   &_btn
+      display: flex 
+      align-items: center
+      justify-content: center
+      svg
+         width: 24rem
+         height: 24rem
+   &_first
+      margin-right: 12rem
+   &_reset
+      transition: opacity $main_time
+      opacity: 0
+      // pointer-events: none
+   &_block
+      padding: 0 26rem 0 16rem
+      // border: 1rem solid transparent
+      border-radius: 0 0 6rem 6rem
+      margin-top: -0.5rem
+      max-height: 0
+      transition: max-height $main_time
+      overflow: hidden
+      position: relative
+      z-index: 2
+      background: #F8F8F8
+      &__wrapper
+         display: flex 
+         flex-direction: column
+         align-items: flex-start
+         overflow: auto
+         &::-webkit-scrollbar
+            height: auto
+            width: 2rem
+         &::-webkit-scrollbar-thumb
+            background-color: $beige
+         &::-webkit-scrollbar-track
+            background: #EFEFEF
+         .search__btn
+            margin-bottom: 12rem
+            transition: opacity $main_time
+            flex-shrink: 0
+            span
+               color: $beige
+            &:last-child
+               margin-bottom: 0
+            &:hover 
+               opacity: 0.6
+
+   &--active
+      .search_block
+         max-height: 200rem
+         padding: 18rem 26rem 16rem 16rem
+         border: 1rem solid #E2E3DE
+      .search_main
+         border-radius: 6rem 6rem 0 0
+      .search_block
+         .search_block__wrapper
+            max-height: 170rem
+      .search_reset
+         opacity: 1
+         // pointer-events: auto
+   
+      
+.filter_window
+   background:  rgba(#1A1A1A, 0.4)
+   display: flex
+   flex-direction: column
+   justify-content: flex-end
+   width: 100%
+   position: fixed
+   top: 0
+   left: 0
+   height: 100vh 
+   width: 100%
+   z-index: 4
+   pointer-events: none
+   opacity: 0
+   transition: opacity $main_time
+   &__p
+      margin-bottom: 28rem
+   &__wrapper
+      background: #F8F8F8
+      padding: 60rem 80rem 120rem 80rem
+   .h1
+      color: #063832
+   &_close
+      border: 1rem solid #E2E3DE
+      display: flex 
+      justify-content: center
+      align-items: center
+      width: 60rem
+      height: 60rem
+      border-radius: 50%
+      margin-left: auto
+      svg
+         width: 30rem
+         height: 30rem
+   &__top
+      display: flex 
+      align-items: center
+      margin-bottom: 60rem
+   &__main
+      display: grid 
+      grid-template-columns: 1fr 1fr 1fr
+      grid-column-gap: 114rem
+      grid-row-gap: 48rem
+   &__flex
+      display: flex
+      align-items: center
+      gap: 8rem
+      flex-wrap: wrap
+   // .select_wrapper
+      // width: 100%
+      // display: flex
+   .select
+      width: 450rem
+      max-width: 100%
+      // display: flex
+   &--active 
+      opacity: 1
+      pointer-events: auto
+
+.section
+   margin-bottom: 180rem
+   &__top
+      display: flex
+      align-items: center
+      margin-bottom: 68rem
+      .section__header
+         margin-bottom: 0
+         margin-right: auto
+   &__header
+      padding-left: 218rem
+      margin-bottom: 68rem
+      background: url(../img/header_svg.svg) left center no-repeat
+      background-size: 158rem 18rem
+      color: $green
+
+.navigation
+   display: flex 
+   align-items: center
+   color: $green
+   transition: opacity $main_time
+   margin-bottom: 80rem
+   align-self: flex-start
+   color: $green
+   &__link
+      margin-right: 16rem
+      opacity: 0.65
+      &::after
+         content: "/"
+         margin-left: 16rem
+      &:last-child
+         opacity: 1
+         &::after 
+            display: none
+      &:hover
+         opacity: 1
+
+.header
+   position: fixed
+   top: 0
+   left: 0
+   width: 100%
+   background: $green
+   color: $white
+   z-index: 5
+   &__container
+      display: flex
+      align-items: center
+   .nav
+      margin-right: 117rem
+      &__list
+         display: flex
+         align-items: center
+      &__item
+         margin-right: 40rem
+         position: relative
+         display: inline-block
+         &:nth-last-child(2)
+            margin-right: 0
+         &:last-child
+            display: none
+         &:after
+            content: ""
+            display: inline-block
+            width: 0%
+            height: 1rem
+            background: $beige
+            position: absolute
+            bottom: -3rem
+            left: 0
+            transition: width $main_time
+         &:hover::after
+            width: 100%
+   &__logo
+      margin-right: auto
+      svg
+         width: 150rem
+         height: 90rem
+   &__left
+      display: flex
+      align-items: center
+   &__whatsup
+      display: flex
+      align-items: center
+      margin-right: 63rem
+      transition: opacity $main_time
+      &:hover
+         opacity: 0.6
+      span
+         margin-right: 12rem
+      svg
+         width: 30rem
+         height: 30rem
+         path
+            fill: $white
+            stroke: $white
+   &__lang
+      position: relative
+      &_main
+         position: relative
+         padding-right: 20rem
+         padding-bottom: 8rem
+         &::after
+            display: block
+            content: ""
+            background: url(../img/arrow_header.svg) center no-repeat
+            transform: rotate(180deg)
+            background-size: contain
+            width: 12rem
+            height: 8rem
+            position: absolute
+            right: 0em
+            top: calc(50% - 4rem - 4rem)
+            transition: transform $main_time
+      &_block
+         pointer-events: none
+         opacity: 0
+         padding: 12rem 20rem
+         border-radius: 4rem
+         position: absolute
+         top: 25rem
+         right: 0
+         background: #1E4841
+         display: flex
+         flex-direction: column
+         align-items: center
+         transition: opacity $main_time
+      &_link
+         margin-bottom: 12rem
+         &:hover
+            opacity: 0.6
+         &:last-child
+            margin-bottom: 0
+         &--active
+            color: $beige
+      &:hover
+         .header__lang_main
+            &::after
+               transform: rotate(0)
+         .header__lang_block
+            opacity: 1
+            pointer-events: auto
+   &__menu
+      display: none
+
+
+.feedback
+   margin-bottom: 180rem
+   &__wrapper
+      background: $white
+      display: flex 
+      padding: 100rem 152rem 100rem 80rem
+      border-radius: 20rem
+      position: relative
+   &__header 
+      color: $green 
+      margin-bottom: 32rem 
+   &__subtitle 
+      color: $gray
+      max-width: 517rem
+   &__left 
+      width: 712rem
+   &__form 
+      display: flex 
+      flex-direction: column
+      width: 700rem
+      margin-left: auto
+   &__input 
+      padding: 20rem
+      background: $lightgray
+      margin-bottom: 16rem 
+      border-radius: 8rem
+   &__submit 
+      margin-top: 40rem
+      margin-bottom: 16rem
+   &__politics 
+      color: $gray
+      a 
+         color: $beige
+   &__wrapper
+      &--remove
+         display: none
+      &--two 
+         padding: 137rem 524rem
+         display: none 
+         flex-direction: column
+         align-items: center
+         .h2 
+            color: $green 
+            margin-bottom: 36rem
+         .h6 
+            color: #646464
+            margin-bottom: 48rem
+            width: 584rem
+            text-align: center
+         &--active 
+            display: flex
+   &_window
+      opacity: 0
+      pointer-events: none 
+      transition: opacity $main_time
+      position: fixed
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: rgba($black, 0.4)
+      z-index: 5
+      max-width: 100% !important
+      display: flex 
+      align-items: center
+      justify-content: center
+      .feedback
+         margin-bottom: 0
+      &--active 
+         pointer-events: auto 
+         opacity: 1
+
+   &_close 
+      position: absolute
+      top: 60rem
+      right: 40rem
+      border: 1rem solid #E2E3DE 
+      padding: 15rem 
+      border-radius: 50%
+      svg 
+         width: 40rem 
+         height: 40rem 
+
+
+.footer
+   background: $green
+   color: $white
+   &__container
+      display: flex
+      padding: 10rem 80rem 56rem 70rem
+   &__col
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: space-between
+   &__left
+      svg
+         width: 305rem
+         height: 180rem
+         margin-bottom: 12rem
+   &__center
+      width: 667rem
+      padding-top: 58rem
+      margin-right: 200rem
+      margin-left: auto
+      align-items: flex-start
+   &__social
+      display: flex
+      &_link
+         display: flex
+         align-items: center
+         margin-right: 48rem
+         svg
+            margin-left: 8rem
+         &:last-child
+            margin-right: 0
+      svg
+         width: 28rem
+         height: 28rem
+   .nav
+      &__list
+         display: flex
+         flex-wrap: wrap
+         justify-content: space-between
+      &__item
+         &:first-child
+            margin-bottom: 28rem
+   &__right
+      padding-top: 58rem
+      .footer__link
+         display: none
+   &__copy
+      a
+         text-decoration: underline
+
+.house_card
+   display: flex
+   flex-direction: column
+   align-items: center
+   // min-width: 546rem
+   background: $white
+   border-radius: 20rem
+   overflow: hidden
+   transition: transform $main_time
+   &__slider
+      width: 546rem
+      height: 343rem
+      border-top-right-radius: 20rem
+      border-top-left-radius: 20rem
+      transition: width $main_time, height $main_time
+      overflow: hidden
+      position: relative
+   &__img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      flex-shrink: 0
+      position: absolute
+      top: 0
+      left: 0
+      opacity: 0
+      transition: opacity calc($main_time * 2.5) ease-out
+      &--active
+         opacity: 1
+   &__pagination
+      display: flex
+      position: absolute
+      bottom: 16rem
+      left: 0
+      right: 0
+      margin: 0 auto
+      width: 181rem
+      opacity: 0
+      transition: opacity $main_time
+      pointer-events: none
+      &_btn
+         flex: 1
+         height: 2rem
+         background: $white
+         margin-right: 8rem
+         position: relative
+         &::after
+            content: ""
+            width: 100%
+            height: 1000%
+            position: absolute
+            left: 0
+            top: -500%
+         &:last-child
+            margin-right: 0
+         &--active
+            background: $beige
+   &__text
+      padding: 20rem 28rem 28rem 28rem
+      width: 546rem
+   &__location
+      display: flex
+      align-items: top
+      margin-bottom: 20rem
+      svg
+         width: 20rem
+         height: 20rem
+         margin-right: 4rem
+   &__header
+      margin-bottom: 24rem
+   &__info
+      display: flex
+      align-items: center
+      margin-bottom: 32rem
+      &_block
+         display: flex
+         align-items: center
+         margin-right: 40rem
+         &:last-child
+            margin-right: 0
+         svg
+            width: 24rem
+            height: 24rem
+            margin-right: 16rem
+   &__price
+      display: flex
+      align-items: center
+      &_full
+         color: $beige
+         margin-right: auto
+   &:hover
+      transform: scale(1.05)
+      // .house_card__slider
+      //    width: 580rem
+      //    height: 364rem
+      .house_card__pagination
+         pointer-events: auto
+         opacity: 1
+
+@media (max-width: 650px)
+   //под стирку НАЧАЛО
+   .ui
+      padding: 20rem 15rem
+
+   .colors__block
+      margin-right: 10rem
+      height: 20rem
+      width: 20rem
+
+   // .buttons
+   //    padding: 10rem
+      // width: 100%
+   //под стирку КОНЕЦ
+
+   .desktop-hidden
+      display: block
+
+   .h1
+      font-size: 28rem
+      line-height: 130%
+
+   .h2
+      font-size: 25rem
+
+   .h3
+      font-size: 20rem
+
+   .h4
+      font-size: 18rem
+      line-height: 136%
+
+   .h5, .h6
+      font-size: 16rem
+      line-height: 120%
+
+   .subtitle
+      font-size: 16rem
+      line-height: 136%
+
+   .maintext
+      font-size: 13rem
+      line-height: 136%
+
+   .liltext
+      font-size: 11rem
+      line-height: 136%
+
+   .link_arrow
+      font-size: 16rem
+
+   .section
+      margin-bottom: 60rem
+      &__header
+         padding-left: 0
+         margin-bottom: 24rem
+         background-position: left top
+         padding-top: 34rem
+         background-size: 89rem 10rem
+      &__top
+         margin-bottom: 24rem
+         // .section__header
+         //    padding-top: 0
+
+   .header
+      .nav
+         position: absolute
+         left: 0
+         width: 100%
+         height: calc(100vh - 40rem)
+         bottom: calc(-100vh + 40rem)
+         background: $green
+         pointer-events: none
+         opacity: 0
+         transition: opacity $main_time
+         &__list
+            flex-direction: column
+            // justify-content: center
+            margin-top: 80rem
+            height: 100%
+         &__item
+            margin-right: 0
+            margin-bottom: 18rem
+            &:last-child
+               display: inline-block
+               margin-bottom: 0
+               margin-top: 48rem
+               &:hover::after
+                  display: none
+         &--active
+            opacity: 1
+            pointer-events: auto
+      &__logo
+         margin-right: 0
+         svg
+            width: 63rem
+            height: 36rem
+      &__menu
+         display: flex
+         flex-direction: column
+         justify-content: center
+         height: 20rem
+         span
+            width: 20rem
+            height: 1rem
+            background: $white
+            border-radius: 0.5rem
+            margin-bottom: 4rem
+            flex-shrink: 0
+            transition: margin $main_time, transform $main_time
+            &:last-child
+               margin-bottom: 0
+         &--active, &:active
+            span
+               margin-bottom: 0
+               &:first-child
+                  transform: rotate(30deg)
+               &:last-child
+                  transform: rotate(-30deg) translateY(-1rem)
+               &:nth-child(2)
+                  display: none
+      &__left
+         margin: 0 36rem 0 auto
+         .header__lang
+            display: none
+      &__whatsup
+         margin-right: 0
+         span
+            margin-right: 8rem
+         svg
+            width: 19rem
+            height: 19rem
+      &__lang
+         &_block
+            top: 20rem
+
+   .feedback
+      margin-bottom: 28rem
+      &__wrapper
+         flex-direction: column
+         padding: 48rem 10rem
+      &__left
+         width: 100%
+         margin-bottom: 28rem
+         .subtitle 
+            font-size: 15rem
+      &__form
+         width: 100%
+      &__header 
+         margin-bottom: 16rem
+      &__input 
+         margin-bottom: 12rem
+      &__submit 
+         margin-top: 32rem 
+         margin-bottom: 12rem 
+      
+
+
+
+   .footer
+      &__container
+         flex-direction: column
+         padding: 15rem 15rem 28rem 15rem
+      &__left
+         margin-bottom: 32rem
+         svg
+            width: 130rem
+            height: 80rem
+            margin-bottom: 0
+         .footer__link
+            display: none
+      &__center
+         align-items: center
+         width: 100%
+         padding-top: 0
+         margin-right: 0
+         margin-bottom: 48rem
+      &__nav
+         display: none
+      &__social
+         flex-direction: column
+         align-items: center
+         &_link
+            margin-right: 0
+            margin-bottom: 16rem
+            font-size: 15rem
+            svg
+               width: 21rem
+               height: 21rem
+            &:last-child
+               margin-bottom: 0
+      &__right
+         padding-top: 0
+         font-size: 11rem
+         .footer__link
+            display: inline-block
+            margin-bottom: 16rem
+            font-size: 11rem
+      &_btn
+         display: none
+
+   .house_card
+      // width: 290rem
+      &__slider
+         width: 290rem
+         height: 182rem
+      &__text
+         width: 290rem
+         padding: 12rem
+      &__location
+         margin-bottom: 12rem
+      &__header
+         margin-bottom: 14rem
+      &__info
+         margin-bottom: 42rem
+         justify-content: space-between
+         &_block
+            font-size: 11rem
+            line-height: 136%
+            margin-right: 0
+            svg
+               width: 14rem
+               height: 14rem
+               margin-right: 8rem
+      &__price
+         flex-direction: column
+         align-items: flex-start
+         &_full
+            margin-bottom: 4rem
+      &:hover
+         transform: none
+
+   .green_btn
+      padding: 12rem 16rem
+
+   .navigation
+      margin-bottom: 48rem
+      max-width: 100%
+      overflow-x: auto
+      display: flex 
+      align-items: center
+      &__link
+         flex-shrink: 0
+         margin-right: 8rem
+         &::after
+            margin-left: 8rem
+
+   .radio
+      span
+         padding: 0 8.25rem 12rem 8.25rem
+         font-size: 11rem 
+         white-space: nowrap
+
+   .sort_checkbox
+      font-size: 11rem
+      svg
+         margin-left: 6rem
+         width: 10rem
+         height: 12rem
+
+   .pages
+      &__btn
+         width: 36rem
+         height: 36rem
+      &__nav
+         svg
+            width: 17rem
+            height: 11rem
+      &__box
+         gap: 4rem
+
+
+   .filter_window
+      z-index: 5
+      &__p
+         margin-bottom: 12rem
+      &__wrapper
+         padding: 16rem 15rem 27rem 15rem
+         max-height: 100%
+         max-width: 100%
+         overflow: auto
+      &_close
+         width: 36rem
+         height: 36rem
+         margin-left: 0
+         margin-right: auto
+         svg
+            width: 16rem
+            height: 16rem
+      &__top
+         margin-bottom: 36rem
+         flex-direction: row-reverse
+         // justify-content: space-between
+         align-items: center
+         .h1 
+            font-size: 18rem
+            width: 136rem
+            text-align: center
+            margin-right: 17rem
+      &__main
+         grid-template-columns: 1fr
+         grid-row-gap: 32rem
+      &__flex
+         gap: 4rem
+      &__block:last-child
+         .filter_window__flex
+            .green_btn
+               width: 100%
+         .filter_window__p
+            display: none 
+      .select
+         width: 100%
+      
+   
+   .search
+      height: 42rem
+      max-width: 100%
+      &_main
+         padding: 12rem
+      &_btn
+         svg
+            width: 15rem
+            height: 15rem
+      &_first
+         margin-right: 8rem
+      &_block
+         padding: 0 12rem 0 12rem
+
+      &--active
+         .search_block
+            max-height: 180rem
+         .search_block
+            .search_block__wrapper
+               max-height: 180rem
+      
+   .circle_btn
+      span
+         width: 36rem
+         height: 36rem
+
+   .checkbox
+      div 
+         padding: 6rem 12rem
+
+   

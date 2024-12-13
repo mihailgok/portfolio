@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <include src="src/components/headers.html" locals='{
+      "title": "404"
+   }'></include>
+</head>
+
+
+<body>
+
+   <include src="src/components/header.html" locals=''></include>
+
+   <main class="main notfound">
+      <section class="notfound_section">
+         <div class="container">
+            <h1 class="notfound__header h1 med caps">Страница не найдена</h1>
+
+
+            <a href="index.html" class="green_btn maintext light caps">
+               <span>На главную</span>
+               <svg fill="none">
+                  <use xlink:href="img/sprite.svg#arrow-right"></use>
+               </svg>
+            </a>
+         </div>
+      </section>
+
+   </main>
+
+   <include src="src/components/footer.html" locals=''></include>
+
+</body>
+
+</html>

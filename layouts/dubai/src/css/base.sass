@@ -1,0 +1,46 @@
+body
+   font-family: 'Inter', sans-serif
+   -webkit-font-smoothing: antialiased
+   color: $black
+   background: #F8F8F8
+   
+.container
+   max-width: 1920rem !important
+   width: 100%
+   margin: 0 auto
+   height: 100%
+   padding: 0 80rem
+
+.swiper-horizontal
+  touch-action: pan-y
+
+*::-webkit-scrollbar,
+html *::-webkit-scrollbar
+   height: auto
+   width : 8rem
+
+*::-webkit-scrollbar-thumb,
+html *::-webkit-scrollbar-thumb 
+   background-color: $green
+   border-radius   : 15rem
+
+*::-webkit-scrollbar-track,
+html *::-webkit-scrollbar-track 
+   background: transparent
+
+input, textarea
+   border-radius: 0
+
+
+@media (max-width: 650px) 
+   *::-webkit-scrollbar, html *::-webkit-scrollbar
+      height: auto
+      width : 4rem
+
+   .container
+      max-width: 100% !important
+      width: 100% !important
+      padding: 0 15rem
+
+
+

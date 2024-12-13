@@ -1,0 +1,445 @@
+.single
+   &_hero
+      padding-top: 141rem
+      &__header
+         color: $green
+         max-width: 1012rem
+         span 
+            color: $beige
+      &__top 
+         display: flex 
+         margin-bottom: 28rem
+         &__buttons 
+            display: flex 
+            align-items: flex-end
+            gap: 16rem
+            margin-left: auto
+   &_swiper
+      overflow: hidden
+      position: relative
+      &_container 
+         display: flex 
+      &__img 
+         flex-shrink: 0
+         width: 100%
+      &_next 
+         position: absolute
+         top: calc(50% - 50rem / 2)
+         right: 80rem
+      &_prev 
+         position: absolute
+         top: calc(50% - 50rem / 2)
+         left: 80rem
+      &_all 
+         background: $white
+         position: absolute
+         top: 28rem
+         right: 80rem
+
+   &_desc 
+      background: $green
+      padding-top: 190rem
+      padding-bottom: 324rem
+      position: relative
+      color: $white
+      &__panel 
+         display: flex 
+         position: absolute
+         top: -35rem
+         left: 80rem
+         right: 80rem
+         margin: 0 auto
+         border-radius: 12rem
+         overflow: hidden
+         color: $gray
+         &__block 
+            display: flex 
+            flex-direction: column 
+            align-items: flex-start
+            border-right: 1rem solid #EFEFEF
+            width: 400rem
+            padding: 28rem 60rem
+            background: $white
+            &--gold 
+               background: $beige
+               color: $white
+            &:not(:first-child)
+               width: 450rem
+            &:last-child
+               flex: 1
+            &__text
+               margin-bottom: 20rem
+            &__main 
+               display: flex 
+               align-items: center
+               line-height: 1
+               svg 
+                  margin-right: 16rem
+                  width: 28rem 
+                  height: 28rem
+            &__header 
+               margin-bottom: 12rem
+      &__info 
+         display: flex 
+         &__maintext 
+            // margin-bottom: 40rem
+            line-height: 148%
+         &__panel 
+            display: flex 
+            gap: 16rem 
+            margin-top: auto
+            .filter_btn
+               background: $white
+         &__left 
+            width: 758rem 
+            display: flex 
+            flex-direction: column
+            &__header 
+               margin-bottom: 40rem
+         &__right 
+            width: 850rem 
+            margin-left: auto
+            &_li 
+               display: flex 
+               justify-content: space-between
+               border-bottom: 1rem solid #748D88
+               margin-bottom: 20rem 
+               padding-bottom: 16rem
+               &:last-child
+                  margin-bottom: 0
+   &_preferences
+      margin-top: -200rem
+      position: relative
+      z-index: 1
+      .h6 
+         color: $white
+      &__panel
+         border-radius: 20rem 
+         background: #EFEFEF
+         display: grid 
+         grid-template-columns: 1fr 1fr 1fr 1fr
+         grid-gap: 1rem
+         overflow: hidden
+         &__block 
+            display: flex 
+            align-items: center
+            color: $gray
+            padding: 28rem 60rem
+            padding-right: 0
+            background: $white
+            svg
+               width: 94rem 
+               height: 94rem 
+               margin-right: 24rem 
+   &_map
+      &__panel
+         background: $white
+         display: flex
+         &__flex 
+            display: flex 
+            align-items: flex-start
+            flex-direction: column
+            gap: 8rem
+            flex-shrink: 0
+            padding: 60rem 24rem
+      &__map 
+         width: 100%
+         height: 676rem
+      &_mark 
+         width: 72rem 
+         height: 72rem
+         background: url(../img/logo.svg) center center no-repeat
+         background-size: contain 
+         border-radius: 50%
+   &_builder 
+      &__header 
+         margin-bottom: 60rem
+         span
+            color: $beige
+      &__img 
+         border-radius: 20rem
+      &__flex 
+         display: flex 
+         >* 
+            width: 850rem 
+      &__info 
+         margin-left: auto
+         padding: 70rem 70rem 70rem 80rem
+         display: flex
+         flex-direction: column
+         align-items: flex-start
+         .h4 
+            margin-bottom: 48rem 
+            color: $green
+         .h6 
+            margin-bottom: 16rem
+            color: $black
+            padding-right: 105rem
+         &__text
+            color: $gray
+            padding-right: 246rem
+         .icon_btn
+            margin-top: auto
+   &_window
+      position: fixed
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: $lightgray
+      z-index: 5
+      display: flex
+      align-items: center
+      justify-content: center
+      opacity: 0
+      pointer-events: none 
+      transition: opacity $main_time
+      &--active 
+         opacity: 1
+         pointer-events: auto
+      &__main 
+         width: 1215rem
+         height: 848rem
+         img
+            width: 100% 
+            height: 100% 
+            object-fit: cover
+            cursor: pointer
+      &__panel
+         position: absolute
+         left: 80rem
+         top: 0 
+         bottom: 0
+         margin: auto 0
+         // margin-right: 151rem
+         width: 152rem  
+         display: flex 
+         flex-direction: column
+         align-items: center
+         justify-content: center
+         &__main
+            display: flex 
+            flex-direction: column
+         .arrow_btn
+            flex-shrink: 0
+            &:first-child
+               transform: rotate(-90deg)
+               margin-bottom: 36rem
+            &:last-child
+               transform: rotate(90deg)
+               margin-top: 36rem
+         img
+            width: 100%
+            height: 88rem 
+            object-fit: cover
+            opacity: 0.4
+            &.active 
+               opacity: 1
+      &_close 
+         position: absolute
+         top: 60rem 
+         right: 80rem
+         border-radius: 50%
+         border: 1rem solid #E2E3DE
+         padding: 20rem
+         svg 
+            width: 42rem
+            height: 42rem
+
+
+
+
+@media (max-width: 650px)
+   .single
+      &_hero
+         padding-top: 56rem
+         &__header 
+            margin-bottom: 24rem
+         &__top
+            flex-direction: column
+            &__buttons
+               flex-direction: column
+               gap: 8rem
+               width: 100%
+               margin-left: 0
+               .icon_btn
+                  width: 100%
+                  padding: 12rem 36rem
+      &_swiper 
+         height: 200rem
+         &_container 
+            height: 100%
+         &__img 
+            height: 100% 
+            object-fit: cover
+         &_all 
+            padding: 2rem 6rem
+            font-size: 11rem
+            top: 4rem 
+            right: 15rem
+            img
+               width: 18rem 
+               height: 18rem
+         .arrow_btn
+            padding: 12rem 10rem 13rem 9rem
+            svg 
+               width: 17rem
+               height: 11rem
+         &_next
+            right: 15rem
+         &_prev
+            left: 15rem
+      &_desc 
+         &__panel 
+            border-radius: 6rem
+            top: -5rem
+            right: 0
+            left: 0
+            flex-wrap: wrap
+            &__block 
+               padding: 15rem
+               width: 50%
+               &:not(:first-child)
+                  width: 50%
+               &:nth-child(n+3)
+                  width: 100%
+         &__info 
+            padding-top: 120rem
+            flex-direction: column
+            &__left 
+               width: 100%
+               margin-bottom: 56rem
+               &__header 
+                  margin-bottom: 16rem
+            &__maintext 
+               margin-bottom: 28rem
+            &__panel
+               flex-direction: column
+               gap: 8rem
+               .filter_btn
+                  display: flex 
+                  align-items: center
+                  justify-content: center
+            &__right 
+               width: 100%
+               &_li 
+                  p:first-child
+                     max-width: 140rem
+                  p:last-child
+                     max-width: 120rem
+                     text-align: right
+                  
+      &_preferences
+         margin-top: -261rem
+         &__panel 
+            display: flex 
+            flex-direction: column
+            border-radius: 6rem
+            grid-gap: 0
+            &__block 
+               white-space: nowrap
+               padding: 12rem
+               border-bottom: 1rem solid #EFEFEF
+               &:last-child
+                  border-bottom: none
+               svg 
+                  width: 32rem 
+                  height: 32rem
+                  margin-right: 12rem
+            
+      &_map 
+         &__panel
+            flex-direction: column
+            &__flex 
+               display: none
+            &__select 
+               max-height: 48rem
+               margin-bottom: 16rem
+               .select 
+                  width: 100%
+                  max-width: 100%
+         &__map 
+            height: 476rem 
+
+      &_builder
+         &__header
+            margin-bottom: 24rem
+            br 
+               display: none
+         &__flex
+            flex-direction: column
+            & > * 
+               width: 100%
+         &__img 
+            border-radius: 8rem
+         &__info 
+            padding: 36rem 10rem 28rem 12rem
+            .h4 
+               margin-bottom: 24rem
+            .h6
+               padding-right: 0
+               margin-bottom: 12rem
+            &__text 
+               padding-right: 0
+               margin-bottom: 32rem
+            .icon_btn 
+               width: 100%
+
+      &_window
+         // padding-top: 68rem
+         // position: fixed
+         // top: 0
+         // left: 0
+         // width: 100%
+         // height: 100%
+         // background: $lightgray
+         // z-index: 5
+         // display: flex
+         // align-items: center
+         // justify-content: center
+         // opacity: 0
+         // pointer-events: none 
+         // transition: opacity $main_time
+         // &--active 
+         //    opacity: 1
+         //    pointer-events: auto
+         &__main 
+            display: none
+         //    width: 1215rem
+         //    height: 848rem
+         //    img
+         //       width: 100% 
+         //       height: 100% 
+         //       object-fit: cover
+         //       cursor: pointer
+         &__panel
+            position: static
+            max-height: 80%
+            overflow-y: auto
+            // left: 80rem
+            // top: 0 
+            // bottom: 0
+            // margin: auto 0
+            // margin-right: 151rem
+            width: 100%
+            // display: flex 
+            // flex-direction: column
+            // align-items: center
+            justify-content: flex-start
+            &__main
+               gap: 8rem
+            //    display: flex 
+            //    flex-direction: column
+            .arrow_btn
+               display: none
+            img
+               height: 223rem
+               opacity: 1
+         &_close 
+            top: 16rem 
+            right: 15rem
+            border-radius: 50%
+            padding: 10rem
+            svg 
+               width: 20rem
+               height: 20rem

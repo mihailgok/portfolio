@@ -1,0 +1,55 @@
+.contacts 
+   padding-top: 141rem 
+   margin-bottom: 160rem
+   &__top 
+      display: flex
+      align-items: flex-start
+   &__panel 
+      width: 850rem 
+      margin-left: auto
+      padding: 60rem 111rem 60rem 92rem
+      display: flex
+      background: $white 
+      border-radius: 20rem
+      &__header 
+         margin-bottom: 20rem
+      &__left 
+         a
+            color: $green
+            display: block
+         address 
+            font-style: normal
+            margin-bottom: 60rem 
+            line-height: 1.5
+      &__right 
+         margin-left: auto
+         .icon_btn
+            width: 100%
+            justify-content: center
+            margin-bottom: 8rem
+            padding: 16rem 36rem
+            &:last-child
+               margin-bottom: 0
+   &__mail
+      margin-bottom: 12rem
+
+
+
+@media (max-width: 650px) 
+   .contacts 
+      padding-top: 70rem 
+      margin-bottom: 60rem
+      &__top 
+         flex-direction: column
+      &__panel 
+         padding: 28rem 12rem
+         flex-direction: column
+         width: 100%
+         &__left 
+            margin-bottom: 36rem
+            address
+               margin-bottom: 36rem 
+         &__right 
+            margin-left: 0
+
+

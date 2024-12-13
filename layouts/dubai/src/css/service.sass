@@ -1,0 +1,104 @@
+.service
+   &_hero
+      padding-top: 141rem
+   &__grid 
+      display: flex
+      align-items: flex-start
+      position: relative
+   &__left
+      width: 563rem 
+      position: sticky
+      top: 141rem
+      .h6 
+         margin-bottom: 28rem
+      .maintext 
+         margin-bottom: 48rem
+   &__right 
+      width: 850rem 
+      margin-left: auto
+      &--active
+         .service__card:not(:first-child)
+            margin-top: -28rem
+      // position: fixed
+      // top: 0
+      // right: 80rem
+      // &:hover 
+      //    .service__card:not(:first-child)
+      //       margin-top: -28rem
+   &__card 
+      padding: 80rem 152rem 0 80rem
+      height: 488rem
+      border-radius: 20rem
+      background: $white
+      transition: margin $main_time * 2 0.2s
+      // position: sticky
+      margin-top: -320rem
+      position: relative
+      // z-index: 1
+      &:first-child
+         margin-top: 0
+      .subtitle  
+         margin-bottom: 16rem
+      .h5
+         margin-bottom: 28rem
+      .maintext
+         margin-bottom: 1em
+         &:last-child
+            margin-bottom: 0
+      &--green 
+         background: $green 
+         color: $white
+      &--beige 
+         background: $beige
+         color: $white
+      &--active
+         margin-top: -28rem
+      
+         
+      // &:nth-child(1)
+      //    top: 141rem
+      // &:nth-child(2)
+      //    top: 291rem
+      // &:nth-child(3)
+      //    top: 441rem
+      // &:nth-child(4)
+      //    top: 591rem
+      // &:not(:first-child)
+      //    margin-top: -28rem
+      
+
+@media (max-width: 650px)
+   .service
+      &_hero
+         padding-top: 70rem
+      &__grid 
+         flex-direction: column
+      &__left 
+         width: 100%
+         position: static
+      &__right 
+         width: 100%
+      &__card 
+         padding: 36rem 12rem
+         border-radius: 8rem
+         // position: static
+         // margin-top: -20rem
+         height: auto
+         &:nth-child(2)
+            margin-top: -170rem
+         &:nth-child(3)
+            margin-top: -340rem
+         &:nth-child(4)
+            margin-top: -395rem
+         &--active 
+            margin-top: -20rem !important
+         .subtitle  
+            margin-bottom: 12rem
+         .h5
+            margin-bottom: 16rem
+         // &:not(:first-child)
+         //    margin-top: -12rem !important
+      &_btn 
+         width: 100%
+
+      

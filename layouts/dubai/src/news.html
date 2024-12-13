@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <include src="src/components/headers.html" locals='{
+      "title": "Новости"
+   }'></include>
+</head>
+
+
+<body>
+
+   <include src="src/components/header.html" locals=''></include>
+
+   <main class="main newspage">
+      <section class="newspage_hero section">
+         <div class="container">
+            <div class="navigation maintext">
+               <a href="index.html" class="navigation__link">Главная</a>
+               <a href="about.html" class="navigation__link">О компании</a>
+            </div>
+
+            <h2 class="h2 section__header caps reg">Новости</h2>
+
+            <div class="newspage_hero__grid">
+               <div class="newspage_hero__grid__left">
+                  <time class="newspage_hero__time maintext" datetime="2023-05-03">03.05.2023</time>
+                  <h3 class="h3 reg caps">
+                     ОАЭ заняли второе место в мире среди лучших стран для экспатов
+                  </h3>
+                  <p class="maintext">
+                     Арабские Эмираты – страна с развитой системой здравоохранения. Современная инфраструктура
+                     привлекает экспатов и медицинских туристов со всего мира. На 100 000 жителей здесь приходится 181
+                     врач.
+                  </p>
+                  <a href="new.html" class="news__card__link med after maintext caps">Подробнее</a>
+               </div>
+
+               <img class="newspage_hero__grid__right" src="img/house_card.jpeg" alt="">
+            </div>
+
+            <div class="newspage__grid">
+               <div class="news__card">
+                  <div class="news__card__text">
+                     <p class="news__card__time maintext light">03.05.2023</p>
+                     <h5 class="news__card__header h5 caps reg">ОАЭ заняли второе место в мире среди лучших стран для
+                        экспатов</h5>
+                     <a href="new.html" class="news__card__link med after maintext caps">Подробнее</a>
+                  </div>
+
+                  <img src="img/news1.jpeg" alt="" class="news__card__img">
+               </div>
+
+               <div class="news__card">
+                  <div class="news__card__text">
+                     <p class="news__card__time maintext light">03.05.2023</p>
+                     <h5 class="news__card__header h5 caps reg">Цены на элитную недвижимость в Дубае выросли на 27%
+                     </h5>
+                     <a href="new.html" class="news__card__link med after maintext caps">Подробнее</a>
+                  </div>
+
+                  <img src="img/news2.jpeg" alt="" class="news__card__img">
+               </div>
+               <div class="news__card">
+                  <div class="news__card__text">
+                     <p class="news__card__time maintext light">03.05.2023</p>
+                     <h5 class="news__card__header h5 caps reg">ОАЭ заняли второе место в мире среди лучших стран для
+                        экспатов</h5>
+                     <a href="new.html" class="news__card__link med after maintext caps">Подробнее</a>
+                  </div>
+
+                  <img src="img/news1.jpeg" alt="" class="news__card__img">
+               </div>
+
+               <div class="news__card">
+                  <div class="news__card__text">
+                     <p class="news__card__time maintext light">03.05.2023</p>
+                     <h5 class="news__card__header h5 caps reg">Цены на элитную недвижимость в Дубае выросли на 27%
+                     </h5>
+                     <a href="new.html" class="news__card__link med after maintext caps">Подробнее</a>
+                  </div>
+
+                  <img src="img/news2.jpeg" alt="" class="news__card__img">
+               </div>
+               <div class="news__card">
+                  <div class="news__card__text">
+                     <p class="news__card__time maintext light">03.05.2023</p>
+                     <h5 class="news__card__header h5 caps reg">ОАЭ заняли второе место в мире среди лучших стран для
+                        экспатов</h5>
+                     <a href="new.html" class="news__card__link med after maintext caps">Подробнее</a>
+                  </div>
+
+                  <img src="img/news1.jpeg" alt="" class="news__card__img">
+               </div>
+
+               <div class="news__card">
+                  <div class="news__card__text">
+                     <p class="news__card__time maintext light">03.05.2023</p>
+                     <h5 class="news__card__header h5 caps reg">Цены на элитную недвижимость в Дубае выросли на 27%
+                     </h5>
+                     <a href="new.html" class="news__card__link med after maintext caps">Подробнее</a>
+                  </div>
+
+                  <img src="img/news2.jpeg" alt="" class="news__card__img">
+               </div>
+            </div>
+
+            <div class="pages">
+               <button class="pages__nav pages__prev pages__btn">
+                  <svg>
+                     <use xlink:href="img/sprite.svg#arrow-right"></use>
+                  </svg>
+               </button>
+
+               <div class="pages__box maintext">
+                  <button class="pages__page pages__btn">1</button>
+                  <button class="pages__page pages__page--active pages__btn">2</button>
+                  <button class="pages__page pages__btn">3</button>
+                  <button class="pages__page pages__btn">...</button>
+                  <button class="pages__page pages__btn">9</button>
+               </div>
+
+               <button class="pages__nav pages__next pages__btn">
+                  <svg>
+                     <use xlink:href="img/sprite.svg#arrow-right"></use>
+                  </svg>
+               </button>
+            </div>
+
+         </div>
+      </section>
+   </main>
+
+   <include src="src/components/footer.html" locals=''></include>
+
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <include src="src/components/headers.html" locals='{
+      "title": "Услуги"
+   }'></include>
+</head>
+
+
+<body>
+
+   <include src="src/components/header.html" locals=''></include>
+
+   <main class="main service">
+      <section class="service_hero section">
+         <div class="container">
+            <div class="navigation maintext">
+               <a href="index.html" class="navigation__link">Главная</a>
+               <a href="about.html" class="navigation__link">Услуги</a>
+            </div>
+
+
+            <div class="service__grid">
+               <div class="service__left">
+                  <h2 class="h2 section__header caps reg">Услуги</h2>
+                  <p class="h6">
+                     Дубай — один из самых популярных городов в мире для инвестиций в недвижимость. С его сильной
+                     экономикой и привлекательными налоговыми льготами неудивительно, что многие люди стремятся овладеть
+                     недвижимостью в этом динамично развивающемся городе.
+                  </p>
+                  <p class="maintext light">
+                     И наша команда “Z13” готова вам в этом помочь, <br>предоставляя следующие виды услуг.
+                  </p>
+                  <button href="#" class="service_btn icon_btn maintext caps" disabled="">
+                     <span>Оставить заявку</span>
+                  </button>
+               </div>
+
+
+               <div class="service__right">
+                  <div class="service__card">
+                     <p class="subtitle">01</p>
+                     <h3 class="h5 reg caps">Продажа первичной недвижимости.</h3>
+                     <p class="maintext">Мы предоставляем нашим клиентам услуги поиска подходящей строящейся или еще не
+                        построенной недвижимости, ее осмотра, оценки и презентации как офлайн, так и онлайн, а также
+                        последующее документационное сопровождение сделки и послепродажные услуги.</p>
+                  </div>
+                  <div class="service__card service__card--green">
+                     <p class="subtitle">02</p>
+                     <h3 class="h5 reg caps">Продажа вторичной недвижимости</h3>
+                     <p class="maintext">Помимо первичной недвижимости, наше агентство обладает обширной базой объектов
+                        вторичной недвижимости. Вы можете обратиться к нам как с продажей, так и с покупкой вторичной
+                        недвижимости. Мы проконсультируем вас по всем доступным вариантам планов платежей и поможем
+                        выбрать наилучший под ваш запрос.<br><br>
+                        Как в случае покупки первичной недвижимости, так и в случае покупки или продажи вторичной
+                        недвижимости мы оказываем услуги послепродажного сопровождения, включая помощь в регистрации
+                        собственности, передаче права собственности и других процессах.</p>
+                  </div>
+                  <div class="service__card service__card--beige">
+                     <p class="subtitle">03</p>
+                     <h3 class="h5 reg caps">Управление недвижимостью</h3>
+                     <p class="maintext">
+                        Обладая многолетним опытом работы в отрасли, мы предлагаем широкий спектр услуг по обеспечению
+                        надлежащего содержания вашей недвижимости и управления ею. Наши услуги включают ремонт и
+                        техническое обслуживание, проверку и отбор арендаторов, сбор арендной платы и многое другое. Мы
+                        понимаем, что управление недвижимостью может отнимать много времени, именно поэтому мы стремимся
+                        максимально упростить для вас этот процесс.<br><br>
+                        Мы также предоставляем дополнительные услуги, такие как юридические консультации по договорам
+                        аренды, разрешение споров между арендаторами и арендодателями, финансовые консультации и многое
+                        другое.
+                     </p>
+                  </div>
+                  <div class="service__card">
+                     <p class="subtitle">04</p>
+                     <h3 class="h5 reg caps">Дизайн и меблировка недвижимости</h3>
+                     <p class="maintext">
+                        В нашей компании мы понимаем, что найти подходящую недвижимость — это только половина успеха. Мы
+                        предоставляем полный комплекс услуг, чтобы ваш дом был именно таким, каким вы его себе
+                        представляете. У нас есть все, что нужно для создания идеального жилого пространства: от
+                        концепций и планов по дизайну интерьера до мебели на заказ и аксессуаров.<br><br>
+                        Наша команда опытных дизайнеров будет работать с вами в индивидуальном порядке, чтобы ваше
+                        видение ожило в каждой детали.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <script>
+         document.addEventListener("DOMContentLoaded", () => {
+            let service_cards = document.querySelectorAll(".service__card");
+
+            for (let card of service_cards) {
+               card.addEventListener("click", () => {
+                  try {
+                     card.nextElementSibling.classList.toggle("service__card--active");
+                  }
+                  catch (err) {
+                     console.log(err);
+                  }
+               });
+            }
+         });
+      </script>
+
+
+      <include src="src/components/feedback.html" locals=''></include>
+   </main>
+
+   <include src="src/components/footer.html" locals=''></include>
+
+</body>
+
+</html>

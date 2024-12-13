@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <include src="src/components/headers.html" locals='{
+      "title": "Контакты"
+   }'></include>
+</head>
+
+
+<body>
+
+   <include src="src/components/header.html" locals=''></include>
+
+   <main class="main contacts">
+      <section class="contacts_section">
+         <div class="container">
+            <div class="navigation maintext">
+               <a href="index.html" class="navigation__link">Главная</a>
+               <a href="new.html" class="navigation__link">Контакты</a>
+            </div>
+
+            <div class="contacts__top">
+               <h2 class="h2 section__header caps reg">Контакты</h2>
+               <div class="contacts__panel">
+                  <div class="contacts__panel__left">
+                     <p class="caps maintext contacts__panel__header">Адрес:</p>
+
+                     <address class="subtitle caps">
+                        emaar business park - 4<br>
+                        Office 109
+                     </address>
+
+                     <a href="#" class="subtitle contacts__mail caps">admin@z13realestate.com</a>
+                     <a href="#" class="subtitle caps">+ 7 (999) 456-85-85</a>
+                  </div>
+
+                  <div class="contacts__panel__right">
+                     <p class="maintext light caps contacts__panel__header">Наши соцсети:</p>
+
+
+                     <a href="#" class="icon_btn maintext light caps" disabled>
+                        <svg fill="none">
+                           <use xlink:href="img/sprite.svg#whatsAppMini"></use>
+                        </svg>
+
+                        <span>Whatsapp</span>
+                     </a>
+
+                     <a href="#" class="icon_btn maintext light caps" disabled>
+                        <svg fill="none">
+                           <use xlink:href="img/sprite.svg#telegram-green"></use>
+                        </svg>
+
+                        <span>Telegram</span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <include src="src/components/footer.html" locals=''></include>
+
+</body>
+
+</html>
